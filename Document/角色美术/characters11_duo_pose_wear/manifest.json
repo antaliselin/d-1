@@ -1,0 +1,61 @@
+{
+  "result": "PASS",
+  "model": "gpt-image-2.5",
+  "quality": "auto",
+  "source_size": [
+    3840,
+    2160
+  ],
+  "source_files": [
+    "source_1.png"
+  ],
+  "grid_px": 256,
+  "padding": 24,
+  "relative_heights": "preserved within each source sheet",
+  "items": [
+    {
+      "id": 1,
+      "name": "红兜帽叠袖角色",
+      "file": "individual/01_red_hood.png",
+      "sheet": 1,
+      "x": 1282,
+      "y": 1032,
+      "width": 508,
+      "height": 760,
+      "cells": 6,
+      "source_crop": [
+        683,
+        199,
+        1956,
+        2096
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        0.0,
+        0.6144101346002344
+      ]
+    },
+    {
+      "id": 2,
+      "name": "渔夫帽眼镜角色",
+      "file": "individual/02_bucket_hat.png",
+      "sheet": 1,
+      "x": 1892,
+      "y": 960,
+      "width": 312,
+      "height": 832,
+      "cells": 8,
+      "source_crop": [
+        2218,
+        41,
+        3007,
+        2121
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        -1.729216152018978,
+        -1.3935075217735857
+      ]
+    }
+  ]
+}

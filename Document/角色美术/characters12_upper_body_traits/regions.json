@@ -1,0 +1,74 @@
+[
+  {
+    "id": 6,
+    "file": "individual/06_female_trainer.png",
+    "rect": [
+      300,
+      749,
+      660,
+      922
+    ],
+    "xy": [
+      312,
+      564
+    ],
+    "size": [
+      336,
+      1156
+    ]
+  },
+  {
+    "id": 8,
+    "file": "individual/08_female_gang.png",
+    "rect": [
+      1256,
+      826,
+      1624,
+      954
+    ],
+    "xy": [
+      1268,
+      656
+    ],
+    "size": [
+      344,
+      1064
+    ]
+  },
+  {
+    "id": 13,
+    "file": "individual/13_axe_uncle.png",
+    "rect": [
+      2056,
+      702,
+      2744,
+      1483
+    ],
+    "xy": [
+      2156,
+      536
+    ],
+    "size": [
+      488,
+      1184
+    ]
+  },
+  {
+    "id": 15,
+    "file": "individual/15_crossbow_woman.png",
+    "rect": [
+      3010,
+      783,
+      3710,
+      1307
+    ],
+    "xy": [
+      3110,
+      604
+    ],
+    "size": [
+      500,
+      1116
+    ]
+  }
+]

@@ -1,0 +1,276 @@
+{
+	"opening": [
+		{
+			"id": "special-leon",
+			"name": "林舟",
+			"title": "新人警察",
+			"request": "我叫林舟，刚从警局里逃出来。子弹、药品，能补给我一点吗？",
+			"aside": "对了，北岸物流站往哪走？",
+			"thanks": "够了。我欠你一次。",
+			"hp": 34,
+			"container": {
+				"cols": 6,
+				"rows": 6,
+				"blocked": []
+			},
+			"startItems": [
+				{
+					"itemId": "pistol",
+					"x": 0,
+					"y": 0,
+					"rot": 0
+				}
+			],
+			"demand": [
+				{
+					"categories": [
+						"ammo"
+					],
+					"weight": 1
+				},
+				{
+					"categories": [
+						"medical"
+					],
+					"weight": 0.6
+				}
+			],
+			"wants": [
+				{
+					"category": "ammo",
+					"atLeast": 2,
+					"tip": 120,
+					"label": "至少两件子弹"
+				}
+			],
+			"budget": 650,
+			"special": true,
+			"dialogue": {
+				"turns": [
+					{
+						"options": [
+							{
+								"id": "dont-know",
+								"label": "不知道",
+								"reply": "……好吧，我自己再找找。"
+							},
+							{
+								"id": "that-way",
+								"label": "在那个方向",
+								"reply": "谢了，我往那边去。"
+							}
+						],
+						"clue": {
+							"accepts": [
+								"location:umbrella"
+							],
+							"reply": "北岸物流站……就是往那个方向。谢了。"
+						}
+					}
+				]
+			},
+			"portrait": "officer"
+		},
+		{
+			"id": "special-merchant",
+			"name": "兜帽客",
+			"title": "神秘商人",
+			"request": "我这儿有一台火箭发射器，便宜甩卖——只要 500 瓶盖。",
+			"aside": "过了这村，可就没这店了。",
+			"thanks": "……",
+			"hp": 93,
+			"demand": [],
+			"wants": [],
+			"budget": 0,
+			"special": true,
+			"dialogue": {
+				"turns": [
+					{
+						"options": [
+							{
+								"id": "buy-rpg",
+								"label": "买了 · 500 瓶盖",
+								"requires": {
+									"money": 500
+								},
+								"effects": {
+									"money": -500,
+									"stock": [
+										{
+											"itemId": "rpg",
+											"count": 1
+										}
+									]
+								},
+								"reply": "货是你的了。别对着自己人。"
+							},
+							{
+								"id": "decline",
+								"label": "不买",
+								"reply": "……行吧。那我找下家。"
+							}
+						]
+					}
+				],
+				"leaveAfter": true
+			},
+			"portrait": "hood"
+		},
+		{
+			"id": "special-ada",
+			"name": "沈鸦",
+			"title": "特工",
+			"request": "见过林舟吗？一个新人警察，穿着警局的制服。",
+			"aside": "我在找他。",
+			"thanks": "够了。",
+			"hp": 58,
+			"container": {
+				"cols": 8,
+				"rows": 8,
+				"blocked": [
+					"7,7"
+				]
+			},
+			"containerHidden": true,
+			"demand": [
+				{
+					"categories": [
+						"ammo"
+					],
+					"weight": 1
+				}
+			],
+			"wants": [
+				{
+					"category": "ammo",
+					"atLeast": 4,
+					"tip": 200,
+					"label": "至少四件子弹"
+				}
+			],
+			"budget": 900,
+			"special": true,
+			"dialogue": {
+				"turns": [
+					{
+						"options": [
+							{
+								"id": "never-seen",
+								"label": "没见过"
+							},
+							{
+								"id": "went-that-way",
+								"label": "他往那边走了"
+							}
+						],
+						"clue": {
+							"accepts": [
+								"customer:special-leon"
+							],
+							"reply": "……这张脸，是林舟。你没说谎。"
+						}
+					},
+					{
+						"line": "那你这儿卖火箭发射器吗？我出 1000 瓶盖收。",
+						"options": [
+							{
+								"id": "sell-rpg",
+								"label": "卖给她 · 1000 瓶盖",
+								"requires": {
+									"stock": [
+										{
+											"itemId": "rpg",
+											"count": 1
+										}
+									]
+								},
+								"effects": {
+									"money": 1000,
+									"stock": [
+										{
+											"itemId": "rpg",
+											"count": -1
+										}
+									]
+								}
+							},
+							{
+								"id": "refuse-rpg",
+								"label": "不卖"
+							}
+						]
+					},
+					{
+						"line": "……好。那就不废话了。我需要尽可能多的子弹。",
+						"revealContainer": true
+					}
+				]
+			},
+			"portrait": "agent"
+		}
+	],
+	"regular": [
+		{
+			"id": "laochen",
+			"name": "老陈",
+			"title": "游商",
+			"thanks": "成，就这些。你这店比我想的齐整。",
+			"portrait": "old_k"
+		},
+		{
+			"id": "vera",
+			"name": "薇拉",
+			"title": "哨兵",
+			"thanks": "够了。下次来我还会找你。",
+			"portrait": "sentry"
+		},
+		{
+			"id": "amu",
+			"name": "阿木",
+			"title": "拾荒者",
+			"thanks": "这箱我背得动。谢了。",
+			"portrait": "scout"
+		},
+		{
+			"id": "su",
+			"name": "苏医生",
+			"title": "诊所",
+			"thanks": "这些能撑一阵子。记你一次人情。",
+			"portrait": "doctor"
+		},
+		{
+			"id": "leige",
+			"name": "老雷",
+			"title": "铁匠",
+			"thanks": "行，我这炉子又能转起来了。",
+			"portrait": "smith"
+		},
+		{
+			"id": "xiaoman",
+			"name": "小满",
+			"title": "护士",
+			"thanks": "够了够了，我替他们谢谢你。",
+			"portrait": "nurse"
+		}
+	],
+	"survivors": [
+		{
+			"id": "survivor-duyan",
+			"name": "独眼",
+			"trait": "眼神毒，捡东西手快",
+			"portrait": "scout"
+		},
+		{
+			"id": "survivor-laok",
+			"name": "老K",
+			"trait": "以前跑运输的，认路",
+			"portrait": "old_k"
+		},
+		{
+			"id": "survivor-xiaoman",
+			"name": "小满",
+			"trait": "个子小，钻得进缝",
+			"portrait": "nurse"
+		}
+	]
+}

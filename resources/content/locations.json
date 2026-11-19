@@ -1,0 +1,820 @@
+[
+	{
+		"id": "site",
+		"name": "工地",
+		"blurb": "脚手架还立着，塔吊停在半空。",
+		"risk": 0.15,
+		"loot": [
+			{
+				"itemId": "plank",
+				"min": 3,
+				"max": 7,
+				"chance": 0.85
+			},
+			{
+				"itemId": "wire",
+				"min": 3,
+				"max": 6,
+				"chance": 0.8
+			},
+			{
+				"itemId": "rope",
+				"min": 2,
+				"max": 5,
+				"chance": 0.75
+			},
+			{
+				"itemId": "battery",
+				"min": 3,
+				"max": 7,
+				"chance": 0.7
+			},
+			{
+				"itemId": "crowbar",
+				"min": 1,
+				"max": 2,
+				"chance": 0.45
+			},
+			{
+				"itemId": "parts",
+				"min": 1,
+				"max": 3,
+				"chance": 0.4
+			},
+			{
+				"itemId": "timber",
+				"min": 1,
+				"max": 3,
+				"chance": 0.45
+			},
+			{
+				"itemId": "sledgehammer",
+				"min": 1,
+				"max": 2,
+				"chance": 0.4
+			},
+			{
+				"itemId": "cable_spool",
+				"min": 1,
+				"max": 2,
+				"chance": 0.3
+			}
+		]
+	},
+	{
+		"id": "hospital",
+		"name": "医院",
+		"blurb": "走廊里全是翻倒的病床。",
+		"risk": 0.3,
+		"loot": [
+			{
+				"itemId": "bandage",
+				"min": 4,
+				"max": 9,
+				"chance": 0.9
+			},
+			{
+				"itemId": "painkiller",
+				"min": 2,
+				"max": 5,
+				"chance": 0.7
+			},
+			{
+				"itemId": "antibiotics",
+				"min": 2,
+				"max": 4,
+				"chance": 0.6
+			},
+			{
+				"itemId": "cloth",
+				"min": 3,
+				"max": 6,
+				"chance": 0.55
+			},
+			{
+				"itemId": "spray",
+				"min": 1,
+				"max": 3,
+				"chance": 0.4
+			},
+			{
+				"itemId": "sedative",
+				"min": 1,
+				"max": 2,
+				"chance": 0.35
+			},
+			{
+				"itemId": "medkit",
+				"min": 1,
+				"max": 2,
+				"chance": 0.3
+			},
+			{
+				"itemId": "stretcher",
+				"min": 1,
+				"max": 2,
+				"chance": 0.4
+			},
+			{
+				"itemId": "medcase",
+				"min": 1,
+				"max": 1,
+				"chance": 0.2
+			}
+		]
+	},
+	{
+		"id": "market",
+		"name": "超市",
+		"blurb": "货架被扫过一遍，地上还散着罐头。",
+		"risk": 0.12,
+		"loot": [
+			{
+				"itemId": "canned_food",
+				"min": 5,
+				"max": 12,
+				"chance": 0.95
+			},
+			{
+				"itemId": "water",
+				"min": 5,
+				"max": 12,
+				"chance": 0.95
+			},
+			{
+				"itemId": "soda",
+				"min": 3,
+				"max": 8,
+				"chance": 0.7
+			},
+			{
+				"itemId": "chocolate",
+				"min": 2,
+				"max": 6,
+				"chance": 0.6
+			},
+			{
+				"itemId": "ration",
+				"min": 2,
+				"max": 5,
+				"chance": 0.6
+			},
+			{
+				"itemId": "honey",
+				"min": 1,
+				"max": 3,
+				"chance": 0.4
+			},
+			{
+				"itemId": "lighter",
+				"min": 1,
+				"max": 3,
+				"chance": 0.4
+			},
+			{
+				"itemId": "water_barrel",
+				"min": 1,
+				"max": 2,
+				"chance": 0.4
+			},
+			{
+				"itemId": "crate_can",
+				"min": 1,
+				"max": 2,
+				"chance": 0.35
+			}
+		]
+	},
+	{
+		"id": "apartment",
+		"name": "居民楼",
+		"blurb": "楼道黑着，有几户门还虚掩着。",
+		"risk": 0.1,
+		"loot": [
+			{
+				"itemId": "canned_food",
+				"min": 3,
+				"max": 8,
+				"chance": 0.8
+			},
+			{
+				"itemId": "water",
+				"min": 3,
+				"max": 8,
+				"chance": 0.8
+			},
+			{
+				"itemId": "cloth",
+				"min": 2,
+				"max": 6,
+				"chance": 0.7
+			},
+			{
+				"itemId": "leather",
+				"min": 1,
+				"max": 3,
+				"chance": 0.5
+			},
+			{
+				"itemId": "goldwatch",
+				"min": 1,
+				"max": 2,
+				"chance": 0.35
+			},
+			{
+				"itemId": "radio",
+				"min": 1,
+				"max": 2,
+				"chance": 0.3
+			},
+			{
+				"itemId": "vinyl",
+				"min": 1,
+				"max": 3,
+				"chance": 0.3
+			},
+			{
+				"itemId": "gramophone",
+				"min": 1,
+				"max": 1,
+				"chance": 0.2
+			},
+			{
+				"itemId": "safe",
+				"min": 1,
+				"max": 1,
+				"chance": 0.15
+			}
+		]
+	},
+	{
+		"id": "gasstation",
+		"name": "加油站",
+		"blurb": "油枪还挂在架子上，空气里全是汽油味。",
+		"risk": 0.25,
+		"loot": [
+			{
+				"itemId": "lighter",
+				"min": 2,
+				"max": 6,
+				"chance": 0.85
+			},
+			{
+				"itemId": "battery",
+				"min": 2,
+				"max": 6,
+				"chance": 0.7
+			},
+			{
+				"itemId": "tape",
+				"min": 2,
+				"max": 5,
+				"chance": 0.6
+			},
+			{
+				"itemId": "water",
+				"min": 2,
+				"max": 5,
+				"chance": 0.6
+			},
+			{
+				"itemId": "jerky",
+				"min": 2,
+				"max": 5,
+				"chance": 0.5
+			},
+			{
+				"itemId": "grenade",
+				"min": 1,
+				"max": 2,
+				"chance": 0.35
+			},
+			{
+				"itemId": "car_battery",
+				"min": 1,
+				"max": 2,
+				"chance": 0.4
+			}
+		]
+	},
+	{
+		"id": "police",
+		"name": "警局",
+		"blurb": "枪柜被撬开了，值班室里一片狼藉。",
+		"risk": 0.4,
+		"loot": [
+			{
+				"itemId": "ammo_pistol",
+				"min": 2,
+				"max": 5,
+				"chance": 0.85
+			},
+			{
+				"itemId": "pipe",
+				"min": 2,
+				"max": 5,
+				"chance": 0.6
+			},
+			{
+				"itemId": "ammo_shotgun",
+				"min": 1,
+				"max": 4,
+				"chance": 0.55
+			},
+			{
+				"itemId": "gasmask",
+				"min": 1,
+				"max": 2,
+				"chance": 0.45
+			},
+			{
+				"itemId": "lockpick",
+				"min": 1,
+				"max": 3,
+				"chance": 0.4
+			},
+			{
+				"itemId": "pistol",
+				"min": 1,
+				"max": 2,
+				"chance": 0.45
+			},
+			{
+				"itemId": "shotgun",
+				"min": 1,
+				"max": 1,
+				"chance": 0.3
+			},
+			{
+				"itemId": "smg",
+				"min": 1,
+				"max": 1,
+				"chance": 0.2
+			},
+			{
+				"itemId": "rifle",
+				"min": 1,
+				"max": 1,
+				"chance": 0.2
+			},
+			{
+				"itemId": "heavy_pistol",
+				"min": 1,
+				"max": 1,
+				"chance": 0.3
+			},
+			{
+				"itemId": "revolver",
+				"min": 1,
+				"max": 1,
+				"chance": 0.3
+			},
+			{
+				"itemId": "taser",
+				"min": 1,
+				"max": 2,
+				"chance": 0.3
+			},
+			{
+				"itemId": "lmg",
+				"min": 1,
+				"max": 1,
+				"chance": 0.15
+			}
+		]
+	},
+	{
+		"id": "school",
+		"name": "学校",
+		"blurb": "教室里的桌椅堆在门口当路障。",
+		"risk": 0.18,
+		"loot": [
+			{
+				"itemId": "bandage",
+				"min": 3,
+				"max": 7,
+				"chance": 0.8
+			},
+			{
+				"itemId": "canned_food",
+				"min": 3,
+				"max": 7,
+				"chance": 0.7
+			},
+			{
+				"itemId": "bat",
+				"min": 1,
+				"max": 3,
+				"chance": 0.6
+			},
+			{
+				"itemId": "cloth",
+				"min": 2,
+				"max": 6,
+				"chance": 0.6
+			},
+			{
+				"itemId": "flashlight",
+				"min": 1,
+				"max": 3,
+				"chance": 0.5
+			},
+			{
+				"itemId": "chocolate",
+				"min": 2,
+				"max": 5,
+				"chance": 0.5
+			}
+		]
+	},
+	{
+		"id": "pharmacy",
+		"name": "药店",
+		"blurb": "柜台后面还锁着两格药柜。",
+		"risk": 0.22,
+		"loot": [
+			{
+				"itemId": "herb_green",
+				"min": 3,
+				"max": 8,
+				"chance": 0.85
+			},
+			{
+				"itemId": "herb_red",
+				"min": 3,
+				"max": 7,
+				"chance": 0.75
+			},
+			{
+				"itemId": "painkiller",
+				"min": 2,
+				"max": 6,
+				"chance": 0.7
+			},
+			{
+				"itemId": "antibiotics",
+				"min": 2,
+				"max": 5,
+				"chance": 0.6
+			},
+			{
+				"itemId": "spray",
+				"min": 1,
+				"max": 3,
+				"chance": 0.45
+			},
+			{
+				"itemId": "medkit",
+				"min": 1,
+				"max": 2,
+				"chance": 0.3
+			},
+			{
+				"itemId": "medcase",
+				"min": 1,
+				"max": 1,
+				"chance": 0.18
+			}
+		]
+	},
+	{
+		"id": "hardware",
+		"name": "五金店",
+		"blurb": "卷帘门被别开了一半，工具撒了一地。",
+		"risk": 0.2,
+		"loot": [
+			{
+				"itemId": "battery",
+				"min": 3,
+				"max": 8,
+				"chance": 0.85
+			},
+			{
+				"itemId": "tape",
+				"min": 3,
+				"max": 7,
+				"chance": 0.75
+			},
+			{
+				"itemId": "wire",
+				"min": 3,
+				"max": 6,
+				"chance": 0.7
+			},
+			{
+				"itemId": "crowbar",
+				"min": 1,
+				"max": 3,
+				"chance": 0.6
+			},
+			{
+				"itemId": "toolbox",
+				"min": 1,
+				"max": 3,
+				"chance": 0.5
+			},
+			{
+				"itemId": "axe",
+				"min": 1,
+				"max": 2,
+				"chance": 0.4
+			},
+			{
+				"itemId": "sledgehammer",
+				"min": 1,
+				"max": 2,
+				"chance": 0.4
+			},
+			{
+				"itemId": "chainsaw",
+				"min": 1,
+				"max": 1,
+				"chance": 0.2
+			},
+			{
+				"itemId": "scope",
+				"min": 1,
+				"max": 2,
+				"chance": 0.35
+			},
+			{
+				"itemId": "welder",
+				"min": 1,
+				"max": 2,
+				"chance": 0.35
+			},
+			{
+				"itemId": "car_battery",
+				"min": 1,
+				"max": 2,
+				"chance": 0.35
+			},
+			{
+				"itemId": "cable_spool",
+				"min": 1,
+				"max": 2,
+				"chance": 0.3
+			}
+		]
+	},
+	{
+		"id": "station",
+		"name": "车站",
+		"blurb": "月台上停着一节卸了一半的军列。",
+		"risk": 0.35,
+		"loot": [
+			{
+				"itemId": "ammo_shotgun",
+				"min": 2,
+				"max": 5,
+				"chance": 0.8
+			},
+			{
+				"itemId": "military_ration",
+				"min": 2,
+				"max": 6,
+				"chance": 0.7
+			},
+			{
+				"itemId": "gasmask",
+				"min": 1,
+				"max": 3,
+				"chance": 0.55
+			},
+			{
+				"itemId": "ammo_rifle",
+				"min": 1,
+				"max": 4,
+				"chance": 0.5
+			},
+			{
+				"itemId": "generator",
+				"min": 1,
+				"max": 2,
+				"chance": 0.4
+			},
+			{
+				"itemId": "grenade",
+				"min": 1,
+				"max": 3,
+				"chance": 0.4
+			},
+			{
+				"itemId": "db_shotgun",
+				"min": 1,
+				"max": 1,
+				"chance": 0.25
+			},
+			{
+				"itemId": "sniper",
+				"min": 1,
+				"max": 1,
+				"chance": 0.12
+			},
+			{
+				"itemId": "welder",
+				"min": 1,
+				"max": 1,
+				"chance": 0.25
+			},
+			{
+				"itemId": "lmg",
+				"min": 1,
+				"max": 1,
+				"chance": 0.12
+			},
+			{
+				"itemId": "rpg",
+				"min": 1,
+				"max": 1,
+				"chance": 0.08
+			}
+		]
+	},
+	{
+		"id": "church",
+		"name": "教堂",
+		"blurb": "长椅上还搭着几件没人认领的外套。",
+		"risk": 0.15,
+		"loot": [
+			{
+				"itemId": "cigar",
+				"min": 1,
+				"max": 4,
+				"chance": 0.7
+			},
+			{
+				"itemId": "silverware",
+				"min": 1,
+				"max": 3,
+				"chance": 0.6
+			},
+			{
+				"itemId": "wine",
+				"min": 1,
+				"max": 3,
+				"chance": 0.55
+			},
+			{
+				"itemId": "goldwatch",
+				"min": 1,
+				"max": 3,
+				"chance": 0.5
+			},
+			{
+				"itemId": "bandage",
+				"min": 2,
+				"max": 6,
+				"chance": 0.5
+			},
+			{
+				"itemId": "medkit",
+				"min": 1,
+				"max": 2,
+				"chance": 0.3
+			},
+			{
+				"itemId": "clock",
+				"min": 1,
+				"max": 1,
+				"chance": 0.15
+			},
+			{
+				"itemId": "gramophone",
+				"min": 1,
+				"max": 1,
+				"chance": 0.2
+			}
+		]
+	},
+	{
+		"id": "warehouse",
+		"name": "仓库",
+		"blurb": "托盘堆到顶，叉车横在门口。",
+		"risk": 0.3,
+		"loot": [
+			{
+				"itemId": "ration",
+				"min": 3,
+				"max": 8,
+				"chance": 0.8
+			},
+			{
+				"itemId": "canned_food",
+				"min": 3,
+				"max": 8,
+				"chance": 0.75
+			},
+			{
+				"itemId": "military_ration",
+				"min": 2,
+				"max": 5,
+				"chance": 0.6
+			},
+			{
+				"itemId": "rope",
+				"min": 2,
+				"max": 6,
+				"chance": 0.6
+			},
+			{
+				"itemId": "parts",
+				"min": 2,
+				"max": 4,
+				"chance": 0.5
+			},
+			{
+				"itemId": "purifier",
+				"min": 1,
+				"max": 2,
+				"chance": 0.4
+			},
+			{
+				"itemId": "leather",
+				"min": 1,
+				"max": 3,
+				"chance": 0.4
+			},
+			{
+				"itemId": "camera",
+				"min": 1,
+				"max": 2,
+				"chance": 0.3
+			},
+			{
+				"itemId": "timber",
+				"min": 1,
+				"max": 3,
+				"chance": 0.45
+			},
+			{
+				"itemId": "crate_can",
+				"min": 1,
+				"max": 2,
+				"chance": 0.35
+			},
+			{
+				"itemId": "safe",
+				"min": 1,
+				"max": 1,
+				"chance": 0.15
+			}
+		]
+	},
+	{
+		"id": "subway",
+		"name": "地铁口",
+		"blurb": "往下是黑的，风里带着铁锈味。",
+		"risk": 0.45,
+		"loot": [
+			{
+				"itemId": "ammo_pistol",
+				"min": 2,
+				"max": 5,
+				"chance": 0.75
+			},
+			{
+				"itemId": "knife",
+				"min": 1,
+				"max": 3,
+				"chance": 0.6
+			},
+			{
+				"itemId": "dagger",
+				"min": 1,
+				"max": 2,
+				"chance": 0.4
+			},
+			{
+				"itemId": "machete",
+				"min": 1,
+				"max": 2,
+				"chance": 0.5
+			},
+			{
+				"itemId": "gasmask",
+				"min": 1,
+				"max": 2,
+				"chance": 0.45
+			},
+			{
+				"itemId": "grenade",
+				"min": 1,
+				"max": 3,
+				"chance": 0.4
+			},
+			{
+				"itemId": "pearl",
+				"min": 1,
+				"max": 2,
+				"chance": 0.3
+			},
+			{
+				"itemId": "ammo_magnum",
+				"min": 1,
+				"max": 3,
+				"chance": 0.3
+			}
+		]
+	}
+]

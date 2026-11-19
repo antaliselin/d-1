@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+
+[node name="EventChoice" type="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+theme = ExtResource("Theme")
+
+[node name="Requirements" type="Label" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+text = "所需物资"
+autowrap_mode = 3
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+visible = false
+
+[node name="Select" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 38)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopSecondary"
+theme_override_font_sizes/font_size = 15
+text = "选择"

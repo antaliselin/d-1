@@ -1,0 +1,283 @@
+{
+  "result": "PASS",
+  "model": "gpt-image-2.5",
+  "quality": "auto",
+  "source_size": [
+    3840,
+    2160
+  ],
+  "source_files": [
+    "source_1.png",
+    "source_2.png",
+    "source_3.png"
+  ],
+  "grid_px": 256,
+  "padding": 24,
+  "relative_heights": "preserved within each source sheet",
+  "items": [
+    {
+      "id": 1,
+      "name": "莱恩（生化2）",
+      "file": "individual/01_customer_01.png",
+      "sheet": 1,
+      "x": 844,
+      "y": 948,
+      "width": 360,
+      "height": 844,
+      "cells": 8,
+      "source_crop": [
+        116,
+        44,
+        998,
+        2105
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        -0.09083536090832922,
+        -1.430656934306512
+      ]
+    },
+    {
+      "id": 2,
+      "name": "克莱尔",
+      "file": "individual/02_customer_02.png",
+      "sheet": 1,
+      "x": 1346,
+      "y": 968,
+      "width": 380,
+      "height": 824,
+      "cells": 8,
+      "source_crop": [
+        988,
+        95,
+        1916,
+        2102
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        0.5450121654501459,
+        0.8175182481752472
+      ]
+    },
+    {
+      "id": 3,
+      "name": "艾达女皇（生化2风衣）",
+      "file": "individual/03_customer_03.png",
+      "sheet": 1,
+      "x": 1930,
+      "y": 952,
+      "width": 236,
+      "height": 840,
+      "cells": 4,
+      "source_crop": [
+        1895,
+        56,
+        2478,
+        2106
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        -0.07785888077856384,
+        -1.310624493106161
+      ]
+    },
+    {
+      "id": 4,
+      "name": "神秘商人",
+      "file": "individual/04_customer_04.png",
+      "sheet": 1,
+      "x": 2306,
+      "y": 960,
+      "width": 508,
+      "height": 832,
+      "cells": 8,
+      "source_crop": [
+        2577,
+        59,
+        3818,
+        2093
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        0.0,
+        -1.8945660989455746
+      ]
+    },
+    {
+      "id": 5,
+      "name": "格里斯（生化1）",
+      "file": "individual/05_customer_05.png",
+      "sheet": 2,
+      "x": 790,
+      "y": 672,
+      "width": 468,
+      "height": 1120,
+      "cells": 10,
+      "source_crop": [
+        164,
+        74,
+        1002,
+        2068
+      ],
+      "source": "source_2.png",
+      "rounding_delta": [
+        -0.44493882091217074,
+        -1.6685205784206119
+      ]
+    },
+    {
+      "id": 6,
+      "name": "吉尔（生化1军装）",
+      "file": "individual/06_customer_06.png",
+      "sheet": 2,
+      "x": 1300,
+      "y": 692,
+      "width": 472,
+      "height": 1100,
+      "cells": 10,
+      "source_crop": [
+        1101,
+        113,
+        1947,
+        2069
+      ],
+      "source": "source_2.png",
+      "rounding_delta": [
+        -0.9655172413793025,
+        0.36929922135709603
+      ]
+    },
+    {
+      "id": 7,
+      "name": "莱恩（生化4）",
+      "file": "individual/07_customer_07.png",
+      "sheet": 2,
+      "x": 1794,
+      "y": 672,
+      "width": 508,
+      "height": 1120,
+      "cells": 10,
+      "source_crop": [
+        1964,
+        80,
+        2871,
+        2074
+      ],
+      "source": "source_2.png",
+      "rounding_delta": [
+        0.0,
+        -1.6685205784206119
+      ]
+    },
+    {
+      "id": 8,
+      "name": "艾达女皇（生化4红毛衣）",
+      "file": "individual/08_customer_08.png",
+      "sheet": 2,
+      "x": 2318,
+      "y": 680,
+      "width": 484,
+      "height": 1112,
+      "cells": 10,
+      "source_crop": [
+        2909,
+        98,
+        3770,
+        2074
+      ],
+      "source": "source_2.png",
+      "rounding_delta": [
+        1.9933259176863203,
+        0.5027808676306904
+      ]
+    },
+    {
+      "id": 9,
+      "name": "艾达女皇（生化6）",
+      "file": "individual/09_customer_09.png",
+      "sheet": 3,
+      "x": 814,
+      "y": 656,
+      "width": 420,
+      "height": 1136,
+      "cells": 10,
+      "source_crop": [
+        179,
+        82,
+        928,
+        2103
+      ],
+      "source": "source_3.png",
+      "rounding_delta": [
+        1.2200477326969121,
+        -1.0921241050118624
+      ]
+    },
+    {
+      "id": 10,
+      "name": "莱恩（生化9）",
+      "file": "individual/10_customer_10.png",
+      "sheet": 3,
+      "x": 1314,
+      "y": 624,
+      "width": 444,
+      "height": 1168,
+      "cells": 10,
+      "source_crop": [
+        980,
+        33,
+        1775,
+        2109
+      ],
+      "source": "source_3.png",
+      "rounding_delta": [
+        -0.7770883054892579,
+        -0.7408114558472789
+      ]
+    },
+    {
+      "id": 11,
+      "name": "格里斯（生化6）",
+      "file": "individual/11_customer_11.png",
+      "sheet": 3,
+      "x": 1800,
+      "y": 608,
+      "width": 496,
+      "height": 1184,
+      "cells": 10,
+      "source_crop": [
+        1853,
+        25,
+        2738,
+        2128
+      ],
+      "source": "source_3.png",
+      "rounding_delta": [
+        1.4892601431981234,
+        0.0
+      ]
+    },
+    {
+      "id": 12,
+      "name": "维克斯",
+      "file": "individual/12_customer_12.png",
+      "sheet": 3,
+      "x": 2306,
+      "y": 616,
+      "width": 508,
+      "height": 1176,
+      "cells": 10,
+      "source_crop": [
+        2818,
+        32,
+        3725,
+        2123
+      ],
+      "source": "source_3.png",
+      "rounding_delta": [
+        0.49069212410500995,
+        -0.6529832935559625
+      ]
+    }
+  ]
+}

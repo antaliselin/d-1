@@ -1,0 +1,261 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+[ext_resource type="PackedScene" path="res://scenes/ui/counter_grid.tscn" id="Board"]
+
+[sub_resource type="StyleBoxFlat" id="HealthBackground"]
+bg_color = Color(0.161, 0.204, 0.184, 1)
+
+[sub_resource type="StyleBoxFlat" id="HealthFill"]
+resource_local_to_scene = true
+bg_color = Color(0.96, 0.73, 0.42, 1)
+
+[node name="TradeView" type="Control"]
+theme = ExtResource("Theme")
+
+[node name="Upper" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.3
+offset_bottom = -8.0
+theme_override_constants/separation = 6
+
+[node name="Heading" type="HBoxContainer" parent="Upper"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Title" type="Label" parent="Upper/Heading"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 28
+text = "交易柜台"
+theme_type_variation = &"ShopTitle"
+size_flags_horizontal = 3
+
+[node name="VisitorIndex" type="Label" parent="Upper/Heading"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 18
+text = "1 / 3"
+theme_type_variation = &"ShopTitle"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
+vertical_alignment = 1
+
+[node name="VisitorName" type="Label" parent="Upper"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 21
+text = "林舟 · 新人警察"
+theme_type_variation = &"ShopTitle"
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+
+[node name="Health" type="VBoxContainer" parent="Upper"]
+layout_mode = 2
+theme_override_constants/separation = 4
+unique_name_in_owner = true
+
+[node name="HealthLabel" type="Label" parent="Upper/Health"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 13
+text = "生命   55 / 100"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="HealthBar" type="ProgressBar" parent="Upper/Health"]
+layout_mode = 2
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 8)
+show_percentage = false
+value = 55
+theme_override_styles/background = SubResource("HealthBackground")
+theme_override_styles/fill = SubResource("HealthFill")
+mouse_filter = 2
+
+[node name="Lower" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchor_top = 0.52
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+theme_override_constants/separation = 6
+
+[node name="Conversation" type="ScrollContainer" parent="Lower"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="Dialogue" type="VBoxContainer" parent="Lower/Conversation"]
+layout_mode = 2
+theme_override_constants/separation = 8
+size_flags_horizontal = 3
+
+[node name="DialogueLine" type="Label" parent="Lower/Conversation/Dialogue"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "我需要弹药和可以处理伤口的物资。"
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+
+[node name="Feedback" type="Label" parent="Lower/Conversation/Dialogue"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 14
+text = ""
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+visible = false
+
+[node name="DialogueOptions" type="VBoxContainer" parent="Lower/Conversation/Dialogue"]
+layout_mode = 2
+theme_override_constants/separation = 8
+unique_name_in_owner = true
+
+[node name="ShowClues" type="Button" parent="Lower/Conversation/Dialogue"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 39)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopSecondary"
+theme_override_font_sizes/font_size = 14
+text = "翻开笔记 · 出示线索"
+unique_name_in_owner = true
+
+[node name="OpenBackpack" type="Button" parent="Lower"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 39)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopPrimary"
+theme_override_font_sizes/font_size = 15
+text = "查看背包"
+
+[node name="TradeBoard" type="VBoxContainer" parent="Lower"]
+layout_mode = 2
+theme_override_constants/separation = 4
+unique_name_in_owner = true
+size_flags_vertical = 3
+
+[node name="Info" type="HBoxContainer" parent="Lower/TradeBoard"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Fill" type="Label" parent="Lower/TradeBoard/Info"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 13
+text = "背包 0/33"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="Spacer" type="Control" parent="Lower/TradeBoard/Info"]
+layout_mode = 2
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Budget" type="Label" parent="Lower/TradeBoard/Info"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 15
+text = "预算 650"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
+
+[node name="Wants" type="Label" parent="Lower/TradeBoard"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 13
+text = "点名需求  子弹"
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="Grid" parent="Lower/TradeBoard" instance=ExtResource("Board")]
+layout_mode = 2
+unique_name_in_owner = true
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 154)
+
+[node name="BoardActions" type="VBoxContainer" parent="Lower"]
+layout_mode = 2
+theme_override_constants/separation = 8
+unique_name_in_owner = true
+
+[node name="Buttons" type="HBoxContainer" parent="Lower/BoardActions"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Rotate" type="Button" parent="Lower/BoardActions/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 35)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "旋转 ↻"
+unique_name_in_owner = true
+
+[node name="ReturnPiece" type="Button" parent="Lower/BoardActions/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 35)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "收回单件"
+unique_name_in_owner = true
+
+[node name="BoardHint" type="Label" parent="Lower/BoardActions"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 13
+text = "拖动或点选物品放入背包 · R 旋转"
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="Settlement" type="Button" parent="Lower"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 38)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopSecondary"
+theme_override_font_sizes/font_size = 15
+text = "查看交易明细"
+unique_name_in_owner = true
+visible = false
+
+[node name="NextVisitor" type="Button" parent="Lower"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 46)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopPrimary"
+theme_override_font_sizes/font_size = 18
+text = "下一位客人"
+unique_name_in_owner = true
+visible = false
+
+[node name="Skip" type="Button" parent="Lower"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 36)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "请客人离开"
+unique_name_in_owner = true

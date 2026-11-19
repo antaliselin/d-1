@@ -1,0 +1,93 @@
+[
+  [
+    [
+      "male_soldier",
+      "男军人",
+      "Male soldier, olive combat uniform and helmet, tan simple tactical vest, rifle lowered near chest, sturdy boots."
+    ],
+    [
+      "female_soldier",
+      "女军人",
+      "Female soldier, olive uniform, tied hair under patrol cap, compact load-bearing vest, checking shoulder radio."
+    ],
+    [
+      "male_police",
+      "男警察",
+      "Male patrol police officer, midnight-blue uniform, simple shield badge, duty belt, one hand near radio."
+    ],
+    [
+      "female_police",
+      "女警察",
+      "Female patrol police officer, navy blue uniform, low ponytail and service cap, silver badge, alert open stance."
+    ],
+    [
+      "male_trainer",
+      "男健身教练",
+      "Male fitness trainer, athletic muscular build, dark teal sleeveless sports shirt, charcoal joggers, white wrist wraps and trainers."
+    ],
+    [
+      "female_trainer",
+      "女健身教练",
+      "Female fitness trainer, athletic build, muted coral training top, dark slate leggings and trainers, compact confident stance."
+    ]
+  ],
+  [
+    [
+      "male_gang",
+      "男帮派成员",
+      "Male street gang member, burgundy bandanna and worn charcoal leather vest, heavy boots, compact guarded stance."
+    ],
+    [
+      "female_gang",
+      "女帮派成员",
+      "Female street gang member, cropped dark biker jacket, burgundy bandanna at neck, rugged dark trousers, defiant stance."
+    ],
+    [
+      "male_doctor",
+      "男医生",
+      "Male physician, warm ivory knee-length lab coat over blue scrubs, dark stethoscope, compact medical pouch."
+    ],
+    [
+      "female_doctor",
+      "女医生",
+      "Female physician, muted mint scrubs under warm ivory coat, tied hair, dark stethoscope, small medical kit held close."
+    ],
+    [
+      "male_backpacker",
+      "大背包男性",
+      "Male civilian traveler with prominent bulky hiking backpack, olive canvas pack and visible straps, worn brown hiking outfit, slight turn to show pack."
+    ],
+    [
+      "female_backpacker",
+      "大背包女性",
+      "Female civilian traveler with prominent bulky hiking backpack, rust-orange canvas pack and visible straps, muted blue hiking jacket, subtle three-quarter turn."
+    ]
+  ],
+  [
+    [
+      "axe_uncle",
+      "消防斧肌肉大叔",
+      "Burly middle-aged muscular man, work shirt with sleeves rolled up, rugged pants, holding recognizable red-head firefighter axe upright close beside torso."
+    ],
+    [
+      "glasses_nerd",
+      "戴眼镜的肥宅",
+      "Heavyset adult male nerd, clearly visible rectangular glasses, simple oversized faded green graphic-free T-shirt, sweatpants and worn sneakers."
+    ],
+    [
+      "crossbow_woman",
+      "自制弩干练女人",
+      "Practical sharp-eyed adult woman, dark work jacket and utility trousers, carrying a compact improvised wooden crossbow diagonally down close to her torso; visibly crossbow rather than rifle."
+    ],
+    [
+      "cap_thin_man",
+      "鸭舌帽瘦男人",
+      "Slim adult male with clear baseball cap brim, faded work jacket and narrow trousers, lanky relaxed stance."
+    ],
+    [
+      "smoking_veteran",
+      "抽烟的老退伍军人",
+      "Elderly male veteran, grey stubble and weathered face, faded olive field jacket and dark trousers, smoking a small cigarette held near his mouth; no smoke cloud or drifting particles."
+    ]
+  ]
+]

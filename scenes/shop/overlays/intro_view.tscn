@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+
+[node name="IntroView" type="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme = ExtResource("Theme")
+
+[node name="StoryText" type="Label" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "雪松街的故事。"
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+
+[node name="Next" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 44)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopPrimary"
+theme_override_font_sizes/font_size = 16
+text = "继续"
+unique_name_in_owner = true

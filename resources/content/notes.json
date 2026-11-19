@@ -1,0 +1,44 @@
+[
+	{
+		"id": "clue-notebook",
+		"kind": "clue",
+		"title": "送货员的记事本",
+		"defaultUnlocked": true,
+		"detail": [
+			"序章里从收银台下面翻出来的那本送货员记事本。",
+			"前面是路线和签收，最后一页只有两行铅笔字：「第四天。痒，好吃。」",
+			"字迹到这里就断了。"
+		]
+	},
+	{
+		"id": "clue-rent",
+		"kind": "clue",
+		"title": "黑鸦帮的租子",
+		"defaultUnlocked": true,
+		"detail": [
+			"黑鸦帮第 3 天来收第一期租，之后每 3 天一次。",
+			"第 1 期 1900 瓶盖，之后一期比一期多。交不上就按 2 倍租金搬货。"
+		]
+	},
+	{
+		"id": "clue-water",
+		"kind": "clue",
+		"title": "水塔议会的水税",
+		"defaultUnlocked": true,
+		"detail": [
+			"拿到产权后，水塔议会每 4 天收一次水税，一共三波。",
+			"三波都撑过去，就是终局。"
+		]
+	},
+	{
+		"id": "location:umbrella",
+		"kind": "location",
+		"title": "北岸物流站",
+		"locationId": "umbrella",
+		"defaultUnlocked": true,
+		"detail": [
+			"城郊的北岸物流站物流站，围墙上挂着褪色的红白货运标记。",
+			"货车总在半夜进出。地图上暂时没有这条路，但方向没错。"
+		]
+	}
+]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=1 format=3]
+
+[node name="DragPreview" type="TextureRect"]
+layout_mode = 2
+mouse_filter = 2
+custom_minimum_size = Vector2(62, 62)
+expand_mode = 1
+stretch_mode = 5
+offset_right = 62
+offset_bottom = 62
+modulate = Color(1, 1, 1, 0.83)

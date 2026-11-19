@@ -1,0 +1,237 @@
+[gd_resource type="Theme" load_steps=31 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/ui/button_amber_normal.png" id="amber_normal"]
+[ext_resource type="Texture2D" path="res://assets/ui/button_amber_hover.png" id="amber_hover"]
+[ext_resource type="Texture2D" path="res://assets/ui/button_amber_pressed.png" id="amber_pressed"]
+[ext_resource type="Texture2D" path="res://assets/ui/button_amber_disabled.png" id="amber_disabled"]
+[ext_resource type="Texture2D" path="res://assets/ui/button_steel_normal.png" id="steel_normal"]
+[ext_resource type="Texture2D" path="res://assets/ui/button_steel_hover.png" id="steel_hover"]
+[ext_resource type="Texture2D" path="res://assets/ui/button_steel_pressed.png" id="steel_pressed"]
+[ext_resource type="Texture2D" path="res://assets/ui/button_steel_disabled.png" id="steel_disabled"]
+[ext_resource type="Texture2D" path="res://assets/ui/button_dark_normal.png" id="dark_normal"]
+[ext_resource type="Texture2D" path="res://assets/ui/button_dark_hover.png" id="dark_hover"]
+[ext_resource type="Texture2D" path="res://assets/ui/button_dark_pressed.png" id="dark_pressed"]
+[ext_resource type="Texture2D" path="res://assets/ui/button_dark_disabled.png" id="dark_disabled"]
+
+[sub_resource type="StyleBoxTexture" id="amber_normal"]
+texture = ExtResource("amber_normal")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="amber_hover"]
+texture = ExtResource("amber_hover")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="amber_pressed"]
+texture = ExtResource("amber_pressed")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="amber_disabled"]
+texture = ExtResource("amber_disabled")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="steel_normal"]
+texture = ExtResource("steel_normal")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="steel_hover"]
+texture = ExtResource("steel_hover")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="steel_pressed"]
+texture = ExtResource("steel_pressed")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="steel_disabled"]
+texture = ExtResource("steel_disabled")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="dark_normal"]
+texture = ExtResource("dark_normal")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="dark_hover"]
+texture = ExtResource("dark_hover")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="dark_pressed"]
+texture = ExtResource("dark_pressed")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="dark_disabled"]
+texture = ExtResource("dark_disabled")
+texture_margin_left = 13.0
+texture_margin_top = 11.0
+texture_margin_right = 13.0
+texture_margin_bottom = 11.0
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="SystemFont" id="Regular"]
+font_names = PackedStringArray("Microsoft YaHei UI", "Noto Sans CJK SC", "PingFang SC", "WenQuanYi Micro Hei", "Droid Sans Fallback")
+
+[sub_resource type="SystemFont" id="Bold"]
+font_names = PackedStringArray("Microsoft YaHei UI", "Noto Sans CJK SC", "PingFang SC", "WenQuanYi Micro Hei", "Droid Sans Fallback")
+font_weight = 700
+
+[sub_resource type="StyleBoxEmpty" id="Empty"]
+
+[sub_resource type="StyleBoxFlat" id="Focus"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.96, 0.91, 0.79, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_left = 8
+corner_radius_bottom_right = 8
+
+[sub_resource type="StyleBoxFlat" id="Track"]
+bg_color = Color(0.157, 0.22, 0.227, 1)
+content_margin_left = 4.0
+content_margin_right = 3.0
+
+[sub_resource type="StyleBoxFlat" id="Thumb"]
+bg_color = Color(0.50, 0.59, 0.61, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_left = 3
+corner_radius_bottom_right = 3
+
+[resource]
+ShopPrimary/base_type = &"Button"
+ShopPrimary/styles/normal = SubResource("amber_normal")
+ShopPrimary/styles/hover = SubResource("amber_hover")
+ShopPrimary/styles/pressed = SubResource("amber_pressed")
+ShopPrimary/styles/disabled = SubResource("amber_disabled")
+ShopPrimary/styles/hover_pressed = SubResource("amber_pressed")
+ShopPrimary/styles/focus = SubResource("Focus")
+ShopPrimary/colors/font_color = Color(0.212, 0.157, 0.09, 1)
+ShopPrimary/colors/font_hover_color = Color(0.212, 0.157, 0.09, 1)
+ShopPrimary/colors/font_focus_color = Color(0.212, 0.157, 0.09, 1)
+ShopPrimary/colors/font_pressed_color = Color(0.212, 0.157, 0.09, 1)
+ShopPrimary/colors/font_hover_pressed_color = Color(0.212, 0.157, 0.09, 1)
+ShopPrimary/colors/font_disabled_color = Color(0.58, 0.63, 0.59, 1)
+ShopSecondary/base_type = &"Button"
+ShopSecondary/styles/normal = SubResource("steel_normal")
+ShopSecondary/styles/hover = SubResource("steel_hover")
+ShopSecondary/styles/pressed = SubResource("steel_pressed")
+ShopSecondary/styles/disabled = SubResource("steel_disabled")
+ShopSecondary/styles/hover_pressed = SubResource("steel_pressed")
+ShopSecondary/styles/focus = SubResource("Focus")
+ShopSecondary/colors/font_color = Color(0.96, 0.91, 0.79, 1)
+ShopSecondary/colors/font_hover_color = Color(0.96, 0.91, 0.79, 1)
+ShopSecondary/colors/font_focus_color = Color(0.96, 0.91, 0.79, 1)
+ShopSecondary/colors/font_pressed_color = Color(0.96, 0.91, 0.79, 1)
+ShopSecondary/colors/font_hover_pressed_color = Color(0.96, 0.91, 0.79, 1)
+ShopSecondary/colors/font_disabled_color = Color(0.58, 0.63, 0.59, 1)
+ShopQuiet/base_type = &"Button"
+ShopQuiet/styles/normal = SubResource("dark_normal")
+ShopQuiet/styles/hover = SubResource("dark_hover")
+ShopQuiet/styles/pressed = SubResource("dark_pressed")
+ShopQuiet/styles/disabled = SubResource("dark_disabled")
+ShopQuiet/styles/hover_pressed = SubResource("dark_pressed")
+ShopQuiet/styles/focus = SubResource("Focus")
+ShopQuiet/colors/font_color = Color(0.96, 0.91, 0.79, 1)
+ShopQuiet/colors/font_hover_color = Color(0.96, 0.91, 0.79, 1)
+ShopQuiet/colors/font_focus_color = Color(0.96, 0.91, 0.79, 1)
+ShopQuiet/colors/font_pressed_color = Color(0.96, 0.91, 0.79, 1)
+ShopQuiet/colors/font_hover_pressed_color = Color(0.96, 0.91, 0.79, 1)
+ShopQuiet/colors/font_disabled_color = Color(0.58, 0.63, 0.59, 1)
+default_font = SubResource("Regular")
+default_font_size = 17
+Label/colors/font_color = Color(0.96, 0.91, 0.79, 1)
+ShopTitle/base_type = &"Label"
+ShopTitle/fonts/font = SubResource("Bold")
+ShopStockRow/base_type = &"Button"
+PanelContainer/styles/panel = SubResource("Empty")
+VScrollBar/styles/scroll = SubResource("Track")
+ShopStockRow/styles/normal = SubResource("Empty")
+ShopStockRow/styles/hover = SubResource("Empty")
+ShopStockRow/styles/pressed = SubResource("Empty")
+ShopStockRow/styles/disabled = SubResource("Empty")
+ShopStockRow/styles/focus = SubResource("Empty")
+ShopStockRow/styles/hover_pressed = SubResource("Empty")
+VScrollBar/styles/grabber = SubResource("Thumb")
+VScrollBar/styles/grabber_highlight = SubResource("Thumb")
+VScrollBar/styles/grabber_pressed = SubResource("Thumb")

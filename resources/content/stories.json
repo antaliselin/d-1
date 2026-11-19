@@ -1,0 +1,2013 @@
+[
+	{
+		"id": "child",
+		"title": "门外的孩子",
+		"weight": 1.3,
+		"series": true,
+		"stages": [
+			{
+				"speaker": {
+					"name": "门外的孩子",
+					"title": "瘦得像根柴"
+				},
+				"lines": [
+					"……老板，你在吗？",
+					"我两天没吃东西了。我妈妈病着，我不敢空手回去。",
+					"给我点吃的，我明天还来。"
+				],
+				"delivery": {
+					"accepts": [
+						"food"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给他两件吃的",
+						"requiresDelivery": 2,
+						"effects": {
+							"reputation": 12,
+							"reason": "给了门外的孩子吃的"
+						},
+						"outcome": "他把吃的揣进怀里，跑两步又回头鞠了一躬。"
+					},
+					{
+						"id": "refuse",
+						"label": "关上门",
+						"ends": true,
+						"effects": {
+							"reputation": -10,
+							"reason": "没管门外的孩子"
+						},
+						"outcome": "门外安静了很久，才响起拖沓的脚步声。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "门外的孩子",
+					"title": "又来了"
+				},
+				"lines": [
+					"我回来了。",
+					"妈妈烧得厉害，我把吃的都给她了。",
+					"我不白要——擦货架、搬箱子，我都能干。只要一点药。"
+				],
+				"delivery": {
+					"accepts": [
+						"medical"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给他一件药",
+						"requiresDelivery": 1,
+						"effects": {
+							"reputation": 12,
+							"reason": "给孩子生病的妈妈送了药"
+						},
+						"outcome": "他攥着药跑远了，鞋底拍在碎石上的声音很急。"
+					},
+					{
+						"id": "refuse",
+						"label": "关上门",
+						"ends": true,
+						"effects": {
+							"reputation": -10,
+							"reason": "没管门外的孩子"
+						},
+						"outcome": "他站了一会儿，慢慢蹲下去，又站起来走了。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "门外的孩子",
+					"title": "妈妈退烧了"
+				},
+				"lines": [
+					"妈妈退烧了。",
+					"她让我把这个给你——家里最后一件值钱的东西。",
+					"以后我长大了，也来你这儿干活。"
+				],
+				"choices": [
+					{
+						"id": "accept",
+						"label": "收下礼物",
+						"effects": {
+							"reputation": 12,
+							"reason": "孩子一家记着你",
+							"gainItems": [
+								{
+									"itemId": "goldwatch",
+									"count": 1
+								}
+							]
+						},
+						"outcome": "金表有点旧，但擦得很亮。你把它收进柜台。"
+					},
+					{
+						"id": "decline",
+						"label": "让孩子留着",
+						"effects": {
+							"reputation": 10,
+							"reason": "没收孩子的礼"
+						},
+						"outcome": "他把金表攥回手心，用力点了点头。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "black-market",
+		"title": "兜帽下的买家",
+		"weight": 1.1,
+		"series": true,
+		"stages": [
+			{
+				"speaker": {
+					"name": "兜帽下的买家",
+					"title": "黑市掮客"
+				},
+				"lines": [
+					"听说你手里有些\"不该有\"的好东西。",
+					"我不问来路。一件值钱的玩意儿，换你 350 瓶盖。",
+					"现金，当面结。"
+				],
+				"delivery": {
+					"accepts": [
+						"luxury"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "sell",
+						"label": "卖给他",
+						"requiresDelivery": 1,
+						"effects": {
+							"money": 350,
+							"reputation": -10,
+							"reason": "和黑市做了买卖"
+						},
+						"outcome": "他把东西塞进内袋，数出瓶盖，一枚一枚推过来。"
+					},
+					{
+						"id": "decline",
+						"label": "不卖",
+						"ends": true,
+						"effects": {
+							"reputation": 10,
+							"reason": "没跟黑市打交道"
+						},
+						"outcome": "他耸耸肩，压了压帽檐，转身走了。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "兜帽下的买家",
+					"title": "又来了"
+				},
+				"lines": [
+					"上次那件东西，我老板很满意。",
+					"这回我要一件能干活的小工具。450，先给你看钱。",
+					"别让我等太久。"
+				],
+				"delivery": {
+					"accepts": [
+						"tool"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "sell",
+						"label": "卖给他",
+						"requiresDelivery": 1,
+						"effects": {
+							"money": 450,
+							"reputation": -10,
+							"reason": "又和黑市做了一笔"
+						},
+						"outcome": "他这次没数，直接把一小袋瓶盖丢在柜台上。"
+					},
+					{
+						"id": "decline",
+						"label": "不卖",
+						"ends": true,
+						"effects": {
+							"reputation": 10,
+							"reason": "没跟黑市打交道"
+						},
+						"outcome": "他看了你一会儿，把帽檐压得更低了。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "radio-station",
+		"title": "北岸中继站",
+		"weight": 1.2,
+		"series": true,
+		"stages": [
+			{
+				"speaker": {
+					"name": "阿岚",
+					"title": "北岸中继站"
+				},
+				"lines": [
+					"我就是上次电台里那个人。",
+					"中继站的塔基被风刮断了两根，得用结实的材料顶住。",
+					"你帮我这一把，我以后把黑鸦帮的动静都告诉你。"
+				],
+				"delivery": {
+					"accepts": [
+						"material"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给他两件材料",
+						"requiresDelivery": 2,
+						"effects": {
+							"reputation": 12,
+							"gainItems": [
+								{
+									"itemId": "parts",
+									"count": 1
+								}
+							],
+							"reason": "帮北岸中继站修了塔基"
+						},
+						"outcome": "他扛着材料钻进风里，回头朝你比了个大拇指。"
+					},
+					{
+						"id": "refuse",
+						"label": "不掺和",
+						"ends": true,
+						"effects": {
+							"reputation": -12,
+							"reason": "没帮北岸中继站"
+						},
+						"outcome": "电流声里只剩一句“算了”，然后彻底安静。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "阿岚",
+					"title": "北岸中继站"
+				},
+				"lines": [
+					"塔基稳住了，发射机还差一个能用的部件。",
+					"工具、瞄准镜、或者别的小玩意儿，能拆的都行。",
+					"修好之后，这条线上的消息就归你了。"
+				],
+				"delivery": {
+					"accepts": [
+						"tool"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给他一件工具",
+						"requiresDelivery": 1,
+						"effects": {
+							"reputation": 12,
+							"gainItems": [
+								{
+									"itemId": "scope",
+									"count": 1
+								}
+							],
+							"reason": "帮中继站修好了发射机"
+						},
+						"outcome": "他抱着部件爬上塔，半个小时后，整条街的收音机都响了一下。"
+					},
+					{
+						"id": "refuse",
+						"label": "不掺和",
+						"ends": true,
+						"effects": {
+							"reputation": -12,
+							"reason": "没帮北岸中继站"
+						},
+						"outcome": "他没有再求，只是把频率调到了别的方向。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "阿岚",
+					"title": "北岸中继站"
+				},
+				"lines": [
+					"频率通了。黑鸦帮下回什么时候来，我听得一清二楚。",
+					"这条消息可以帮你提前关门，也可以卖个好价钱。",
+					"你选。"
+				],
+				"choices": [
+					{
+						"id": "take-intel",
+						"label": "收下情报",
+						"effects": {
+							"money": 450,
+							"reputation": 15,
+							"rentShift": {
+								"kind": "delay",
+								"days": 2
+							},
+							"reason": "中继站帮你拖住了黑鸦帮"
+						},
+						"outcome": "阿岚在频率里动了点手脚，黑鸦帮的传令晚了两天。"
+					},
+					{
+						"id": "sell-intel",
+						"label": "把情报卖给黑市",
+						"effects": {
+							"money": 700,
+							"reputation": -18,
+							"rentShift": {
+								"kind": "delay",
+								"days": 1
+							},
+							"reason": "把中继站的情报卖了"
+						},
+						"outcome": "钱很厚。阿岚那边，从此再没响起过你的呼叫。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "lost-scavenger",
+		"title": "失踪的拾荒者",
+		"weight": 1.2,
+		"series": true,
+		"stages": [
+			{
+				"speaker": {
+					"name": "小满",
+					"title": "替你去过北边的人"
+				},
+				"lines": [
+					"老板，我找到他的脚印了。",
+					"他摔进了一个塌方的坑，腿卡在钢筋里。",
+					"给我点药，我先下去把他稳住。"
+				],
+				"delivery": {
+					"accepts": [
+						"medical"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给他一件药",
+						"requiresDelivery": 1,
+						"effects": {
+							"reputation": 10,
+							"reason": "派人去找失踪的拾荒者"
+						},
+						"outcome": "小满揣着药钻进了废墟。"
+					},
+					{
+						"id": "refuse",
+						"label": "不找了",
+						"ends": true,
+						"effects": {
+							"reputation": -10,
+							"reason": "放弃了失踪的拾荒者"
+						},
+						"outcome": "小满站了一会儿，把绳子收了回去。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "小满",
+					"title": "替你去过北边的人"
+				},
+				"lines": [
+					"人还活着，但得把压在上面的东西挪开。",
+					"我们得在下面撑一天，需要吃的，也需要一点能撬动钢筋的家伙。",
+					"你给什么，我就带什么下去。"
+				],
+				"delivery": {
+					"accepts": [
+						"food"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给他两件吃的",
+						"requiresDelivery": 2,
+						"effects": {
+							"reputation": 10,
+							"reason": "给救援的人送了吃的"
+						},
+						"outcome": "小满把吃的塞进背包，转身又钻回了坑里。"
+					},
+					{
+						"id": "refuse",
+						"label": "不救了",
+						"ends": true,
+						"effects": {
+							"reputation": -12,
+							"reason": "放弃了失踪的拾荒者"
+						},
+						"outcome": "下面再没有敲击声传上来。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "失踪的拾荒者",
+					"title": "被拖回来的人"
+				},
+				"lines": [
+					"……我以为我死定了。",
+					"你救了我。这条命，以后就给你干活。",
+					"或者，你要是嫌我废，就把我背包里的东西留下。"
+				],
+				"choices": [
+					{
+						"id": "rescue",
+						"label": "带他回来",
+						"requiresFreeSurvivor": true,
+						"effects": {
+							"hireScavenger": {},
+							"money": 200,
+							"reputation": 24,
+							"reason": "救回了一位拾荒者"
+						},
+						"outcome": "他拄着钢筋站起来，一瘸一拐地跟你回了店。"
+					},
+					{
+						"id": "loot",
+						"label": "只留下他的背包",
+						"effects": {
+							"gainItems": [
+								{
+									"itemId": "rifle",
+									"count": 1
+								},
+								{
+									"itemId": "ammo_rifle",
+									"count": 20
+								}
+							],
+							"reputation": -10,
+							"reason": "只拿了失踪者的遗物"
+						},
+						"outcome": "背包里有一把还能用的步枪和半盒子弹。他没再说话。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "old-soldier",
+		"title": "最后的老兵",
+		"weight": 1.1,
+		"series": true,
+		"stages": [
+			{
+				"speaker": {
+					"name": "独眼老兵",
+					"title": "在门口坐了一下午"
+				},
+				"lines": [
+					"我不白坐。",
+					"给我两口吃的，我告诉你哪条街还有能用的东西。",
+					"我打仗的时候，鼻子比狗灵。"
+				],
+				"delivery": {
+					"accepts": [
+						"food"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给他两件吃的",
+						"requiresDelivery": 2,
+						"effects": {
+							"reputation": 12,
+							"reason": "请老兵吃了一顿"
+						},
+						"outcome": "他吃得很快，然后把一张手绘的街区图推到你面前。"
+					},
+					{
+						"id": "refuse",
+						"label": "让他走",
+						"ends": true,
+						"effects": {
+							"reputation": -12,
+							"reason": "赶走了门口的老兵"
+						},
+						"outcome": "他站起来，敬了个不太标准的礼，走了。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "独眼老兵",
+					"title": "带回来一个坏消息"
+				},
+				"lines": [
+					"北边的路被黑鸦帮封了。",
+					"我认识一个管仓库的，拿点值钱的东西去，他能给咱们留一条缝。",
+					"酒、烟、表，什么都行。"
+				],
+				"delivery": {
+					"accepts": [
+						"luxury"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给他一件值钱的",
+						"requiresDelivery": 1,
+						"effects": {
+							"reputation": 12,
+							"gainItems": [
+								{
+									"itemId": "ammo_rifle",
+									"count": 20
+								}
+							],
+							"reason": "老兵替你打通了北边的路"
+						},
+						"outcome": "他带回来一条能走的路，还有一盒压满的步枪弹。"
+					},
+					{
+						"id": "refuse",
+						"label": "不折腾了",
+						"ends": true,
+						"effects": {
+							"reputation": -10,
+							"reason": "没跟老兵走这一趟"
+						},
+						"outcome": "他把帽檐压低，靠在墙边闭上了那只独眼。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "独眼老兵",
+					"title": "最后一次站在你柜台前"
+				},
+				"lines": [
+					"我这条腿走不远了，但手还能动。",
+					"你要是愿意，我留下来替你看着店。",
+					"不愿意的话，给我 300 瓶盖，我这就走。"
+				],
+				"choices": [
+					{
+						"id": "hire",
+						"label": "留下他",
+						"requiresFreeSurvivor": true,
+						"effects": {
+							"hireScavenger": {},
+							"gainItems": [
+								{
+									"itemId": "rifle",
+									"count": 1
+								}
+							],
+							"reputation": 24,
+							"reason": "收留了独眼老兵"
+						},
+						"outcome": "他把自己的步枪靠在柜台边，说：“以后这店有我一半。”"
+					},
+					{
+						"id": "payoff",
+						"label": "给他 300 瓶盖",
+						"requiresMoney": 300,
+						"effects": {
+							"money": -300,
+							"reputation": 10,
+							"reason": "送走了老兵"
+						},
+						"outcome": "他收下钱，没数，转身走进夕阳里。"
+					},
+					{
+						"id": "decline",
+						"label": "婉拒",
+						"effects": {
+							"reputation": -10,
+							"reason": "婉拒了老兵"
+						},
+						"outcome": "他点点头，把步枪重新背回肩上，慢慢走远了。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "underground-clinic",
+		"title": "地下诊所",
+		"weight": 1.1,
+		"series": true,
+		"stages": [
+			{
+				"speaker": {
+					"name": "苏医生",
+					"title": "地下诊所"
+				},
+				"lines": [
+					"我在地下室开了个诊所，缺药。",
+					"你货架上有医疗用品，匀我两份，我记你一个人情。",
+					"这条街上，能救人的人不多了。"
+				],
+				"delivery": {
+					"accepts": [
+						"medical"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给她两份医疗用品",
+						"requiresDelivery": 2,
+						"effects": {
+							"reputation": 12,
+							"reason": "给地下诊所送了药"
+						},
+						"outcome": "她把药一支支码进铁盒，动作很轻。"
+					},
+					{
+						"id": "refuse",
+						"label": "不掺和",
+						"ends": true,
+						"effects": {
+							"reputation": -12,
+							"reason": "没帮地下诊所"
+						},
+						"outcome": "她点点头，把门重新关上。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "苏医生",
+					"title": "地下诊所"
+				},
+				"lines": [
+					"有个病人感染了，普通的药压不住。",
+					"再给我一份医疗用品，我试试。",
+					"救回来，他会记得你的店。"
+				],
+				"delivery": {
+					"accepts": [
+						"medical"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "再给她一份",
+						"requiresDelivery": 1,
+						"effects": {
+							"reputation": 12,
+							"gainItems": [
+								{
+									"itemId": "antibiotics",
+									"count": 1
+								}
+							],
+							"reason": "帮地下诊所救回一个病人"
+						},
+						"outcome": "她熬了一夜，天亮时病人睁开了眼。"
+					},
+					{
+						"id": "refuse",
+						"label": "到此为止",
+						"ends": true,
+						"effects": {
+							"reputation": -10,
+							"reason": "没再帮地下诊所"
+						},
+						"outcome": "她没抬头，只把手术灯调暗了一格。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "苏医生",
+					"title": "地下诊所"
+				},
+				"lines": [
+					"这条街上的伤者，以后可以优先送到你这里。",
+					"我可以给你留一批药，也可以让黑鸦帮少来烦你一次。",
+					"你选一个。"
+				],
+				"choices": [
+					{
+						"id": "protect",
+						"label": "让她帮你挡一次",
+						"effects": {
+							"money": 300,
+							"reputation": 18,
+							"rentShift": {
+								"kind": "delay",
+								"days": 1
+							},
+							"reason": "地下诊所帮你挡了黑鸦帮一次"
+						},
+						"outcome": "苏医生托人带了句话，黑鸦帮这次晚来了一天。"
+					},
+					{
+						"id": "fee",
+						"label": "收下诊金",
+						"effects": {
+							"money": 600,
+							"reputation": 10,
+							"reason": "收了地下诊所的诊金"
+						},
+						"outcome": "她把一袋瓶盖推过来，说：“两清。”"
+					},
+					{
+						"id": "hire",
+						"label": "请她留下",
+						"requiresFreeSurvivor": true,
+						"effects": {
+							"hireScavenger": {},
+							"reputation": 24,
+							"reason": "请苏医生留下帮忙"
+						},
+						"outcome": "她看了看地下室，又看了看你，终于把手术灯提了起来。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "debt-ledger",
+		"title": "收租人的账本",
+		"weight": 1.1,
+		"series": true,
+		"stages": [
+			{
+				"speaker": {
+					"name": "账房先生",
+					"title": "黑鸦帮的人"
+				},
+				"lines": [
+					"我的账本丢了。",
+					"上面记着这条街每一家铺子的数。",
+					"你要是捡到了，最好当没看见。"
+				],
+				"choices": [
+					{
+						"id": "buy",
+						"label": "花 300 瓶盖买下",
+						"requiresMoney": 300,
+						"effects": {
+							"money": -300,
+							"reputation": 10,
+							"reason": "从账房手里买下账本"
+						},
+						"outcome": "他把账本塞进你手里，走得比来时快。"
+					},
+					{
+						"id": "steal",
+						"label": "直接抢走",
+						"effects": {
+							"reputation": -15,
+							"reason": "抢了黑鸦帮的账本"
+						},
+						"outcome": "你抢到账本，也记住了他临走时的眼神。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "账本上的字",
+					"title": "黑鸦帮的流水"
+				},
+				"lines": [
+					"每一笔收租、每一趟货、每一个被搬空的铺子，都写在上面。",
+					"这东西能救命，也能要命。",
+					"你打算怎么办？"
+				],
+				"choices": [
+					{
+						"id": "burn",
+						"label": "烧掉账本",
+						"effects": {
+							"reputation": 18,
+							"rentShift": {
+								"kind": "delay",
+								"days": 2
+							},
+							"reason": "烧了黑鸦帮的账本"
+						},
+						"outcome": "火苗舔上纸页，黑鸦帮的收租队晚了两天才来。"
+					},
+					{
+						"id": "return",
+						"label": "还给黑鸦帮",
+						"effects": {
+							"money": 500,
+							"reputation": 12,
+							"rentShift": {
+								"kind": "advance"
+							},
+							"reason": "把账本还给了黑鸦帮"
+						},
+						"outcome": "账房翻了两页，脸色稍缓：“明天我们再来。”"
+					},
+					{
+						"id": "sell",
+						"label": "卖给黑市",
+						"effects": {
+							"money": 800,
+							"reputation": -21,
+							"rentShift": {
+								"kind": "delay",
+								"days": 1
+							},
+							"reason": "把账本卖给了黑市"
+						},
+						"outcome": "黑市的人拿走账本，第二天黑鸦帮就找上了门。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "radio-voice",
+		"title": "失频电台",
+		"weight": 1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "沙沙的电流声",
+					"title": "北岸中继站"
+				},
+				"lines": [
+					"……有人能听见吗？这里是北岸中继站。",
+					"我的备用电池撑不过今晚了。谁有富余的材料，到老水塔下面找我。",
+					"不白拿，我拿一个还能用的坐标换。"
+				],
+				"delivery": {
+					"accepts": [
+						"material"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "answer",
+						"label": "给他一件材料",
+						"requiresDelivery": 1,
+						"effects": {
+							"money": 250,
+							"reputation": 10,
+							"reason": "帮电台续了电"
+						},
+						"outcome": "电流声稳了下来。他说下次会给你留个坐标。"
+					},
+					{
+						"id": "ignore",
+						"label": "不理会",
+						"effects": {
+							"reputation": -10,
+							"reason": "没理会电台的求救"
+						},
+						"outcome": "电流声渐渐弱下去，最后只剩杂音。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "courier",
+		"title": "还在送信的人",
+		"weight": 1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "瘸腿的邮差",
+					"title": "还在送信的人"
+				},
+				"lines": [
+					"别紧张，我不抢东西。",
+					"这封信要送到北边，可我这条腿走不动了。",
+					"给我点药或者一口吃的，我替你跑完这趟。"
+				],
+				"delivery": {
+					"accepts": [
+						"medical",
+						"food"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给他两件",
+						"requiresDelivery": 2,
+						"effects": {
+							"money": 250,
+							"reputation": 10,
+							"reason": "帮邮差跑了这趟信"
+						},
+						"outcome": "他把信揣进内袋，一瘸一拐地往北边去了。"
+					},
+					{
+						"id": "refuse",
+						"label": "让他走",
+						"effects": {
+							"reputation": -10,
+							"reason": "没帮瘸腿的邮差"
+						},
+						"outcome": "他点点头，没再说什么，转身消失在风里。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "roof-leak",
+		"title": "漏水的屋顶",
+		"weight": 1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "隔壁的老太太",
+					"title": "住在隔壁的幸存者"
+				},
+				"lines": [
+					"你这屋顶漏了三天了，夜里滴答滴答的。",
+					"我男人以前是木匠，我还能搭把手。",
+					"给我两块能堵漏的材料，我帮你补上。"
+				],
+				"delivery": {
+					"accepts": [
+						"material"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给她两件材料",
+						"requiresDelivery": 2,
+						"effects": {
+							"reputation": 12,
+							"reason": "帮隔壁修了屋顶"
+						},
+						"outcome": "她踩在凳子上敲敲打打，天黑前把最后一块补上了。"
+					},
+					{
+						"id": "refuse",
+						"label": "自己想办法",
+						"effects": {
+							"reputation": -10,
+							"reason": "没修屋顶"
+						},
+						"outcome": "她叹了口气，把工具收回围裙里。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "supply-drop",
+		"title": "空投物资",
+		"weight": 1.2,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "远处的哨声",
+					"title": "天上掉下来的东西"
+				},
+				"lines": [
+					"一顶降落伞挂在废弃水塔上，下面绑着两个箱子。",
+					"风很大，箱子晃得厉害。",
+					"附近没有别人。"
+				],
+				"choices": [
+					{
+						"id": "grab",
+						"label": "爬上去翻空投",
+						"effects": {
+							"money": 300,
+							"reputation": 10,
+							"gainItems": [
+								{
+									"itemId": "canned_food",
+									"count": 3
+								},
+								{
+									"itemId": "ammo_pistol",
+									"count": 48
+								}
+							],
+							"reason": "捡到了一批空投"
+						},
+						"outcome": "你拆开箱子，里面有罐头、子弹，还有一卷用油纸包好的瓶盖。"
+					},
+					{
+						"id": "share",
+						"label": "分给附近的人",
+						"effects": {
+							"money": 100,
+							"reputation": 15,
+							"reason": "把空投分给了邻里"
+						},
+						"outcome": "箱子很快空了，但这条街上的人看你的眼神变了。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "radio-lottery",
+		"title": "深夜抽奖",
+		"weight": 1.1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "电台主持人",
+					"title": "还在播音的频道"
+				},
+				"lines": [
+					"今晚的幸运听众，可以报出你的店名。",
+					"奖品是一台还能响的收音机，外加一袋瓶盖。",
+					"只限一个名额。"
+				],
+				"choices": [
+					{
+						"id": "enter",
+						"label": "报出店名",
+						"effects": {
+							"money": 400,
+							"reputation": 10,
+							"gainItems": [
+								{
+									"itemId": "radio",
+									"count": 1
+								}
+							],
+							"reason": "中了电台的抽奖"
+						},
+						"outcome": "主持人念了三遍你的店名。第二天，门口多了几个新面孔。"
+					},
+					{
+						"id": "pass",
+						"label": "把名额让给别人",
+						"effects": {
+							"reputation": 10,
+							"reason": "把抽奖名额让了出去"
+						},
+						"outcome": "你没报名字。那天夜里，隔壁的灯亮到了很晚。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "wounded-scavenger",
+		"title": "受伤的拾荒者",
+		"weight": 1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "受伤的拾荒者",
+					"title": "靠在门框上"
+				},
+				"lines": [
+					"别……别关门。",
+					"我在北边被什么东西咬了一口，腿肿得走不动了。",
+					"给我点药，我什么都能干。"
+				],
+				"delivery": {
+					"accepts": [
+						"medical"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "hire",
+						"label": "救他，留下他",
+						"requiresDelivery": 1,
+						"requiresFreeSurvivor": true,
+						"effects": {
+							"hireScavenger": {},
+							"reputation": 18,
+							"reason": "收留了受伤的拾荒者"
+						},
+						"outcome": "你替他清了伤口。他咬着牙站起来，说以后替你跑腿。"
+					},
+					{
+						"id": "pay",
+						"label": "给他药，让他走",
+						"requiresDelivery": 1,
+						"effects": {
+							"money": 200,
+							"reputation": 10,
+							"reason": "给受伤的拾荒者留了药"
+						},
+						"outcome": "他把身上所有的瓶盖都掏给了你，一瘸一拐地走了。"
+					},
+					{
+						"id": "ignore",
+						"label": "不管",
+						"effects": {
+							"reputation": -12,
+							"reason": "把受伤的拾荒者赶走了"
+						},
+						"outcome": "门关上之后，门外很久没有动静。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "plague",
+		"title": "疫病",
+		"weight": 1.1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "咳嗽的人",
+					"title": "蜷在货架后面"
+				},
+				"lines": [
+					"我不是故意的……我实在没地方去了。",
+					"这病会过人，我知道。",
+					"给我点药，或者让我走。"
+				],
+				"delivery": {
+					"accepts": [
+						"medical"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "treat",
+						"label": "掏药救人",
+						"requiresDelivery": 2,
+						"effects": {
+							"reputation": 15,
+							"reason": "冒险收治了疫病病人"
+						},
+						"outcome": "你把他隔离在库房，两天后，咳嗽声停了。"
+					},
+					{
+						"id": "expel",
+						"label": "把人送走",
+						"requiresHomeScavenger": true,
+						"effects": {
+							"loseScavenger": true,
+							"money": 150,
+							"reputation": -10,
+							"reason": "把染病的拾荒者送走了"
+						},
+						"outcome": "你让一位拾荒者把他架出了城。回来的人没再提这件事。"
+					},
+					{
+						"id": "lockdown",
+						"label": "封店消毒",
+						"effects": {
+							"money": -300,
+							"reputation": 10,
+							"reason": "封店处理了疫病"
+						},
+						"outcome": "店关了两天，货架被药水擦得发白。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "informer",
+		"title": "黑鸦帮的探子",
+		"weight": 1.2,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "黑鸦帮的探子",
+					"title": "在街角站了很久"
+				},
+				"lines": [
+					"别紧张，我不是来收租的。",
+					"下回什么时候来，我说了算。",
+					"就看你懂不懂规矩。"
+				],
+				"choices": [
+					{
+						"id": "bribe",
+						"label": "塞给他 200 瓶盖",
+						"requiresMoney": 200,
+						"effects": {
+							"money": -200,
+							"reputation": 10,
+							"rentShift": {
+								"kind": "delay",
+								"days": 2
+							},
+							"reason": "买通了黑鸦帮的探子"
+						},
+						"outcome": "他掂了掂钱袋，说：“这两天别开门太早。”"
+					},
+					{
+						"id": "hand-over",
+						"label": "把他交给黑鸦帮",
+						"effects": {
+							"money": 300,
+							"reputation": -12,
+							"rentShift": {
+								"kind": "advance"
+							},
+							"reason": "把探子卖给了黑鸦帮"
+						},
+						"outcome": "黑鸦帮收了人，也收下了你的“诚意”。明天他们就来。"
+					},
+					{
+						"id": "dismiss",
+						"label": "把他赶走",
+						"effects": {
+							"reputation": -10,
+							"reason": "赶走了黑鸦帮的探子"
+						},
+						"outcome": "他笑了笑，没有争辩，慢慢退进了阴影里。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "caravan",
+		"title": "废土商队",
+		"weight": 1.1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "商队领队",
+					"title": "三辆改装车"
+				},
+				"lines": [
+					"路过，讨杯水。",
+					"我车上有工具、有药，也有你想不到的东西。",
+					"你拿什么换？"
+				],
+				"delivery": {
+					"accepts": [
+						"luxury"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "buy",
+						"label": "花 300 瓶盖买货",
+						"requiresMoney": 300,
+						"effects": {
+							"money": -300,
+							"reputation": 10,
+							"gainItems": [
+								{
+									"itemId": "toolbox",
+									"count": 1
+								},
+								{
+									"itemId": "medkit",
+									"count": 1
+								}
+							],
+							"reason": "和废土商队做了买卖"
+						},
+						"outcome": "领队从车里拖出一只工具箱和一个医疗包，收钱时笑得很客气。"
+					},
+					{
+						"id": "sell",
+						"label": "卖他一件奢侈品",
+						"requiresDelivery": 1,
+						"effects": {
+							"money": 500,
+							"reputation": -10,
+							"reason": "把奢侈品卖给了商队"
+						},
+						"outcome": "领队对着光看了很久，最后给出一个很难拒绝的价。"
+					},
+					{
+						"id": "skip",
+						"label": "不做买卖",
+						"effects": {
+							"reputation": 0
+						},
+						"outcome": "商队没多留，卷起尘土走了。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "dog-pack",
+		"title": "饥饿的狗群",
+		"weight": 1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "领头的黑狗",
+					"title": "堵在巷口"
+				},
+				"lines": [
+					"五六条狗堵在巷口，没有叫，只是看着你手里的袋子。",
+					"它们的肋骨根根分明。",
+					"后面没有别的路。"
+				],
+				"delivery": {
+					"accepts": [
+						"food"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "feed",
+						"label": "喂饱它们",
+						"requiresDelivery": 2,
+						"effects": {
+							"reputation": 12,
+							"gainItems": [
+								{
+									"itemId": "leather",
+									"count": 2
+								},
+								{
+									"itemId": "jerky",
+									"count": 2
+								}
+							],
+							"reason": "喂了巷口的狗群"
+						},
+						"outcome": "黑狗叼来两块鞣好的皮子，放在你脚边，然后让开了路。"
+					},
+					{
+						"id": "follow",
+						"label": "跟着它们去找东西",
+						"effects": {
+							"money": 250,
+							"reputation": 10,
+							"gainItems": [
+								{
+									"itemId": "leather",
+									"count": 2
+								}
+							],
+							"reason": "跟着狗群找到了一处藏货"
+						},
+						"outcome": "狗群把你带到一处塌掉的仓库，里面还有没被翻过的皮子。"
+					},
+					{
+						"id": "chase",
+						"label": "捡石头赶走",
+						"effects": {
+							"reputation": -10,
+							"reason": "赶走了饥饿的狗群"
+						},
+						"outcome": "狗群散进巷子深处，有一只回头看了你很久。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "suspicious-package",
+		"title": "可疑的包裹",
+		"weight": 1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "没有署名的包裹",
+					"title": "放在柜台角落"
+				},
+				"lines": [
+					"油纸包得严严实实，上面没有名字。",
+					"摇一摇，有金属碰撞的声音。",
+					"不知道是谁放在这儿的。"
+				],
+				"choices": [
+					{
+						"id": "open",
+						"label": "拆开看看",
+						"effects": {
+							"money": 350,
+							"reputation": -10,
+							"gainItems": [
+								{
+									"itemId": "goldwatch",
+									"count": 1
+								}
+							],
+							"reason": "拆了一个来路不明的包裹"
+						},
+						"outcome": "里面是一块金表和一卷瓶盖。第二天，街上有个人一直在看你的店。"
+					},
+					{
+						"id": "hand",
+						"label": "交给黑鸦帮",
+						"effects": {
+							"money": 250,
+							"reputation": 12,
+							"rentShift": {
+								"kind": "delay",
+								"days": 1
+							},
+							"reason": "把可疑包裹交给了黑鸦帮"
+						},
+						"outcome": "黑鸦帮的人收了包裹，说这次算你懂事，晚一天来。"
+					},
+					{
+						"id": "bury",
+						"label": "原封不动埋掉",
+						"effects": {
+							"reputation": 10,
+							"reason": "埋掉了来路不明的包裹"
+						},
+						"outcome": "你在后院挖了个坑。夜里，街道很安静。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "generator",
+		"title": "漏电的发电机",
+		"weight": 1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "发电机",
+					"title": "在墙角嗡嗡响"
+				},
+				"lines": [
+					"线皮裂了，火花一跳一跳。",
+					"整条街的灯都跟着闪。",
+					"修好它，今晚就能用上电。"
+				],
+				"delivery": {
+					"accepts": [
+						"tool"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "repair",
+						"label": "修好它",
+						"requiresDelivery": 1,
+						"effects": {
+							"money": 400,
+							"reputation": 10,
+							"rentShift": {
+								"kind": "delay",
+								"days": 1
+							},
+							"reason": "修好了街区的发电机"
+						},
+						"outcome": "灯稳定下来的那一刻，整条街都松了口气。黑鸦帮晚来了一天。"
+					},
+					{
+						"id": "scrap",
+						"label": "拆零件卖",
+						"effects": {
+							"money": 250,
+							"gainItems": [
+								{
+									"itemId": "car_battery",
+									"count": 1
+								}
+							],
+							"reputation": 0,
+							"reason": "拆了发电机卖零件"
+						},
+						"outcome": "你拆下还能用的蓄电池，剩下的铜线卖了个好价。"
+					},
+					{
+						"id": "ignore",
+						"label": "不管",
+						"effects": {
+							"reputation": -10,
+							"reason": "没管漏电的发电机"
+						},
+						"outcome": "火花闪了一夜，第二天整条街都黑了。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "funeral",
+		"title": "拾荒者的遗物",
+		"weight": 1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "没有名字的坟",
+					"title": "城外的新土"
+				},
+				"lines": [
+					"有人在城外埋了一个拾荒者。",
+					"坟边放着他的背包，拉链没拉。",
+					"没人知道他从哪儿来。"
+				],
+				"choices": [
+					{
+						"id": "keep",
+						"label": "收下遗物",
+						"effects": {
+							"money": 200,
+							"reputation": -10,
+							"gainItems": [
+								{
+									"itemId": "rifle",
+									"count": 1
+								},
+								{
+									"itemId": "ammo_rifle",
+									"count": 30
+								}
+							],
+							"reason": "拿走了无名拾荒者的遗物"
+						},
+						"outcome": "背包里有一把步枪和三十发子弹。你把土重新踩实了。"
+					},
+					{
+						"id": "grave",
+						"label": "给他立块碑",
+						"effects": {
+							"money": -300,
+							"reputation": 21,
+							"reason": "给无名拾荒者立了碑"
+						},
+						"outcome": "碑上只有一句话：“他来过。”这条街上的人记住了你的店。"
+					},
+					{
+						"id": "family",
+						"label": "把东西交给他的家人",
+						"effects": {
+							"money": 100,
+							"reputation": 15,
+							"reason": "把遗物还给了拾荒者的家人"
+						},
+						"outcome": "一个瘦小的女人接过背包，没哭，只是反复说谢谢。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "night-thief",
+		"title": "夜里的贼",
+		"weight": 1,
+		"series": false,
+		"stages": [
+			{
+				"speaker": {
+					"name": "柜台后的动静",
+					"title": "半夜"
+				},
+				"lines": [
+					"你听见货架后面有东西被拖动的声音。",
+					"一盏灯亮了，又灭了。",
+					"有人从后窗翻了出去。"
+				],
+				"choices": [
+					{
+						"id": "chase",
+						"label": "追出去",
+						"effects": {
+							"money": -200,
+							"reputation": 12,
+							"gainItems": [
+								{
+									"itemId": "knife",
+									"count": 1
+								}
+							],
+							"reason": "追回了夜里的贼"
+						},
+						"outcome": "你追了两条街，抢回一把刀，也丢了一些瓶盖。"
+					},
+					{
+						"id": "pay",
+						"label": "破财免灾",
+						"effects": {
+							"money": -400,
+							"reason": "被夜里的贼顺走了瓶盖"
+						},
+						"outcome": "天亮时，柜台底下空了一格。"
+					},
+					{
+						"id": "trap",
+						"label": "设陷阱",
+						"effects": {
+							"money": 200,
+							"reputation": 10,
+							"gainItems": [
+								{
+									"itemId": "crowbar",
+									"count": 1
+								}
+							],
+							"loseItems": [
+								{
+									"itemId": "canned_food",
+									"count": 3
+								}
+							],
+							"reason": "用陷阱抓住了夜里的贼"
+						},
+						"outcome": "陷阱咬住了他的裤脚。他丢下撬棍和瓶盖，翻窗跑了。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "water-ledger",
+		"title": "水塔的账本",
+		"weight": 2,
+		"series": true,
+		"act": "post",
+		"stages": [
+			{
+				"speaker": {
+					"name": "地下室的水声",
+					"title": "地契下面还有一层"
+				},
+				"lines": [
+					"地契背面画着一条早就该停的水管。",
+					"你撬开库房的地板，下面是一台还在转的旧水泵。",
+					"泵房要工具才能继续拆。"
+				],
+				"delivery": {
+					"accepts": [
+						"tool"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "open",
+						"label": "拆开泵房",
+						"requiresDelivery": 1,
+						"effects": {
+							"intel": 1,
+							"reason": "查到了水泵的来历"
+						},
+						"outcome": "泵壳里刻着水塔议会的编号。"
+					},
+					{
+						"id": "stop",
+						"label": "先不碰",
+						"ends": true,
+						"effects": {
+							"reputation": -10,
+							"reason": "没敢碰地下室的水泵"
+						},
+						"outcome": "你把地板重新盖上，水声在脚下响了一夜。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "旧账本",
+					"title": "水塔议会"
+				},
+				"lines": [
+					"一本泡烂的账本，记着这条街每一户的水费。",
+					"最后一页写着一个名字：黑鸦帮，代收。",
+					"纸页粘在一起，需要材料慢慢揭。"
+				],
+				"delivery": {
+					"accepts": [
+						"material"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "read",
+						"label": "把账本拆开",
+						"requiresDelivery": 2,
+						"effects": {
+							"intel": 1,
+							"reason": "读完了水塔议会的旧账"
+						},
+						"outcome": "你抄下了三个名字，和一条通往水塔的检修路线。"
+					},
+					{
+						"id": "stop",
+						"label": "不看了",
+						"ends": true,
+						"effects": {
+							"reputation": -10,
+							"reason": "没再查水塔的账"
+						},
+						"outcome": "账本在潮气里彻底烂成了纸浆。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "阀门密码",
+					"title": "最后一段"
+				},
+				"lines": [
+					"账本最后一页夹着一把小钥匙。",
+					"泵房最里面还有一道铁门，门后是总阀门。",
+					"你只差最后一点药，给守门的人换一条命。"
+				],
+				"delivery": {
+					"accepts": [
+						"medical"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "open",
+						"label": "打开铁门",
+						"requiresDelivery": 2,
+						"effects": {
+							"intel": 1,
+							"reason": "拿到了总阀门的密码"
+						},
+						"outcome": "铁门后的阀门还在，锈得很厉害，但能转。"
+					},
+					{
+						"id": "stop",
+						"label": "到此为止",
+						"ends": true,
+						"effects": {
+							"reputation": -10,
+							"reason": "没打开总阀门"
+						},
+						"outcome": "你把钥匙收回口袋，水声继续在墙里响。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "district-voices",
+		"title": "街坊的名单",
+		"weight": 1.8,
+		"series": true,
+		"act": "post",
+		"stages": [
+			{
+				"speaker": {
+					"name": "楼下的老太太",
+					"title": "来讨水"
+				},
+				"lines": [
+					"水塔议会把水价又抬了。",
+					"楼里还有孩子，能不能先借点吃的？",
+					"我们不是白拿，街上谁家有事，我们都记得。"
+				],
+				"delivery": {
+					"accepts": [
+						"food"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给她两件吃的",
+						"requiresDelivery": 2,
+						"effects": {
+							"ally": 1,
+							"reputation": 15,
+							"reason": "帮楼里凑了吃的"
+						},
+						"outcome": "她提着袋子下楼，楼道里第一次有人跟你打招呼。"
+					},
+					{
+						"id": "refuse",
+						"label": "关上门",
+						"ends": true,
+						"effects": {
+							"reputation": -12,
+							"reason": "没帮楼里的街坊"
+						},
+						"outcome": "门外的脚步声停了一会儿，慢慢远了。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "修管道的年轻人",
+					"title": "街坊"
+				},
+				"lines": [
+					"泵房的水管漏了，我能修。",
+					"但没有药，我手上的口子会烂。",
+					"你给我一点药，我替这条街把管子接上。"
+				],
+				"delivery": {
+					"accepts": [
+						"medical"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "help",
+						"label": "给他一份药",
+						"requiresDelivery": 1,
+						"effects": {
+							"ally": 1,
+							"reputation": 15,
+							"reason": "帮街坊修了水管"
+						},
+						"outcome": "他缠好手，钻进泵房，水声稳了下来。"
+					},
+					{
+						"id": "refuse",
+						"label": "让他走",
+						"ends": true,
+						"effects": {
+							"reputation": -12,
+							"reason": "没帮街坊修水管"
+						},
+						"outcome": "他看了看自己的手，把工具收回了包里。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "街坊们",
+					"title": "第一次坐在一起"
+				},
+				"lines": [
+					"水泵修好了，水塔议会却说是他们的。",
+					"这条街的人第一次坐在一起。",
+					"你愿意把店拿出来，和大家一起守吗？"
+				],
+				"delivery": {
+					"accepts": [
+						"material"
+					],
+					"need": 2
+				},
+				"choices": [
+					{
+						"id": "ally",
+						"label": "把店变成街坊的",
+						"requiresDelivery": 2,
+						"effects": {
+							"ally": 1,
+							"reputation": 20,
+							"reason": "和街坊站到了一起"
+						},
+						"outcome": "名单钉在柜台上，下面按了一排手印。"
+					},
+					{
+						"id": "refuse",
+						"label": "再想想",
+						"ends": true,
+						"effects": {
+							"reputation": -10,
+							"reason": "没答应街坊"
+						},
+						"outcome": "大家没说什么，起身各自散了。"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "gang-remnants",
+		"title": "黑鸦残部",
+		"weight": 2,
+		"series": true,
+		"act": "post",
+		"requiresOwnership": [
+			"conquered"
+		],
+		"stages": [
+			{
+				"speaker": {
+					"name": "独眼的残部",
+					"title": "黑鸦帮"
+				},
+				"lines": [
+					"首领死了，弟兄们还得吃饭。",
+					"我们知道你库房里还有什么。",
+					"给条活路，或者把枪拿出来。"
+				],
+				"delivery": {
+					"accepts": [
+						"firearm"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "deal",
+						"label": "给他一把枪，换一条路",
+						"requiresDelivery": 1,
+						"effects": {
+							"ally": 1,
+							"reputation": 12,
+							"reason": "收编了一伙残部"
+						},
+						"outcome": "他把枪背到身后，说以后这条巷子归他看。"
+					},
+					{
+						"id": "fight",
+						"label": "把枪口抬起来",
+						"ends": true,
+						"effects": {
+							"reputation": -10,
+							"reason": "和残部翻了脸"
+						},
+						"outcome": "他退进巷子，临走前记住了你的门牌。"
+					}
+				]
+			},
+			{
+				"speaker": {
+					"name": "残部的名单",
+					"title": "最后一页"
+				},
+				"lines": [
+					"残部要走了。",
+					"他们留下一张水塔议会的巡逻表。",
+					"要药，还是要他们的名字？"
+				],
+				"delivery": {
+					"accepts": [
+						"medical"
+					],
+					"need": 1
+				},
+				"choices": [
+					{
+						"id": "take",
+						"label": "收下巡逻表",
+						"requiresDelivery": 1,
+						"effects": {
+							"intel": 1,
+							"ally": 1,
+							"reputation": 10,
+							"reason": "和残部做了最后一场交易"
+						},
+						"outcome": "巡逻表上画着水塔议会换班的空档。"
+					},
+					{
+						"id": "refuse",
+						"label": "让他们走",
+						"effects": {
+							"reputation": 10
+						},
+						"outcome": "残部消失在巷子尽头，没有再回头。"
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+
+[node name="SettlementView" type="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme = ExtResource("Theme")
+
+[node name="Lines" type="Label" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 17
+text = "交易结算"
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+
+[node name="Healing" type="Label" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 17
+text = "治疗酬谢    +0"
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
+visible = false
+
+[node name="BudgetWarning" type="Label" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 15
+text = "已达到客人的预算上限。成交会交付箱内全部物资。"
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+visible = false

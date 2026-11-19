@@ -1,0 +1,199 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+
+[node name="DispatchView" type="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 9
+theme = ExtResource("Theme")
+
+[node name="Survivors" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 9
+unique_name_in_owner = true
+
+[node name="Budget" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Decrease" type="Button" parent="Budget"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 36)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 17
+text = "−"
+unique_name_in_owner = true
+
+[node name="BudgetValue" type="Label" parent="Budget"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "预算 50 / 500"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
+vertical_alignment = 1
+
+[node name="Increase" type="Button" parent="Budget"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 36)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 17
+text = "+"
+unique_name_in_owner = true
+
+[node name="InterestCount" type="Label" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 15
+text = "搜刮重点  0 / 3"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="InterestGroups" type="GridContainer" parent="."]
+layout_mode = 2
+unique_name_in_owner = true
+columns = 4
+theme_override_constants/h_separation = 3
+theme_override_constants/v_separation = 3
+
+[node name="Firearm" type="Button" parent="InterestGroups"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 34)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "枪械"
+unique_name_in_owner = true
+
+[node name="Ammo" type="Button" parent="InterestGroups"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 34)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "子弹"
+unique_name_in_owner = true
+
+[node name="Melee" type="Button" parent="InterestGroups"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 34)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "近战"
+unique_name_in_owner = true
+
+[node name="Medical" type="Button" parent="InterestGroups"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 34)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "医疗"
+unique_name_in_owner = true
+
+[node name="Food" type="Button" parent="InterestGroups"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 34)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "食品"
+unique_name_in_owner = true
+
+[node name="Material" type="Button" parent="InterestGroups"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 34)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "材料"
+unique_name_in_owner = true
+
+[node name="Tool" type="Button" parent="InterestGroups"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 34)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "工具"
+unique_name_in_owner = true
+
+[node name="Luxury" type="Button" parent="InterestGroups"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 34)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "奢侈品"
+unique_name_in_owner = true
+
+[node name="EquipmentTitle" type="Label" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "装备    ·    预计产量 ×1.02"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
+
+[node name="GearFirearm" type="OptionButton" parent="."]
+layout_mode = 2
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 36)
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "枪械 · 不携带"
+selected = 0
+
+[node name="GearAmmo" type="OptionButton" parent="."]
+layout_mode = 2
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 36)
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "子弹 · 不携带"
+selected = 0
+
+[node name="GearMelee" type="OptionButton" parent="."]
+layout_mode = 2
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 36)
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "近战 · 不携带"
+selected = 0
+
+[node name="GearMedical" type="OptionButton" parent="."]
+layout_mode = 2
+unique_name_in_owner = true
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 36)
+fit_to_longest_item = false
+item_count = 1
+popup/item_0/text = "医疗 · 不携带"
+selected = 0
+
+[node name="Send" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 47)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopPrimary"
+theme_override_font_sizes/font_size = 19
+text = "出发"
+unique_name_in_owner = true

@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+
+[node name="NoteEntry" type="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+theme = ExtResource("Theme")
+
+[node name="Title" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 46)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopSecondary"
+theme_override_font_sizes/font_size = 17
+text = "笔记条目"
+
+[node name="Detail" type="Label" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "笔记内容"
+autowrap_mode = 3
+size_flags_horizontal = 3
+visible = false
+
+[node name="Present" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 40)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopPrimary"
+theme_override_font_sizes/font_size = 16
+text = "出示给客人"
+visible = false

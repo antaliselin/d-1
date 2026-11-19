@@ -1,0 +1,474 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+[ext_resource type="Script" path="res://scripts/ui/faceted_panel.gd" id="Panel"]
+[ext_resource type="Script" path="res://scripts/ui/shop_symbol.gd" id="Symbol"]
+[ext_resource type="Script" path="res://scripts/ui/drop_surface.gd" id="Drop"]
+[ext_resource type="Script" path="res://scripts/ui/shop_screen.gd" id="Screen"]
+[ext_resource type="Script" path="res://scripts/ui/stock_drop_scroll.gd" id="StockScroll"]
+[ext_resource type="PackedScene" path="res://scenes/ui/stock_row.tscn" id="StockRow"]
+[ext_resource type="PackedScene" path="res://scenes/shop/overlays/shop_overlays.tscn" id="Overlay"]
+[ext_resource type="PackedScene" path="res://scenes/shop/views/prepare_view.tscn" id="Prepare"]
+[ext_resource type="PackedScene" path="res://scenes/shop/views/trade_view.tscn" id="Trade"]
+[ext_resource type="PackedScene" path="res://scenes/shop/views/event_view.tscn" id="Event"]
+[ext_resource type="PackedScene" path="res://scenes/shop/views/report_view.tscn" id="Report"]
+[ext_resource type="Texture2D" path="res://assets/items/ammo_shotgun.png" id="PreviewShotgunAmmo"]
+[ext_resource type="Texture2D" path="res://assets/items/crowbar.png" id="PreviewCrowbar"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1
+anchor_bottom = 1
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("Theme")
+script = ExtResource("Screen")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1
+anchor_bottom = 1
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.118, 0.161, 0.165, 1)
+
+[node name="Insets" type="MarginContainer" parent="."]
+layout_mode = 1
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 13
+theme_override_constants/margin_bottom = 13
+anchors_preset = 15
+anchor_right = 1
+anchor_bottom = 1
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="Insets"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Header" type="PanelContainer" parent="Insets/Layout"]
+layout_mode = 2
+script = ExtResource("Panel")
+finish = "bar"
+custom_minimum_size = Vector2(0, 88)
+
+[node name="Insets" type="MarginContainer" parent="Insets/Layout/Header"]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="HBoxContainer" parent="Insets/Layout/Header/Insets"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TitleGroup" type="VBoxContainer" parent="Insets/Layout/Header/Insets/Content"]
+layout_mode = 2
+theme_override_constants/separation = 2
+size_flags_horizontal = 3
+
+[node name="GameTitle" type="Label" parent="Insets/Layout/Header/Insets/Content/TitleGroup"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 34
+text = "末世小卖部"
+theme_type_variation = &"ShopTitle"
+
+[node name="DayAndPhase" type="Label" parent="Insets/Layout/Header/Insets/Content/TitleGroup"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 14
+text = "第 01 天   /   准备营业"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="Stats" type="VBoxContainer" parent="Insets/Layout/Header/Insets/Content"]
+layout_mode = 2
+theme_override_constants/separation = 2
+size_flags_vertical = 4
+custom_minimum_size = Vector2(120, 0)
+
+[node name="Visitors" type="HBoxContainer" parent="Insets/Layout/Header/Insets/Content/Stats"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Icon" type="Control" parent="Insets/Layout/Header/Insets/Content/Stats/Visitors"]
+layout_mode = 2
+mouse_filter = 2
+custom_minimum_size = Vector2(22, 22)
+script = ExtResource("Symbol")
+symbol = "visitor"
+
+[node name="Traffic" type="Label" parent="Insets/Layout/Header/Insets/Content/Stats/Visitors"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "客流    3 人"
+unique_name_in_owner = true
+
+[node name="Rent" type="HBoxContainer" parent="Insets/Layout/Header/Insets/Content/Stats"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Icon" type="Control" parent="Insets/Layout/Header/Insets/Content/Stats/Rent"]
+layout_mode = 2
+mouse_filter = 2
+custom_minimum_size = Vector2(22, 22)
+script = ExtResource("Symbol")
+symbol = "clock"
+
+[node name="RentCountdown" type="Label" parent="Insets/Layout/Header/Insets/Content/Stats/Rent"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "距缴租  2 天"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
+
+[node name="Worktop" type="HBoxContainer" parent="Insets/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 10
+size_flags_vertical = 3
+
+[node name="Counter" type="PanelContainer" parent="Insets/Layout/Worktop"]
+layout_mode = 2
+script = ExtResource("Panel")
+finish = "wood"
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(256, 0)
+size_flags_stretch_ratio = 1.13
+
+[node name="Insets" type="MarginContainer" parent="Insets/Layout/Worktop/Counter"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 17
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 20
+
+[node name="Pages" type="Control" parent="Insets/Layout/Worktop/Counter/Insets"]
+layout_mode = 2
+
+[node name="PrepareView" parent="Insets/Layout/Worktop/Counter/Insets/Pages" instance=ExtResource("Prepare")]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_top = 0.69
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TradeView" parent="Insets/Layout/Worktop/Counter/Insets/Pages" instance=ExtResource("Trade")]
+unique_name_in_owner = true
+layout_mode = 1
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="EventView" parent="Insets/Layout/Worktop/Counter/Insets/Pages" instance=ExtResource("Event")]
+unique_name_in_owner = true
+layout_mode = 1
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ReportView" parent="Insets/Layout/Worktop/Counter/Insets/Pages" instance=ExtResource("Report")]
+unique_name_in_owner = true
+layout_mode = 1
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PortraitStage" type="PanelContainer" parent="Insets/Layout/Worktop/Counter/Insets/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchor_top = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.52
+mouse_filter = 2
+script = ExtResource("Drop")
+finish = "plain"
+
+[node name="VisitorPortrait" type="TextureRect" parent="Insets/Layout/Worktop/Counter/Insets/Pages/PortraitStage"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Inventory" type="PanelContainer" parent="Insets/Layout/Worktop"]
+layout_mode = 2
+script = ExtResource("Panel")
+finish = "steel"
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(238, 0)
+
+[node name="Insets" type="MarginContainer" parent="Insets/Layout/Worktop/Inventory"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 17
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 17
+
+[node name="InventoryContent" type="VBoxContainer" parent="Insets/Layout/Worktop/Inventory/Insets"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Heading" type="HBoxContainer" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/Heading"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 29
+text = "库存"
+theme_type_variation = &"ShopTitle"
+size_flags_horizontal = 3
+
+[node name="CatalogToggle" type="Button" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/Heading"]
+layout_mode = 2
+size_flags_horizontal = 8
+custom_minimum_size = Vector2(0, 32)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 13
+text = "全目录"
+unique_name_in_owner = true
+
+[node name="InventoryHint" type="Label" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 13
+text = "按分类查看现有物资"
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="Filters" type="HBoxContainer" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="All" type="Button" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/Filters"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 32)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopPrimary"
+theme_override_font_sizes/font_size = 14
+text = "全部"
+unique_name_in_owner = true
+
+[node name="Firearms" type="Button" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/Filters"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 32)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "枪械"
+unique_name_in_owner = true
+
+[node name="Ammo" type="Button" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/Filters"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 32)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "弹药"
+unique_name_in_owner = true
+
+[node name="Other" type="Button" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/Filters"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 32)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 14
+text = "其他"
+unique_name_in_owner = true
+
+[node name="StockScroll" type="ScrollContainer" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+unique_name_in_owner = true
+vertical_scroll_mode = 2
+script = ExtResource("StockScroll")
+
+[node name="ListContent" type="VBoxContainer" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/StockScroll"]
+layout_mode = 2
+theme_override_constants/separation = 6
+size_flags_horizontal = 3
+
+[node name="Rows" type="VBoxContainer" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/StockScroll/ListContent"]
+layout_mode = 2
+theme_override_constants/separation = 6
+unique_name_in_owner = true
+
+[node name="EmptyStock" type="Label" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/StockScroll/ListContent"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 15
+text = "当前分类没有现货。"
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+visible = false
+
+[node name="StockPreview" type="VBoxContainer" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/StockScroll/ListContent"]
+layout_mode = 2
+theme_override_constants/separation = 6
+unique_name_in_owner = true
+
+[node name="PreviewOrder1" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/StockScroll/ListContent/StockPreview" instance=ExtResource("StockRow")]
+layout_mode = 2
+
+[node name="PreviewOrder2" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/StockScroll/ListContent/StockPreview" instance=ExtResource("StockRow")]
+layout_mode = 2
+editor_preview = {"icon": ExtResource("PreviewShotgunAmmo"), "name": "霰弹包", "price": "40", "amount": "80发"}
+
+[node name="PreviewOrder3" parent="Insets/Layout/Worktop/Inventory/Insets/InventoryContent/StockScroll/ListContent/StockPreview" instance=ExtResource("StockRow")]
+layout_mode = 2
+editor_preview = {"icon": ExtResource("PreviewCrowbar"), "name": "撬棍", "price": "50", "amount": "×1"}
+
+[node name="Footer" type="PanelContainer" parent="Insets/Layout"]
+layout_mode = 2
+script = ExtResource("Panel")
+finish = "bar"
+custom_minimum_size = Vector2(0, 78)
+
+[node name="Insets" type="MarginContainer" parent="Insets/Layout/Footer"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 9
+
+[node name="Content" type="HBoxContainer" parent="Insets/Layout/Footer/Insets"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Stats" type="HBoxContainer" parent="Insets/Layout/Footer/Insets/Content"]
+layout_mode = 2
+theme_override_constants/separation = 10
+size_flags_vertical = 4
+
+[node name="Money" type="HBoxContainer" parent="Insets/Layout/Footer/Insets/Content/Stats"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="Control" parent="Insets/Layout/Footer/Insets/Content/Stats/Money"]
+layout_mode = 2
+mouse_filter = 2
+custom_minimum_size = Vector2(28, 22)
+script = ExtResource("Symbol")
+symbol = "money"
+
+[node name="Values" type="VBoxContainer" parent="Insets/Layout/Footer/Insets/Content/Stats/Money"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Caption" type="Label" parent="Insets/Layout/Footer/Insets/Content/Stats/Money/Values"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 13
+text = "瓶盖"
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="MoneyValue" type="Label" parent="Insets/Layout/Footer/Insets/Content/Stats/Money/Values"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 23
+text = "800"
+theme_type_variation = &"ShopTitle"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
+
+[node name="Reputation" type="HBoxContainer" parent="Insets/Layout/Footer/Insets/Content/Stats"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="Control" parent="Insets/Layout/Footer/Insets/Content/Stats/Reputation"]
+layout_mode = 2
+mouse_filter = 2
+custom_minimum_size = Vector2(28, 22)
+script = ExtResource("Symbol")
+symbol = "reputation"
+
+[node name="Values" type="VBoxContainer" parent="Insets/Layout/Footer/Insets/Content/Stats/Reputation"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Caption" type="Label" parent="Insets/Layout/Footer/Insets/Content/Stats/Reputation/Values"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 13
+text = "声望"
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="ReputationValue" type="Label" parent="Insets/Layout/Footer/Insets/Content/Stats/Reputation/Values"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 23
+text = "50"
+theme_type_variation = &"ShopTitle"
+unique_name_in_owner = true
+
+[node name="Spacer" type="Control" parent="Insets/Layout/Footer/Insets/Content"]
+layout_mode = 2
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Actions" type="HBoxContainer" parent="Insets/Layout/Footer/Insets/Content"]
+layout_mode = 2
+theme_override_constants/separation = 4
+size_flags_vertical = 4
+
+[node name="NotesButton" type="Button" parent="Insets/Layout/Footer/Insets/Content/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 44)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 15
+text = "笔记"
+unique_name_in_owner = true
+
+[node name="ReturnAll" type="Button" parent="Insets/Layout/Footer/Insets/Content/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 44)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopSecondary"
+theme_override_font_sizes/font_size = 15
+text = "全部收回"
+unique_name_in_owner = true
+
+[node name="Sell" type="Button" parent="Insets/Layout/Footer/Insets/Content/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(111, 48)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopPrimary"
+theme_override_font_sizes/font_size = 18
+text = "成交"
+unique_name_in_owner = true
+disabled = true
+
+[node name="Overlays" parent="." instance=ExtResource("Overlay")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1
+anchor_bottom = 1
+grow_horizontal = 2
+grow_vertical = 2
+unique_name_in_owner = true
+visible = false

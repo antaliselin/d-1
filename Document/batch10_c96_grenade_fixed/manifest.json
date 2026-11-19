@@ -1,0 +1,3908 @@
+{
+  "status": "COMPLETED",
+  "model": "gpt-image-2.5",
+  "quality": "auto",
+  "new_source_pixels": {
+    "E:\\person\\mrxmb\\output\\batch10_c96_grenade\\source.png": [
+      3840,
+      2160
+    ]
+  },
+  "all_used_source_pixels": {
+    "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\repairs_source.png": [
+      3840,
+      2160
+    ],
+    "E:\\person\\mrxmb\\output\\batch09_visibility_tiles\\small_weapons_source.png": [
+      3840,
+      2160
+    ],
+    "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\packaging_fix.png": [
+      3840,
+      2160
+    ],
+    "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\canonical_cartridges.png": [
+      3840,
+      2160
+    ],
+    "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\food_facets_source.png": [
+      3840,
+      2160
+    ],
+    "E:\\person\\mrxmb\\output\\batch07_remaining_items\\shape_fixes.png": [
+      3840,
+      2160
+    ],
+    "E:\\person\\mrxmb\\output\\batch09_visibility_tiles\\redraw_source.png": [
+      3840,
+      2160
+    ],
+    "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_a.png": [
+      3840,
+      2160
+    ],
+    "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\source.png": [
+      3840,
+      2160
+    ],
+    "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_b.png": [
+      3840,
+      2160
+    ],
+    "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png": [
+      3840,
+      2160
+    ]
+  },
+  "grid_px": 256,
+  "scale_mode": "visibility_grid_override",
+  "old_uniform_real_scale_overridden": true,
+  "count": 92,
+  "split": 41,
+  "atlas_cells": [
+    120,
+    108
+  ],
+  "changed_ids": [
+    3,
+    15
+  ],
+  "unchanged_ids": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "柯尔特蟒蛇",
+      "slug": "colt_python",
+      "file": "individual/01_colt_python.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 496,
+      "bbox_height": 208,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 13,
+      "grid_y": 2,
+      "sheet_x": 3336,
+      "sheet_y": 536,
+      "sheet_right": 3832,
+      "sheet_bottom": 744,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        -1.8663838812301208
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\01_colt_python.png",
+      "baseline_bbox": [
+        248,
+        104
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.0,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\repairs_source.png",
+        "source_crop": [
+          0,
+          0,
+          1920,
+          720
+        ],
+        "native_size_before_resize": [
+          943,
+          399
+        ],
+        "native_to_final_scale": 0.5259809119830329
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 2,
+      "name": "马卡洛夫PM",
+      "slug": "makarov_pm",
+      "file": "individual/02_makarov_pm.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 336,
+      "bbox_height": 240,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 9,
+      "grid_y": 6,
+      "sheet_x": 2392,
+      "sheet_y": 1544,
+      "sheet_right": 2728,
+      "sheet_bottom": 1784,
+      "padding": 24,
+      "rounding_delta_px": [
+        -1.702127659574444,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\02_makarov_pm.png",
+      "baseline_bbox": [
+        136,
+        100
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.4705882352941178,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles\\small_weapons_source.png",
+        "source_crop": [
+          1320,
+          100,
+          2520,
+          980
+        ],
+        "native_size_before_resize": [
+          992,
+          705
+        ],
+        "native_to_final_scale": 0.3404255319148936
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 3,
+      "name": "毛瑟C96",
+      "slug": "mauser_c96",
+      "file": "individual/03_mauser_c96.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 432,
+      "bbox_height": 236,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 11,
+      "grid_y": 6,
+      "sheet_x": 2856,
+      "sheet_y": 1546,
+      "sheet_right": 3288,
+      "sheet_bottom": 1782,
+      "padding": 24,
+      "rounding_delta_px": [
+        5.684341886080802e-14,
+        -0.455569461827281
+      ],
+      "operation": "targeted_redraw",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles\\individual\\03_mauser_c96.png",
+      "baseline_bbox": [
+        248,
+        136
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.7419354838709677,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch10_c96_grenade\\source.png",
+        "source_crop": [
+          0,
+          0,
+          2600,
+          2000
+        ]
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles",
+      "source_file": "source.png",
+      "source_crop": [
+        0,
+        0,
+        2600,
+        2000
+      ]
+    },
+    {
+      "id": 4,
+      "name": "UZI",
+      "slug": "uzi",
+      "file": "individual/04_uzi.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 552,
+      "bbox_height": 280,
+      "grid_cols": 3,
+      "grid_rows": 2,
+      "total_cells": 6,
+      "grid_x": 5,
+      "grid_y": 0,
+      "sheet_x": 1388,
+      "sheet_y": 116,
+      "sheet_right": 1940,
+      "sheet_bottom": 396,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\04_uzi.png",
+      "baseline_bbox": [
+        552,
+        280
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 5,
+      "name": "MP5",
+      "slug": "mp5",
+      "file": "individual/05_mp5.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 576,
+      "bbox_height": 264,
+      "grid_cols": 3,
+      "grid_rows": 2,
+      "total_cells": 6,
+      "grid_x": 8,
+      "grid_y": 0,
+      "sheet_x": 2144,
+      "sheet_y": 124,
+      "sheet_right": 2720,
+      "sheet_bottom": 388,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\05_mp5.png",
+      "baseline_bbox": [
+        576,
+        264
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 6,
+      "name": "野牛PP19",
+      "slug": "pp19_bizon",
+      "file": "individual/06_pp19_bizon.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 560,
+      "bbox_height": 160,
+      "grid_cols": 3,
+      "grid_rows": 1,
+      "total_cells": 3,
+      "grid_x": 12,
+      "grid_y": 4,
+      "sheet_x": 3176,
+      "sheet_y": 1072,
+      "sheet_right": 3736,
+      "sheet_bottom": 1232,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\06_pp19_bizon.png",
+      "baseline_bbox": [
+        560,
+        160
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 7,
+      "name": "截短双管霰弹枪",
+      "slug": "sawed_off_double_barrel",
+      "file": "individual/07_sawed_off_double_barrel.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 384,
+      "bbox_height": 148,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 13,
+      "grid_y": 6,
+      "sheet_x": 3392,
+      "sheet_y": 1590,
+      "sheet_right": 3776,
+      "sheet_bottom": 1738,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\07_sawed_off_double_barrel.png",
+      "baseline_bbox": [
+        384,
+        148
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 8,
+      "name": "温切斯特M1887",
+      "slug": "winchester_m1887",
+      "file": "individual/08_winchester_m1887.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 1064,
+      "bbox_height": 300,
+      "grid_cols": 5,
+      "grid_rows": 2,
+      "total_cells": 10,
+      "grid_x": 0,
+      "grid_y": 0,
+      "sheet_x": 108,
+      "sheet_y": 106,
+      "sheet_right": 1172,
+      "sheet_bottom": 406,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\08_winchester_m1887.png",
+      "baseline_bbox": [
+        1064,
+        300
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 9,
+      "name": "贝内利M2无托",
+      "slug": "benelli_m2_stockless",
+      "file": "individual/09_benelli_m2_stockless.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 596,
+      "bbox_height": 156,
+      "grid_cols": 3,
+      "grid_rows": 1,
+      "total_cells": 3,
+      "grid_x": 0,
+      "grid_y": 5,
+      "sheet_x": 86,
+      "sheet_y": 1330,
+      "sheet_right": 682,
+      "sheet_bottom": 1486,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\09_benelli_m2_stockless.png",
+      "baseline_bbox": [
+        596,
+        156
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 10,
+      "name": "莫辛纳甘",
+      "slug": "mosin_nagant",
+      "file": "individual/10_mosin_nagant.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 1048,
+      "bbox_height": 236,
+      "grid_cols": 5,
+      "grid_rows": 1,
+      "total_cells": 5,
+      "grid_x": 3,
+      "grid_y": 2,
+      "sheet_x": 884,
+      "sheet_y": 522,
+      "sheet_right": 1932,
+      "sheet_bottom": 758,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\10_mosin_nagant.png",
+      "baseline_bbox": [
+        1048,
+        236
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 11,
+      "name": "M1加兰德",
+      "slug": "m1_garand",
+      "file": "individual/11_m1_garand.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 952,
+      "bbox_height": 200,
+      "grid_cols": 4,
+      "grid_rows": 1,
+      "total_cells": 4,
+      "grid_x": 3,
+      "grid_y": 3,
+      "sheet_x": 804,
+      "sheet_y": 796,
+      "sheet_right": 1756,
+      "sheet_bottom": 996,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\11_m1_garand.png",
+      "baseline_bbox": [
+        952,
+        200
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 12,
+      "name": "M4A1",
+      "slug": "m4a1",
+      "file": "individual/12_m4a1.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 712,
+      "bbox_height": 328,
+      "grid_cols": 3,
+      "grid_rows": 2,
+      "total_cells": 6,
+      "grid_x": 11,
+      "grid_y": 0,
+      "sheet_x": 2844,
+      "sheet_y": 92,
+      "sheet_right": 3556,
+      "sheet_bottom": 420,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\12_m4a1.png",
+      "baseline_bbox": [
+        712,
+        328
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 13,
+      "name": "QBZ-191",
+      "slug": "qbz191",
+      "file": "individual/13_qbz191.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 764,
+      "bbox_height": 308,
+      "grid_cols": 3,
+      "grid_rows": 2,
+      "total_cells": 6,
+      "grid_x": 0,
+      "grid_y": 2,
+      "sheet_x": 2,
+      "sheet_y": 614,
+      "sheet_right": 766,
+      "sheet_bottom": 922,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\13_qbz191.png",
+      "baseline_bbox": [
+        764,
+        308
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 14,
+      "name": "RPG-7",
+      "slug": "rpg7",
+      "file": "individual/14_rpg7.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 1268,
+      "bbox_height": 248,
+      "grid_cols": 5,
+      "grid_rows": 1,
+      "total_cells": 5,
+      "grid_x": 8,
+      "grid_y": 2,
+      "sheet_x": 2054,
+      "sheet_y": 516,
+      "sheet_right": 3322,
+      "sheet_bottom": 764,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\14_rpg7.png",
+      "baseline_bbox": [
+        1268,
+        248
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 15,
+      "name": "手雷",
+      "slug": "frag_grenade",
+      "file": "individual/15_frag_grenade.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 156,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 2,
+      "grid_y": 7,
+      "sheet_x": 562,
+      "sheet_y": 1800,
+      "sheet_right": 718,
+      "sheet_bottom": 2040,
+      "padding": 24,
+      "rounding_delta_px": [
+        -1.0700636942675317,
+        -2.842170943040401e-14
+      ],
+      "operation": "targeted_redraw",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles\\individual\\15_frag_grenade.png",
+      "baseline_bbox": [
+        56,
+        84
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.857142857142857,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch10_c96_grenade\\source.png",
+        "source_crop": [
+          2650,
+          0,
+          3840,
+          2160
+        ]
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles",
+      "source_file": "source.png",
+      "source_crop": [
+        2650,
+        0,
+        3840,
+        2160
+      ]
+    },
+    {
+      "id": 16,
+      "name": "木柄手雷",
+      "slug": "stick_grenade",
+      "file": "individual/16_stick_grenade.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 68,
+      "bbox_height": 312,
+      "grid_cols": 1,
+      "grid_rows": 2,
+      "total_cells": 2,
+      "grid_x": 14,
+      "grid_y": 0,
+      "sheet_x": 3678,
+      "sheet_y": 100,
+      "sheet_right": 3746,
+      "sheet_bottom": 412,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\16_stick_grenade.png",
+      "baseline_bbox": [
+        68,
+        312
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 17,
+      "name": "撬棍",
+      "slug": "crowbar",
+      "file": "individual/17_crowbar.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 636,
+      "bbox_height": 84,
+      "grid_cols": 3,
+      "grid_rows": 1,
+      "total_cells": 3,
+      "grid_x": 3,
+      "grid_y": 5,
+      "sheet_x": 834,
+      "sheet_y": 1366,
+      "sheet_right": 1470,
+      "sheet_bottom": 1450,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\17_crowbar.png",
+      "baseline_bbox": [
+        636,
+        84
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 18,
+      "name": "木制棒球棍",
+      "slug": "wood_baseball_bat",
+      "file": "individual/18_wood_baseball_bat.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 732,
+      "bbox_height": 88,
+      "grid_cols": 3,
+      "grid_rows": 1,
+      "total_cells": 3,
+      "grid_x": 6,
+      "grid_y": 5,
+      "sheet_x": 1554,
+      "sheet_y": 1364,
+      "sheet_right": 2286,
+      "sheet_bottom": 1452,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\18_wood_baseball_bat.png",
+      "baseline_bbox": [
+        732,
+        88
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 19,
+      "name": "钉刺棒球棍",
+      "slug": "spiked_baseball_bat",
+      "file": "individual/19_spiked_baseball_bat.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 732,
+      "bbox_height": 176,
+      "grid_cols": 3,
+      "grid_rows": 1,
+      "total_cells": 3,
+      "grid_x": 9,
+      "grid_y": 5,
+      "sheet_x": 2322,
+      "sheet_y": 1320,
+      "sheet_right": 3054,
+      "sheet_bottom": 1496,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\19_spiked_baseball_bat.png",
+      "baseline_bbox": [
+        732,
+        176
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 20,
+      "name": "金属管道棒",
+      "slug": "metal_pipe_club",
+      "file": "individual/20_metal_pipe_club.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 764,
+      "bbox_height": 76,
+      "grid_cols": 3,
+      "grid_rows": 1,
+      "total_cells": 3,
+      "grid_x": 12,
+      "grid_y": 5,
+      "sheet_x": 3074,
+      "sheet_y": 1370,
+      "sheet_right": 3838,
+      "sheet_bottom": 1446,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\20_metal_pipe_club.png",
+      "baseline_bbox": [
+        764,
+        76
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 21,
+      "name": "水泥钢筋重锤",
+      "slug": "concrete_rebar_hammer",
+      "file": "individual/21_concrete_rebar_hammer.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 848,
+      "bbox_height": 168,
+      "grid_cols": 4,
+      "grid_rows": 1,
+      "total_cells": 4,
+      "grid_x": 7,
+      "grid_y": 3,
+      "sheet_x": 1880,
+      "sheet_y": 812,
+      "sheet_right": 2728,
+      "sheet_bottom": 980,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\21_concrete_rebar_hammer.png",
+      "baseline_bbox": [
+        848,
+        168
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 22,
+      "name": "锯片斧",
+      "slug": "saw_blade_axe",
+      "file": "individual/22_saw_blade_axe.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 764,
+      "bbox_height": 188,
+      "grid_cols": 3,
+      "grid_rows": 1,
+      "total_cells": 3,
+      "grid_x": 0,
+      "grid_y": 6,
+      "sheet_x": 2,
+      "sheet_y": 1570,
+      "sheet_right": 766,
+      "sheet_bottom": 1758,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\22_saw_blade_axe.png",
+      "baseline_bbox": [
+        764,
+        188
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 23,
+      "name": "贝斯",
+      "slug": "bass_guitar",
+      "file": "individual/23_bass_guitar.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 996,
+      "bbox_height": 244,
+      "grid_cols": 4,
+      "grid_rows": 1,
+      "total_cells": 4,
+      "grid_x": 11,
+      "grid_y": 3,
+      "sheet_x": 2830,
+      "sheet_y": 774,
+      "sheet_right": 3826,
+      "sheet_bottom": 1018,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\23_bass_guitar.png",
+      "baseline_bbox": [
+        996,
+        244
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 24,
+      "name": "匕首",
+      "slug": "dagger",
+      "file": "individual/24_dagger.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 256,
+      "bbox_height": 60,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 3,
+      "grid_y": 7,
+      "sheet_x": 768,
+      "sheet_y": 1890,
+      "sheet_right": 1024,
+      "sheet_bottom": 1950,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\24_dagger.png",
+      "baseline_bbox": [
+        256,
+        60
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 25,
+      "name": "抗战大刀",
+      "slug": "dadao",
+      "file": "individual/25_dadao.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 808,
+      "bbox_height": 80,
+      "grid_cols": 4,
+      "grid_rows": 1,
+      "total_cells": 4,
+      "grid_x": 0,
+      "grid_y": 4,
+      "sheet_x": 108,
+      "sheet_y": 1112,
+      "sheet_right": 916,
+      "sheet_bottom": 1192,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\25_dadao.png",
+      "baseline_bbox": [
+        808,
+        80
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 26,
+      "name": "武士刀",
+      "slug": "katana",
+      "file": "individual/26_katana.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 876,
+      "bbox_height": 72,
+      "grid_cols": 4,
+      "grid_rows": 1,
+      "total_cells": 4,
+      "grid_x": 4,
+      "grid_y": 4,
+      "sheet_x": 1098,
+      "sheet_y": 1116,
+      "sheet_right": 1974,
+      "sheet_bottom": 1188,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\26_katana.png",
+      "baseline_bbox": [
+        876,
+        72
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 27,
+      "name": "消防斧",
+      "slug": "fire_axe",
+      "file": "individual/27_fire_axe.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 764,
+      "bbox_height": 184,
+      "grid_cols": 3,
+      "grid_rows": 1,
+      "total_cells": 3,
+      "grid_x": 3,
+      "grid_y": 6,
+      "sheet_x": 770,
+      "sheet_y": 1572,
+      "sheet_right": 1534,
+      "sheet_bottom": 1756,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\27_fire_axe.png",
+      "baseline_bbox": [
+        764,
+        184
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 28,
+      "name": "长剑",
+      "slug": "longsword",
+      "file": "individual/28_longsword.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 1020,
+      "bbox_height": 172,
+      "grid_cols": 4,
+      "grid_rows": 1,
+      "total_cells": 4,
+      "grid_x": 8,
+      "grid_y": 4,
+      "sheet_x": 2050,
+      "sheet_y": 1066,
+      "sheet_right": 3070,
+      "sheet_bottom": 1238,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\28_longsword.png",
+      "baseline_bbox": [
+        1020,
+        172
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 29,
+      "name": "电锯",
+      "slug": "chainsaw",
+      "file": "individual/29_chainsaw.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 724,
+      "bbox_height": 244,
+      "grid_cols": 3,
+      "grid_rows": 1,
+      "total_cells": 3,
+      "grid_x": 6,
+      "grid_y": 6,
+      "sheet_x": 1558,
+      "sheet_y": 1542,
+      "sheet_right": 2282,
+      "sheet_bottom": 1786,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\29_chainsaw.png",
+      "baseline_bbox": [
+        724,
+        244
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 30,
+      "name": "手枪子弹（红色盒装）",
+      "slug": "ammo_pistol_red",
+      "file": "individual/30_ammo_pistol_red.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 128,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 4,
+      "grid_y": 7,
+      "sheet_x": 1032,
+      "sheet_y": 1856,
+      "sheet_right": 1272,
+      "sheet_bottom": 1984,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\30_ammo_pistol_red.png",
+      "baseline_bbox": [
+        92,
+        48
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.608695652173913,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\packaging_fix.png",
+        "source_crop": [
+          1280,
+          0,
+          2560,
+          445
+        ],
+        "additional_source": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\canonical_cartridges.png",
+        "native_size_before_resize": null
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 31,
+      "name": "霰弹枪子弹（绿色盒装）",
+      "slug": "ammo_shotgun_green",
+      "file": "individual/31_ammo_shotgun_green.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 124,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 5,
+      "grid_y": 7,
+      "sheet_x": 1288,
+      "sheet_y": 1858,
+      "sheet_right": 1528,
+      "sheet_bottom": 1982,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\31_ammo_shotgun_green.png",
+      "baseline_bbox": [
+        120,
+        64
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.0,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\packaging_fix.png",
+        "source_crop": [
+          2560,
+          0,
+          3840,
+          445
+        ],
+        "additional_source": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\canonical_cartridges.png",
+        "native_size_before_resize": null
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 32,
+      "name": "冲锋枪子弹（蓝色盒装）",
+      "slug": "ammo_smg_blue",
+      "file": "individual/32_ammo_smg_blue.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 124,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 6,
+      "grid_y": 7,
+      "sheet_x": 1544,
+      "sheet_y": 1858,
+      "sheet_right": 1784,
+      "sheet_bottom": 1982,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\32_ammo_smg_blue.png",
+      "baseline_bbox": [
+        92,
+        48
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.608695652173913,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\packaging_fix.png",
+        "source_crop": [
+          0,
+          445,
+          1280,
+          835
+        ],
+        "additional_source": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\canonical_cartridges.png",
+        "native_size_before_resize": null
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 33,
+      "name": "步枪子弹（白色盒装）",
+      "slug": "ammo_rifle_white",
+      "file": "individual/33_ammo_rifle_white.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 128,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 7,
+      "grid_y": 7,
+      "sheet_x": 1800,
+      "sheet_y": 1856,
+      "sheet_right": 2040,
+      "sheet_bottom": 1984,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\33_ammo_rifle_white.png",
+      "baseline_bbox": [
+        128,
+        68
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.875,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\packaging_fix.png",
+        "source_crop": [
+          1280,
+          445,
+          2560,
+          835
+        ],
+        "additional_source": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\canonical_cartridges.png",
+        "native_size_before_resize": null
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 34,
+      "name": "马格南弹药（黑红盒装）",
+      "slug": "ammo_magnum_black_red",
+      "file": "individual/34_ammo_magnum_black_red.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 116,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 8,
+      "grid_y": 7,
+      "sheet_x": 2056,
+      "sheet_y": 1862,
+      "sheet_right": 2296,
+      "sheet_bottom": 1978,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\34_ammo_magnum_black_red.png",
+      "baseline_bbox": [
+        108,
+        52
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.2222222222222223,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\packaging_fix.png",
+        "source_crop": [
+          2560,
+          445,
+          3840,
+          835
+        ],
+        "additional_source": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\canonical_cartridges.png",
+        "native_size_before_resize": null
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 35,
+      "name": "突击步枪子弹（紫色盒装）",
+      "slug": "ammo_assault_purple",
+      "file": "individual/35_ammo_assault_purple.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 124,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 9,
+      "grid_y": 7,
+      "sheet_x": 2312,
+      "sheet_y": 1858,
+      "sheet_right": 2552,
+      "sheet_bottom": 1982,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\35_ammo_assault_purple.png",
+      "baseline_bbox": [
+        120,
+        60
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.0,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\packaging_fix.png",
+        "source_crop": [
+          0,
+          835,
+          1280,
+          1280
+        ],
+        "additional_source": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\canonical_cartridges.png",
+        "native_size_before_resize": null
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 36,
+      "name": "番茄罐头",
+      "slug": "tomato_can",
+      "file": "individual/36_tomato_can.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 152,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 10,
+      "grid_y": 7,
+      "sheet_x": 2612,
+      "sheet_y": 1800,
+      "sheet_right": 2764,
+      "sheet_bottom": 2040,
+      "padding": 24,
+      "rounding_delta_px": [
+        1.469964664310936,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\36_tomato_can.png",
+      "baseline_bbox": [
+        64,
+        100
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.4,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\food_facets_source.png",
+        "source_crop": [
+          1600,
+          0,
+          2400,
+          760
+        ],
+        "native_size_before_resize": [
+          355,
+          566
+        ],
+        "native_to_final_scale": 0.42402826855123676
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 37,
+      "name": "军用自热食品",
+      "slug": "military_meal",
+      "file": "individual/37_military_meal.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 204,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 11,
+      "grid_y": 7,
+      "sheet_x": 2842,
+      "sheet_y": 1800,
+      "sheet_right": 3046,
+      "sheet_bottom": 2040,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.7830045523520539,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\37_military_meal.png",
+      "baseline_bbox": [
+        168,
+        200
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.2,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\food_facets_source.png",
+        "source_crop": [
+          2560,
+          0,
+          3840,
+          760
+        ],
+        "native_size_before_resize": [
+          558,
+          659
+        ],
+        "native_to_final_scale": 0.36418816388467373
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 38,
+      "name": "压缩饼干",
+      "slug": "compressed_biscuits",
+      "file": "individual/38_compressed_biscuits.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 120,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 12,
+      "grid_y": 7,
+      "sheet_x": 3080,
+      "sheet_y": 1860,
+      "sheet_right": 3320,
+      "sheet_bottom": 1980,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        -0.4528301886792434
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\38_compressed_biscuits.png",
+      "baseline_bbox": [
+        104,
+        52
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.3076923076923075,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\food_facets_source.png",
+        "source_crop": [
+          0,
+          760,
+          1280,
+          1420
+        ],
+        "native_size_before_resize": [
+          795,
+          399
+        ],
+        "native_to_final_scale": 0.3018867924528302
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 39,
+      "name": "薯片",
+      "slug": "chips",
+      "file": "individual/39_chips.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 216,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 13,
+      "grid_y": 7,
+      "sheet_x": 3348,
+      "sheet_y": 1800,
+      "sheet_right": 3564,
+      "sheet_bottom": 2040,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.27406199021206135,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\39_chips.png",
+      "baseline_bbox": [
+        152,
+        172
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.3953488372093024,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\food_facets_source.png",
+        "source_crop": [
+          1280,
+          760,
+          2560,
+          1450
+        ],
+        "native_size_before_resize": [
+          551,
+          613
+        ],
+        "native_to_final_scale": 0.3915171288743883
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 40,
+      "name": "桶装泡面",
+      "slug": "instant_noodles",
+      "file": "individual/40_instant_noodles.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 208,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 14,
+      "grid_y": 7,
+      "sheet_x": 3592,
+      "sheet_y": 1816,
+      "sheet_right": 3832,
+      "sheet_bottom": 2024,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        0.9166666666666572
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\40_instant_noodles.png",
+      "baseline_bbox": [
+        120,
+        104
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.0,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\food_facets_source.png",
+        "source_crop": [
+          2560,
+          760,
+          3840,
+          1450
+        ],
+        "native_size_before_resize": [
+          576,
+          497
+        ],
+        "native_to_final_scale": 0.4166666666666667
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 41,
+      "name": "巧克力棒",
+      "slug": "chocolate_bar",
+      "file": "individual/41_chocolate_bar.png",
+      "atlas": 1,
+      "atlas_file": "atlas_1_3840x2160.png",
+      "bbox_width": 496,
+      "bbox_height": 128,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 0,
+      "grid_y": 7,
+      "sheet_x": 8,
+      "sheet_y": 1856,
+      "sheet_right": 504,
+      "sheet_bottom": 1984,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        -1.5412115193644524
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\41_chocolate_bar.png",
+      "baseline_bbox": [
+        136,
+        36
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 3.6470588235294117,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\food_facets_source.png",
+        "source_crop": [
+          0,
+          1450,
+          1280,
+          2160
+        ],
+        "native_size_before_resize": [
+          1007,
+          263
+        ],
+        "native_to_final_scale": 0.4925521350546177
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 42,
+      "name": "卫龙面筋",
+      "slug": "spicy_gluten",
+      "file": "individual/42_spicy_gluten.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 208,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 14,
+      "grid_y": 2,
+      "sheet_x": 3608,
+      "sheet_y": 520,
+      "sheet_right": 3816,
+      "sheet_bottom": 760,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.8934010152284202,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch06_targeted_materials\\individual\\42_spicy_gluten.png",
+      "baseline_bbox": [
+        136,
+        156
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.5384615384615385,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch05_repairs_extend\\food_facets_source.png",
+        "source_crop": [
+          1280,
+          1450,
+          2450,
+          2160
+        ],
+        "native_size_before_resize": [
+          510,
+          591
+        ],
+        "native_to_final_scale": 0.40609137055837563
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 43,
+      "name": "一箱罐头",
+      "slug": "case_canned_food",
+      "file": "individual/43_case_canned_food.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 340,
+      "bbox_height": 144,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 13,
+      "grid_y": 3,
+      "sheet_x": 3414,
+      "sheet_y": 824,
+      "sheet_right": 3754,
+      "sheet_bottom": 968,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\43_case_canned_food.png",
+      "baseline_bbox": [
+        340,
+        144
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 44,
+      "name": "桶装水",
+      "slug": "water_jug",
+      "file": "individual/44_water_jug.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 244,
+      "bbox_height": 424,
+      "grid_cols": 1,
+      "grid_rows": 2,
+      "total_cells": 2,
+      "grid_x": 14,
+      "grid_y": 0,
+      "sheet_x": 3590,
+      "sheet_y": 44,
+      "sheet_right": 3834,
+      "sheet_bottom": 468,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\44_water_jug.png",
+      "baseline_bbox": [
+        244,
+        424
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 45,
+      "name": "可乐",
+      "slug": "cola",
+      "file": "individual/45_cola.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 132,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 14,
+      "grid_y": 4,
+      "sheet_x": 3646,
+      "sheet_y": 1032,
+      "sheet_right": 3778,
+      "sheet_bottom": 1272,
+      "padding": 24,
+      "rounding_delta_px": [
+        -0.07708779443254343,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\45_cola.png",
+      "baseline_bbox": [
+        56,
+        104
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.3076923076923075,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\shape_fixes.png",
+        "source_crop": [
+          1928,
+          8,
+          3832,
+          564
+        ],
+        "native_size_before_resize": [
+          257,
+          467
+        ],
+        "native_to_final_scale": 0.5139186295503212
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 46,
+      "name": "法棍",
+      "slug": "baguette",
+      "file": "individual/46_baguette.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 552,
+      "bbox_height": 64,
+      "grid_cols": 3,
+      "grid_rows": 1,
+      "total_cells": 3,
+      "grid_x": 0,
+      "grid_y": 3,
+      "sheet_x": 108,
+      "sheet_y": 864,
+      "sheet_right": 660,
+      "sheet_bottom": 928,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\46_baguette.png",
+      "baseline_bbox": [
+        552,
+        64
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 47,
+      "name": "东北大米",
+      "slug": "rice_sack",
+      "file": "individual/47_rice_sack.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 256,
+      "bbox_height": 468,
+      "grid_cols": 1,
+      "grid_rows": 2,
+      "total_cells": 2,
+      "grid_x": 7,
+      "grid_y": 2,
+      "sheet_x": 1792,
+      "sheet_y": 534,
+      "sheet_right": 2048,
+      "sheet_bottom": 1002,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\47_rice_sack.png",
+      "baseline_bbox": [
+        256,
+        468
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 48,
+      "name": "野生狗奶",
+      "slug": "wild_dog_milk_carton",
+      "file": "individual/48_wild_dog_milk_carton.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 132,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 8,
+      "grid_y": 5,
+      "sheet_x": 2110,
+      "sheet_y": 1288,
+      "sheet_right": 2242,
+      "sheet_bottom": 1528,
+      "padding": 24,
+      "rounding_delta_px": [
+        1.7180043383947918,
+        2.842170943040401e-14
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\48_milk_bottle.png",
+      "baseline_bbox": [
+        72,
+        152
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.5789473684210527,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles\\redraw_source.png",
+        "source_crop": [
+          2190,
+          80,
+          3390,
+          2100
+        ],
+        "native_size_before_resize": [
+          1001,
+          1844
+        ],
+        "native_to_final_scale": 0.1301518438177874
+      },
+      "allowed_packaging_text": [
+        "野生狗奶",
+        "粤西特供",
+        "180ml"
+      ],
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 49,
+      "name": "木板",
+      "slug": "wood_plank",
+      "file": "individual/49_wood_plank.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 1020,
+      "bbox_height": 140,
+      "grid_cols": 4,
+      "grid_rows": 1,
+      "total_cells": 4,
+      "grid_x": 9,
+      "grid_y": 3,
+      "sheet_x": 2306,
+      "sheet_y": 826,
+      "sheet_right": 3326,
+      "sheet_bottom": 966,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\49_wood_plank.png",
+      "baseline_bbox": [
+        1020,
+        140
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 50,
+      "name": "5号电池",
+      "slug": "aa_battery",
+      "file": "individual/50_aa_battery.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 92,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 9,
+      "grid_y": 5,
+      "sheet_x": 2386,
+      "sheet_y": 1288,
+      "sheet_right": 2478,
+      "sheet_bottom": 1528,
+      "padding": 24,
+      "rounding_delta_px": [
+        1.6470588235294201,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\50_aa_battery.png",
+      "baseline_bbox": [
+        16,
+        44
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 5.454545454545454,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_a.png",
+        "source_crop": [
+          1280,
+          835,
+          2560,
+          1140
+        ],
+        "native_size_before_resize": [
+          96,
+          255
+        ],
+        "native_to_final_scale": 0.9411764705882353
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 51,
+      "name": "汽车电池",
+      "slug": "car_battery",
+      "file": "individual/51_car_battery.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 496,
+      "bbox_height": 304,
+      "grid_cols": 2,
+      "grid_rows": 2,
+      "total_cells": 4,
+      "grid_x": 3,
+      "grid_y": 2,
+      "sheet_x": 776,
+      "sheet_y": 616,
+      "sheet_right": 1272,
+      "sheet_bottom": 920,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        -1.5360000000000014
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\51_car_battery.png",
+      "baseline_bbox": [
+        240,
+        148
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.066666666666667,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_a.png",
+        "source_crop": [
+          2560,
+          800,
+          3840,
+          1140
+        ],
+        "native_size_before_resize": [
+          500,
+          308
+        ],
+        "native_to_final_scale": 0.992
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 52,
+      "name": "铁丝网",
+      "slug": "wire_mesh_roll",
+      "file": "individual/52_wire_mesh_roll.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 424,
+      "bbox_height": 376,
+      "grid_cols": 2,
+      "grid_rows": 2,
+      "total_cells": 4,
+      "grid_x": 5,
+      "grid_y": 2,
+      "sheet_x": 1324,
+      "sheet_y": 580,
+      "sheet_right": 1748,
+      "sheet_bottom": 956,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\52_wire_mesh_roll.png",
+      "baseline_bbox": [
+        424,
+        376
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 53,
+      "name": "胶带",
+      "slug": "adhesive_tape",
+      "file": "individual/53_adhesive_tape.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 212,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 10,
+      "grid_y": 5,
+      "sheet_x": 2568,
+      "sheet_y": 1302,
+      "sheet_right": 2808,
+      "sheet_bottom": 1514,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        1.3577981651376092
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\53_adhesive_tape.png",
+      "baseline_bbox": [
+        84,
+        76
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.857142857142857,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_a.png",
+        "source_crop": [
+          1280,
+          1140,
+          2560,
+          1490
+        ],
+        "native_size_before_resize": [
+          327,
+          287
+        ],
+        "native_to_final_scale": 0.7339449541284404
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 54,
+      "name": "金属废料",
+      "slug": "metal_scrap",
+      "file": "individual/54_metal_scrap.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 752,
+      "bbox_height": 380,
+      "grid_cols": 3,
+      "grid_rows": 2,
+      "total_cells": 6,
+      "grid_x": 8,
+      "grid_y": 0,
+      "sheet_x": 2056,
+      "sheet_y": 66,
+      "sheet_right": 2808,
+      "sheet_bottom": 446,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        0.9160883280757162
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\54_metal_scrap.png",
+      "baseline_bbox": [
+        296,
+        148
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.5405405405405403,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\source.png",
+        "source_crop": [
+          1000,
+          100,
+          2820,
+          1040
+        ],
+        "native_size_before_resize": [
+          1585,
+          799
+        ],
+        "native_to_final_scale": 0.4744479495268139
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 55,
+      "name": "绳索",
+      "slug": "coiled_rope",
+      "file": "individual/55_coiled_rope.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 236,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 11,
+      "grid_y": 5,
+      "sheet_x": 2824,
+      "sheet_y": 1290,
+      "sheet_right": 3064,
+      "sheet_bottom": 1526,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        -0.5644171779141232
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\55_coiled_rope.png",
+      "baseline_bbox": [
+        212,
+        208
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.1320754716981132,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\shape_fixes.png",
+        "source_crop": [
+          8,
+          1176,
+          1912,
+          1678
+        ],
+        "native_size_before_resize": [
+          489,
+          482
+        ],
+        "native_to_final_scale": 0.49079754601226994
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 56,
+      "name": "火药",
+      "slug": "powder_canister",
+      "file": "individual/56_powder_canister.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 216,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 12,
+      "grid_y": 5,
+      "sheet_x": 3092,
+      "sheet_y": 1288,
+      "sheet_right": 3308,
+      "sheet_bottom": 1528,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.7686832740213561,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\56_powder_canister.png",
+      "baseline_bbox": [
+        116,
+        128
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.875,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_a.png",
+        "source_crop": [
+          1280,
+          1490,
+          2560,
+          1840
+        ],
+        "native_size_before_resize": [
+          252,
+          281
+        ],
+        "native_to_final_scale": 0.8540925266903915
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 57,
+      "name": "电路板",
+      "slug": "circuit_board",
+      "file": "individual/57_circuit_board.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 128,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 13,
+      "grid_y": 5,
+      "sheet_x": 3336,
+      "sheet_y": 1344,
+      "sheet_right": 3576,
+      "sheet_bottom": 1472,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        0.11678832116787419
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\57_circuit_board.png",
+      "baseline_bbox": [
+        128,
+        68
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.875,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_a.png",
+        "source_crop": [
+          2560,
+          1490,
+          3840,
+          1840
+        ],
+        "native_size_before_resize": [
+          548,
+          292
+        ],
+        "native_to_final_scale": 0.43795620437956206
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 58,
+      "name": "光学零件",
+      "slug": "optical_parts",
+      "file": "individual/58_optical_parts.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 108,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 14,
+      "grid_y": 5,
+      "sheet_x": 3592,
+      "sheet_y": 1354,
+      "sheet_right": 3832,
+      "sheet_bottom": 1462,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        1.2849364791288593
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\58_optical_parts.png",
+      "baseline_bbox": [
+        84,
+        36
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.857142857142857,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_a.png",
+        "source_crop": [
+          0,
+          1840,
+          1280,
+          2160
+        ],
+        "native_size_before_resize": [
+          551,
+          245
+        ],
+        "native_to_final_scale": 0.4355716878402904
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 59,
+      "name": "钢管",
+      "slug": "steel_pipe",
+      "file": "individual/59_steel_pipe.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 1276,
+      "bbox_height": 68,
+      "grid_cols": 5,
+      "grid_rows": 1,
+      "total_cells": 5,
+      "grid_x": 9,
+      "grid_y": 2,
+      "sheet_x": 2306,
+      "sheet_y": 606,
+      "sheet_right": 3582,
+      "sheet_bottom": 674,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\59_steel_pipe.png",
+      "baseline_bbox": [
+        1276,
+        68
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 60,
+      "name": "扳手",
+      "slug": "adjustable_wrench",
+      "file": "individual/60_adjustable_wrench.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 496,
+      "bbox_height": 152,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 0,
+      "grid_y": 4,
+      "sheet_x": 8,
+      "sheet_y": 1076,
+      "sheet_right": 504,
+      "sheet_bottom": 1228,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        0.48282265552458625
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\60_adjustable_wrench.png",
+      "baseline_bbox": [
+        256,
+        76
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.9375,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_b.png",
+        "source_crop": [
+          0,
+          0,
+          1280,
+          430
+        ],
+        "native_size_before_resize": [
+          1077,
+          329
+        ],
+        "native_to_final_scale": 0.4605385329619313
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 61,
+      "name": "撬锁工具",
+      "slug": "lockpick_set",
+      "file": "individual/61_lockpick_set.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 496,
+      "bbox_height": 192,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 2,
+      "grid_y": 4,
+      "sheet_x": 520,
+      "sheet_y": 1056,
+      "sheet_right": 1016,
+      "sheet_bottom": 1248,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        -1.263430420711984
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\61_lockpick_set.png",
+      "baseline_bbox": [
+        152,
+        60
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 3.263157894736842,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\source.png",
+        "source_crop": [
+          1040,
+          1180,
+          2800,
+          2020
+        ],
+        "native_size_before_resize": [
+          1545,
+          602
+        ],
+        "native_to_final_scale": 0.32103559870550163
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 62,
+      "name": "焊机",
+      "slug": "welder",
+      "file": "individual/62_welder.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 340,
+      "bbox_height": 164,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 4,
+      "grid_y": 4,
+      "sheet_x": 1110,
+      "sheet_y": 1070,
+      "sheet_right": 1450,
+      "sheet_bottom": 1234,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\62_welder.png",
+      "baseline_bbox": [
+        340,
+        164
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 63,
+      "name": "螺丝刀",
+      "slug": "screwdriver",
+      "file": "individual/63_screwdriver.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 496,
+      "bbox_height": 68,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 6,
+      "grid_y": 4,
+      "sheet_x": 1544,
+      "sheet_y": 1118,
+      "sheet_right": 2040,
+      "sheet_bottom": 1186,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        -1.9186376537369938
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\63_screwdriver.png",
+      "baseline_bbox": [
+        212,
+        28
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.339622641509434,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_b.png",
+        "source_crop": [
+          0,
+          430,
+          1280,
+          690
+        ],
+        "native_size_before_resize": [
+          1057,
+          149
+        ],
+        "native_to_final_scale": 0.4692526017029328
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 64,
+      "name": "工具箱",
+      "slug": "toolbox",
+      "file": "individual/64_toolbox.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 384,
+      "bbox_height": 156,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 8,
+      "grid_y": 4,
+      "sheet_x": 2112,
+      "sheet_y": 1074,
+      "sheet_right": 2496,
+      "sheet_bottom": 1230,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\64_toolbox.png",
+      "baseline_bbox": [
+        384,
+        156
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 65,
+      "name": "手锯",
+      "slug": "hand_saw",
+      "file": "individual/65_hand_saw.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 468,
+      "bbox_height": 104,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 10,
+      "grid_y": 4,
+      "sheet_x": 2582,
+      "sheet_y": 1100,
+      "sheet_right": 3050,
+      "sheet_bottom": 1204,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\65_hand_saw.png",
+      "baseline_bbox": [
+        468,
+        104
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 66,
+      "name": "防毒面具",
+      "slug": "gas_mask",
+      "file": "individual/66_gas_mask.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 324,
+      "bbox_height": 240,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 12,
+      "grid_y": 4,
+      "sheet_x": 3166,
+      "sheet_y": 1032,
+      "sheet_right": 3490,
+      "sheet_bottom": 1272,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\66_gas_mask.png",
+      "baseline_bbox": [
+        324,
+        240
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 67,
+      "name": "防毒面具过滤器",
+      "slug": "mask_filter",
+      "file": "individual/67_mask_filter.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 216,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 0,
+      "grid_y": 6,
+      "sheet_x": 8,
+      "sheet_y": 1556,
+      "sheet_right": 248,
+      "sheet_bottom": 1772,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        -0.960000000000008
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\67_mask_filter.png",
+      "baseline_bbox": [
+        92,
+        84
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.608695652173913,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_b.png",
+        "source_crop": [
+          1280,
+          745,
+          2560,
+          1130
+        ],
+        "native_size_before_resize": [
+          375,
+          339
+        ],
+        "native_to_final_scale": 0.64
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 68,
+      "name": "手电筒",
+      "slug": "flashlight",
+      "file": "individual/68_flashlight.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 496,
+      "bbox_height": 176,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 0,
+      "grid_y": 5,
+      "sheet_x": 8,
+      "sheet_y": 1320,
+      "sheet_right": 504,
+      "sheet_bottom": 1496,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        0.08533333333332394
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\68_flashlight.png",
+      "baseline_bbox": [
+        152,
+        56
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 3.263157894736842,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_b.png",
+        "source_crop": [
+          2560,
+          740,
+          3840,
+          1090
+        ],
+        "native_size_before_resize": [
+          750,
+          266
+        ],
+        "native_to_final_scale": 0.6613333333333333
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 69,
+      "name": "手摇发电机",
+      "slug": "hand_crank_generator",
+      "file": "individual/69_hand_crank_generator.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 752,
+      "bbox_height": 296,
+      "grid_cols": 3,
+      "grid_rows": 2,
+      "total_cells": 6,
+      "grid_x": 11,
+      "grid_y": 0,
+      "sheet_x": 2824,
+      "sheet_y": 108,
+      "sheet_right": 3576,
+      "sheet_bottom": 404,
+      "padding": 24,
+      "rounding_delta_px": [
+        -1.1368683772161603e-13,
+        -0.8693259972490068
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\69_hand_crank_generator.png",
+      "baseline_bbox": [
+        212,
+        84
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 3.547169811320755,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_b.png",
+        "source_crop": [
+          0,
+          1108,
+          1100,
+          1405
+        ],
+        "native_size_before_resize": [
+          727,
+          287
+        ],
+        "native_to_final_scale": 1.034387895460798
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 70,
+      "name": "铁铲",
+      "slug": "shovel",
+      "file": "individual/70_shovel.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 1276,
+      "bbox_height": 332,
+      "grid_cols": 5,
+      "grid_rows": 2,
+      "total_cells": 10,
+      "grid_x": 3,
+      "grid_y": 0,
+      "sheet_x": 770,
+      "sheet_y": 90,
+      "sheet_right": 2046,
+      "sheet_bottom": 422,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\70_shovel.png",
+      "baseline_bbox": [
+        1276,
+        332
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 71,
+      "name": "瑞士军刀",
+      "slug": "swiss_army_knife",
+      "file": "individual/71_swiss_army_knife.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 124,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 1,
+      "grid_y": 6,
+      "sheet_x": 264,
+      "sheet_y": 1602,
+      "sheet_right": 504,
+      "sheet_bottom": 1726,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        0.6666666666666572
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\71_swiss_army_knife.png",
+      "baseline_bbox": [
+        128,
+        64
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.875,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_b.png",
+        "source_crop": [
+          2800,
+          1090,
+          3840,
+          1405
+        ],
+        "native_size_before_resize": [
+          576,
+          296
+        ],
+        "native_to_final_scale": 0.4166666666666667
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 72,
+      "name": "绿色草药",
+      "slug": "green_herb",
+      "file": "individual/72_green_herb.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 228,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 2,
+      "grid_y": 6,
+      "sheet_x": 526,
+      "sheet_y": 1544,
+      "sheet_right": 754,
+      "sheet_bottom": 1784,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\72_green_herb.png",
+      "baseline_bbox": [
+        228,
+        240
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 73,
+      "name": "红色草药",
+      "slug": "red_herb",
+      "file": "individual/73_red_herb.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 236,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 3,
+      "grid_y": 6,
+      "sheet_x": 778,
+      "sheet_y": 1544,
+      "sheet_right": 1014,
+      "sheet_bottom": 1784,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\73_red_herb.png",
+      "baseline_bbox": [
+        236,
+        240
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 74,
+      "name": "黄色草药",
+      "slug": "yellow_herb",
+      "file": "individual/74_yellow_herb.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 232,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 4,
+      "grid_y": 6,
+      "sheet_x": 1036,
+      "sheet_y": 1544,
+      "sheet_right": 1268,
+      "sheet_bottom": 1784,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\74_yellow_herb.png",
+      "baseline_bbox": [
+        232,
+        240
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 75,
+      "name": "绷带",
+      "slug": "bandage",
+      "file": "individual/75_bandage.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 160,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 5,
+      "grid_y": 6,
+      "sheet_x": 1288,
+      "sheet_y": 1584,
+      "sheet_right": 1528,
+      "sheet_bottom": 1744,
+      "padding": 24,
+      "rounding_delta_px": [
+        2.842170943040401e-14,
+        -1.1940298507462614
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\75_bandage.png",
+      "baseline_bbox": [
+        60,
+        40
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 4.0,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_b.png",
+        "source_crop": [
+          0,
+          1820,
+          1280,
+          2160
+        ],
+        "native_size_before_resize": [
+          402,
+          270
+        ],
+        "native_to_final_scale": 0.5970149253731343
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 76,
+      "name": "急救喷雾",
+      "slug": "first_aid_spray",
+      "file": "individual/76_first_aid_spray.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 92,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 6,
+      "grid_y": 6,
+      "sheet_x": 1618,
+      "sheet_y": 1544,
+      "sheet_right": 1710,
+      "sheet_bottom": 1784,
+      "padding": 24,
+      "rounding_delta_px": [
+        1.6103896103896034,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\76_first_aid_spray.png",
+      "baseline_bbox": [
+        56,
+        152
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.5789473684210527,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_b.png",
+        "source_crop": [
+          1280,
+          1805,
+          2560,
+          2160
+        ],
+        "native_size_before_resize": [
+          116,
+          308
+        ],
+        "native_to_final_scale": 0.7792207792207793
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 77,
+      "name": "止痛药",
+      "slug": "painkillers",
+      "file": "individual/77_painkillers.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 164,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 7,
+      "grid_y": 6,
+      "sheet_x": 1838,
+      "sheet_y": 1544,
+      "sheet_right": 2002,
+      "sheet_bottom": 1784,
+      "padding": 24,
+      "rounding_delta_px": [
+        -0.5714285714285836,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\77_painkillers.png",
+      "baseline_bbox": [
+        52,
+        76
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 3.1578947368421053,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png",
+        "source_crop": [
+          0,
+          0,
+          960,
+          540
+        ],
+        "native_size_before_resize": [
+          312,
+          455
+        ],
+        "native_to_final_scale": 0.5274725274725275
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 78,
+      "name": "抗生素",
+      "slug": "antibiotics",
+      "file": "individual/78_antibiotics.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 176,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 8,
+      "grid_y": 6,
+      "sheet_x": 2088,
+      "sheet_y": 1544,
+      "sheet_right": 2264,
+      "sheet_bottom": 1784,
+      "padding": 24,
+      "rounding_delta_px": [
+        -0.2962962962962763,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\78_antibiotics.png",
+      "baseline_bbox": [
+        76,
+        104
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.3076923076923075,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png",
+        "source_crop": [
+          960,
+          0,
+          1920,
+          540
+        ],
+        "native_size_before_resize": [
+          357,
+          486
+        ],
+        "native_to_final_scale": 0.49382716049382713
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 79,
+      "name": "缝合手术包",
+      "slug": "suture_kit",
+      "file": "individual/79_suture_kit.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 128,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 9,
+      "grid_y": 6,
+      "sheet_x": 2312,
+      "sheet_y": 1600,
+      "sheet_right": 2552,
+      "sheet_bottom": 1728,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        0.1428571428571388
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\79_suture_kit.png",
+      "baseline_bbox": [
+        152,
+        80
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.5789473684210527,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png",
+        "source_crop": [
+          1920,
+          0,
+          2880,
+          540
+        ],
+        "native_size_before_resize": [
+          672,
+          358
+        ],
+        "native_to_final_scale": 0.35714285714285715
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 80,
+      "name": "医疗箱",
+      "slug": "medical_case",
+      "file": "individual/80_medical_case.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 296,
+      "bbox_height": 196,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 2,
+      "grid_y": 5,
+      "sheet_x": 620,
+      "sheet_y": 1310,
+      "sheet_right": 916,
+      "sheet_bottom": 1506,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\80_medical_case.png",
+      "baseline_bbox": [
+        296,
+        196
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 81,
+      "name": "金表",
+      "slug": "gold_watch",
+      "file": "individual/81_gold_watch.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 96,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 10,
+      "grid_y": 6,
+      "sheet_x": 2640,
+      "sheet_y": 1544,
+      "sheet_right": 2736,
+      "sheet_bottom": 1784,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.7619047619047734,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\81_gold_watch.png",
+      "baseline_bbox": [
+        76,
+        196
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.2244897959183674,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png",
+        "source_crop": [
+          0,
+          540,
+          960,
+          1065
+        ],
+        "native_size_before_resize": [
+          200,
+          504
+        ],
+        "native_to_final_scale": 0.47619047619047616
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 82,
+      "name": "雪茄",
+      "slug": "cigar",
+      "file": "individual/82_cigar.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 496,
+      "bbox_height": 80,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 4,
+      "grid_y": 5,
+      "sheet_x": 1032,
+      "sheet_y": 1368,
+      "sheet_right": 1528,
+      "sheet_bottom": 1448,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        1.7954545454545467
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\82_cigar.png",
+      "baseline_bbox": [
+        128,
+        20
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 3.875,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png",
+        "source_crop": [
+          960,
+          540,
+          1920,
+          1080
+        ],
+        "native_size_before_resize": [
+          704,
+          111
+        ],
+        "native_to_final_scale": 0.7045454545454546
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 83,
+      "name": "陈年红酒",
+      "slug": "wine_bottle",
+      "file": "individual/83_wine_bottle.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 68,
+      "bbox_height": 256,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 11,
+      "grid_y": 6,
+      "sheet_x": 2910,
+      "sheet_y": 1536,
+      "sheet_right": 2978,
+      "sheet_bottom": 1792,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\83_wine_bottle.png",
+      "baseline_bbox": [
+        68,
+        256
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 84,
+      "name": "绿宝石",
+      "slug": "emerald",
+      "file": "individual/84_emerald.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 232,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 12,
+      "grid_y": 6,
+      "sheet_x": 3084,
+      "sheet_y": 1544,
+      "sheet_right": 3316,
+      "sheet_bottom": 1784,
+      "padding": 24,
+      "rounding_delta_px": [
+        -1.8636363636363455,
+        2.842170943040401e-14
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\84_emerald.png",
+      "baseline_bbox": [
+        20,
+        20
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 12.0,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png",
+        "source_crop": [
+          2880,
+          540,
+          3840,
+          1080
+        ],
+        "native_size_before_resize": [
+          343,
+          352
+        ],
+        "native_to_final_scale": 0.6818181818181818
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 85,
+      "name": "保险箱",
+      "slug": "safe",
+      "file": "individual/85_safe.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 584,
+      "bbox_height": 752,
+      "grid_cols": 3,
+      "grid_rows": 3,
+      "total_cells": 9,
+      "grid_x": 0,
+      "grid_y": 0,
+      "sheet_x": 92,
+      "sheet_y": 8,
+      "sheet_right": 676,
+      "sheet_bottom": 760,
+      "padding": 24,
+      "rounding_delta_px": [
+        1.5607675906182976,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\85_safe.png",
+      "baseline_bbox": [
+        324,
+        512
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.46875,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles\\redraw_source.png",
+        "source_crop": [
+          350,
+          70,
+          1900,
+          2100
+        ],
+        "native_size_before_resize": [
+          1453,
+          1876
+        ],
+        "native_to_final_scale": 0.40085287846481876
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 86,
+      "name": "金条",
+      "slug": "gold_bar",
+      "file": "individual/86_gold_bar.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 68,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 13,
+      "grid_y": 6,
+      "sheet_x": 3336,
+      "sheet_y": 1630,
+      "sheet_right": 3576,
+      "sheet_bottom": 1698,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        1.9837398373983746
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\86_gold_bar.png",
+      "baseline_bbox": [
+        100,
+        28
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 2.4,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png",
+        "source_crop": [
+          960,
+          1080,
+          1920,
+          1620
+        ],
+        "native_size_before_resize": [
+          738,
+          203
+        ],
+        "native_to_final_scale": 0.3252032520325203
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 87,
+      "name": "咖啡豆",
+      "slug": "coffee_beans",
+      "file": "individual/87_coffee_beans.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 200,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 14,
+      "grid_y": 6,
+      "sheet_x": 3612,
+      "sheet_y": 1544,
+      "sheet_right": 3812,
+      "sheet_bottom": 1784,
+      "padding": 24,
+      "rounding_delta_px": [
+        1.958041958041946,
+        -2.842170943040401e-14
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\87_coffee_beans.png",
+      "baseline_bbox": [
+        176,
+        212
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.1320754716981132,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png",
+        "source_crop": [
+          1920,
+          1070,
+          2880,
+          1555
+        ],
+        "native_size_before_resize": [
+          354,
+          429
+        ],
+        "native_to_final_scale": 0.5594405594405595
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 88,
+      "name": "香烟",
+      "slug": "cigarettes",
+      "file": "individual/88_cigarettes.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 172,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 0,
+      "grid_y": 7,
+      "sheet_x": 42,
+      "sheet_y": 1800,
+      "sheet_right": 214,
+      "sheet_bottom": 2040,
+      "padding": 24,
+      "rounding_delta_px": [
+        -1.8888888888888857,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\88_cigarettes.png",
+      "baseline_bbox": [
+        56,
+        76
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 3.1578947368421053,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png",
+        "source_crop": [
+          2880,
+          1080,
+          3840,
+          1640
+        ],
+        "native_size_before_resize": [
+          313,
+          432
+        ],
+        "native_to_final_scale": 0.5555555555555556
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 89,
+      "name": "手机",
+      "slug": "smartphone",
+      "file": "individual/89_smartphone.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 140,
+      "bbox_height": 240,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 1,
+      "grid_y": 7,
+      "sheet_x": 314,
+      "sheet_y": 1800,
+      "sheet_right": 454,
+      "sheet_bottom": 2040,
+      "padding": 24,
+      "rounding_delta_px": [
+        1.659388646288221,
+        0.0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\89_smartphone.png",
+      "baseline_bbox": [
+        80,
+        136
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.7647058823529411,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png",
+        "source_crop": [
+          0,
+          1600,
+          960,
+          2160
+        ],
+        "native_size_before_resize": [
+          264,
+          458
+        ],
+        "native_to_final_scale": 0.5240174672489083
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 90,
+      "name": "“交换”游戏机",
+      "slug": "switch_console",
+      "file": "individual/90_switch_console.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 240,
+      "bbox_height": 96,
+      "grid_cols": 1,
+      "grid_rows": 1,
+      "total_cells": 1,
+      "grid_x": 2,
+      "grid_y": 7,
+      "sheet_x": 520,
+      "sheet_y": 1872,
+      "sheet_right": 760,
+      "sheet_bottom": 1968,
+      "padding": 24,
+      "rounding_delta_px": [
+        0.0,
+        0.4961240310077528
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\90_switch_console.png",
+      "baseline_bbox": [
+        204,
+        80
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.1764705882352942,
+      "native_source": {
+        "source_path": "E:\\person\\mrxmb\\output\\batch07_remaining_items\\source_c.png",
+        "source_crop": [
+          960,
+          1620,
+          1920,
+          2160
+        ],
+        "native_size_before_resize": [
+          774,
+          308
+        ],
+        "native_to_final_scale": 0.31007751937984496
+      },
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 91,
+      "name": "第五代“游玩车站”",
+      "slug": "ps5_console",
+      "file": "individual/91_ps5_console.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 168,
+      "bbox_height": 332,
+      "grid_cols": 1,
+      "grid_rows": 2,
+      "total_cells": 2,
+      "grid_x": 8,
+      "grid_y": 2,
+      "sheet_x": 2092,
+      "sheet_y": 602,
+      "sheet_right": 2260,
+      "sheet_bottom": 934,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\91_ps5_console.png",
+      "baseline_bbox": [
+        168,
+        332
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    },
+    {
+      "id": 92,
+      "name": "高性能显卡",
+      "slug": "graphics_card",
+      "file": "individual/92_graphics_card.png",
+      "atlas": 2,
+      "atlas_file": "atlas_2_3840x2160.png",
+      "bbox_width": 280,
+      "bbox_height": 124,
+      "grid_cols": 2,
+      "grid_rows": 1,
+      "total_cells": 2,
+      "grid_x": 6,
+      "grid_y": 5,
+      "sheet_x": 1652,
+      "sheet_y": 1346,
+      "sheet_right": 1932,
+      "sheet_bottom": 1470,
+      "padding": 24,
+      "rounding_delta_px": [
+        0,
+        0
+      ],
+      "operation": "byte_identical_reuse",
+      "baseline_file": "E:\\person\\mrxmb\\output\\batch08_scrap_lockpicks\\individual\\92_graphics_card.png",
+      "baseline_bbox": [
+        280,
+        124
+      ],
+      "scale_mode": "visibility_grid_override",
+      "display_scale_vs_baseline": 1.0,
+      "native_source": {},
+      "source_baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+    }
+  ],
+  "baseline": "E:\\person\\mrxmb\\output\\batch09_visibility_tiles"
+}

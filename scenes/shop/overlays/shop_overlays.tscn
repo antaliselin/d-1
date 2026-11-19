@@ -1,0 +1,124 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+[ext_resource type="Script" path="res://scripts/ui/faceted_panel.gd" id="Panel"]
+[ext_resource type="Script" path="res://scripts/ui/shop_overlays.gd" id="Controller"]
+[ext_resource type="PackedScene" path="res://scenes/shop/overlays/map_view.tscn" id="Map"]
+[ext_resource type="PackedScene" path="res://scenes/shop/overlays/notes_view.tscn" id="Notes"]
+[ext_resource type="PackedScene" path="res://scenes/shop/overlays/dispatch_view.tscn" id="Dispatch"]
+[ext_resource type="PackedScene" path="res://scenes/shop/overlays/settlement_view.tscn" id="Settlement"]
+[ext_resource type="PackedScene" path="res://scenes/shop/overlays/intro_view.tscn" id="Intro"]
+
+[node name="ShopOverlays" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1
+anchor_bottom = 1
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("Theme")
+script = ExtResource("Controller")
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1
+anchor_bottom = 1
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.045, 0.07, 0.075, 0.81)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1
+anchor_bottom = 1
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="Center"]
+layout_mode = 2
+script = ExtResource("Panel")
+finish = "modal"
+custom_minimum_size = Vector2(472, 720)
+
+[node name="Insets" type="MarginContainer" parent="Center/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 21
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 21
+
+[node name="Body" type="VBoxContainer" parent="Center/Panel/Insets"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Heading" type="HBoxContainer" parent="Center/Panel/Insets/Body"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="HeadingLabel" type="Label" parent="Center/Panel/Insets/Body/Heading"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 27
+text = "柜台笔记"
+theme_type_variation = &"ShopTitle"
+unique_name_in_owner = true
+size_flags_horizontal = 3
+
+[node name="Close" type="Button" parent="Center/Panel/Insets/Body/Heading"]
+layout_mode = 2
+size_flags_horizontal = 8
+custom_minimum_size = Vector2(65, 36)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 15
+text = "关闭"
+unique_name_in_owner = true
+
+[node name="Subtitle" type="Label" parent="Center/Panel/Insets/Body"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 15
+text = "记录见过的特殊客人、传闻和到访过的地点。"
+unique_name_in_owner = true
+autowrap_mode = 3
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="Scroll" type="ScrollContainer" parent="Center/Panel/Insets/Body"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+unique_name_in_owner = true
+
+[node name="Content" type="VBoxContainer" parent="Center/Panel/Insets/Body/Scroll"]
+layout_mode = 2
+theme_override_constants/separation = 0
+unique_name_in_owner = true
+size_flags_horizontal = 3
+
+[node name="MapView" parent="Center/Panel/Insets/Body/Scroll/Content" instance=ExtResource("Map")]
+layout_mode = 2
+unique_name_in_owner = true
+visible = false
+
+[node name="NotesView" parent="Center/Panel/Insets/Body/Scroll/Content" instance=ExtResource("Notes")]
+layout_mode = 2
+unique_name_in_owner = true
+
+[node name="DispatchView" parent="Center/Panel/Insets/Body/Scroll/Content" instance=ExtResource("Dispatch")]
+layout_mode = 2
+unique_name_in_owner = true
+visible = false
+
+[node name="SettlementView" parent="Center/Panel/Insets/Body/Scroll/Content" instance=ExtResource("Settlement")]
+layout_mode = 2
+unique_name_in_owner = true
+visible = false
+
+[node name="IntroView" parent="Center/Panel/Insets/Body/Scroll/Content" instance=ExtResource("Intro")]
+layout_mode = 2
+unique_name_in_owner = true
+visible = false

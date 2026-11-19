@@ -1,0 +1,393 @@
+{
+  "result": "PASS",
+  "model": "gpt-image-2.5",
+  "quality": "auto",
+  "source_size": [
+    3840,
+    2160
+  ],
+  "source_files": [
+    "source_1.png",
+    "source_2.png",
+    "source_3.png"
+  ],
+  "grid_px": 256,
+  "padding": 24,
+  "relative_heights": "preserved within each source sheet",
+  "items": [
+    {
+      "id": 1,
+      "name": "男军人",
+      "file": "individual/01_male_soldier.png",
+      "sheet": 1,
+      "x": 324,
+      "y": 608,
+      "width": 376,
+      "height": 1184,
+      "cells": 10,
+      "source_crop": [
+        28,
+        87,
+        650,
+        2037
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        1.4631633178773313,
+        0.0
+      ]
+    },
+    {
+      "id": 2,
+      "name": "女军人",
+      "file": "individual/02_female_soldier.png",
+      "sheet": 1,
+      "x": 816,
+      "y": 764,
+      "width": 416,
+      "height": 1028,
+      "cells": 10,
+      "source_crop": [
+        618,
+        342,
+        1307,
+        2037
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        1.8134981968057104,
+        -1.0613086038124493
+      ]
+    },
+    {
+      "id": 3,
+      "name": "男警察",
+      "file": "individual/03_male_police.png",
+      "sheet": 1,
+      "x": 1314,
+      "y": 656,
+      "width": 444,
+      "height": 1136,
+      "cells": 10,
+      "source_crop": [
+        1256,
+        165,
+        1990,
+        2036
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        1.753735188047358,
+        -0.4204018547141004
+      ]
+    },
+    {
+      "id": 4,
+      "name": "女警察",
+      "file": "individual/04_female_police.png",
+      "sheet": 1,
+      "x": 1864,
+      "y": 764,
+      "width": 368,
+      "height": 1028,
+      "cells": 10,
+      "source_crop": [
+        1989,
+        344,
+        2598,
+        2038
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        1.3930963420916669,
+        -0.4513137557960363
+      ]
+    },
+    {
+      "id": 5,
+      "name": "男健身教练",
+      "file": "individual/05_male_trainer.png",
+      "sheet": 1,
+      "x": 2372,
+      "y": 608,
+      "width": 376,
+      "height": 1184,
+      "cells": 10,
+      "source_crop": [
+        2572,
+        88,
+        3198,
+        2036
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        -0.9768160741886049,
+        1.219989696032826
+      ]
+    },
+    {
+      "id": 6,
+      "name": "女健身教练",
+      "file": "individual/06_female_trainer.png",
+      "sheet": 1,
+      "x": 2904,
+      "y": 636,
+      "width": 336,
+      "height": 1156,
+      "cells": 10,
+      "source_crop": [
+        3266,
+        135,
+        3823,
+        2035
+      ],
+      "source": "source_1.png",
+      "rounding_delta": [
+        1.1128284389489522,
+        1.8897475528076484
+      ]
+    },
+    {
+      "id": 7,
+      "name": "男帮派成员",
+      "file": "individual/07_male_gang.png",
+      "sheet": 2,
+      "x": 336,
+      "y": 664,
+      "width": 352,
+      "height": 1128,
+      "cells": 10,
+      "source_crop": [
+        23,
+        196,
+        595,
+        2004
+      ],
+      "source": "source_2.png",
+      "rounding_delta": [
+        -0.6941798941799107,
+        1.0074074074072996
+      ]
+    },
+    {
+      "id": 8,
+      "name": "女帮派成员",
+      "file": "individual/08_female_gang.png",
+      "sheet": 2,
+      "x": 852,
+      "y": 728,
+      "width": 344,
+      "height": 1064,
+      "cells": 10,
+      "source_crop": [
+        662,
+        291,
+        1221,
+        2000
+      ],
+      "source": "source_2.png",
+      "rounding_delta": [
+        -1.17671957671962,
+        -1.6000000000001364
+      ]
+    },
+    {
+      "id": 9,
+      "name": "男医生",
+      "file": "individual/09_male_doctor.png",
+      "sheet": 2,
+      "x": 1350,
+      "y": 608,
+      "width": 372,
+      "height": 1184,
+      "cells": 10,
+      "source_crop": [
+        1213,
+        105,
+        1817,
+        2004
+      ],
+      "source": "source_2.png",
+      "rounding_delta": [
+        -0.11428571428575651,
+        0.0
+      ]
+    },
+    {
+      "id": 10,
+      "name": "女医生",
+      "file": "individual/10_female_doctor.png",
+      "sheet": 2,
+      "x": 1830,
+      "y": 800,
+      "width": 436,
+      "height": 992,
+      "cells": 8,
+      "source_crop": [
+        1754,
+        400,
+        2458,
+        1995
+      ],
+      "source": "source_2.png",
+      "rounding_delta": [
+        -0.012698412698455286,
+        -1.557671957672028
+      ]
+    },
+    {
+      "id": 11,
+      "name": "大背包男性",
+      "file": "individual/11_male_backpacker.png",
+      "sheet": 2,
+      "x": 2348,
+      "y": 664,
+      "width": 424,
+      "height": 1128,
+      "cells": 10,
+      "source_crop": [
+        2450,
+        200,
+        3136,
+        2011
+      ],
+      "source": "source_2.png",
+      "rounding_delta": [
+        -0.7365079365079623,
+        -0.8719576719577162
+      ]
+    },
+    {
+      "id": 12,
+      "name": "大背包女性",
+      "file": "individual/12_female_backpacker.png",
+      "sheet": 2,
+      "x": 2876,
+      "y": 648,
+      "width": 392,
+      "height": 1144,
+      "cells": 10,
+      "source_crop": [
+        3139,
+        184,
+        3776,
+        2016
+      ],
+      "source": "source_2.png",
+      "rounding_delta": [
+        -1.4137566137566182,
+        1.972486772486718
+      ]
+    },
+    {
+      "id": 13,
+      "name": "消防斧肌肉大叔",
+      "file": "individual/13_axe_uncle.png",
+      "sheet": 3,
+      "x": 524,
+      "y": 608,
+      "width": 488,
+      "height": 1184,
+      "cells": 10,
+      "source_crop": [
+        62,
+        129,
+        841,
+        2009
+      ],
+      "source": "source_3.png",
+      "rounding_delta": [
+        1.2514682327815763,
+        1.264281900693959
+      ]
+    },
+    {
+      "id": 14,
+      "name": "戴眼镜的肥宅",
+      "file": "individual/14_glasses_nerd.png",
+      "sheet": 3,
+      "x": 1060,
+      "y": 720,
+      "width": 440,
+      "height": 1072,
+      "cells": 10,
+      "source_crop": [
+        898,
+        306,
+        1603,
+        2008
+      ],
+      "source": "source_3.png",
+      "rounding_delta": [
+        0.029898558462321034,
+        1.7853710624665382
+      ]
+    },
+    {
+      "id": 15,
+      "name": "自制弩干练女人",
+      "file": "individual/15_crossbow_woman.png",
+      "sheet": 3,
+      "x": 1542,
+      "y": 676,
+      "width": 500,
+      "height": 1116,
+      "cells": 10,
+      "source_crop": [
+        1657,
+        232,
+        2460,
+        2008
+      ],
+      "source": "source_3.png",
+      "rounding_delta": [
+        -1.9199145755472955,
+        0.2712226374799229
+      ]
+    },
+    {
+      "id": 16,
+      "name": "鸭舌帽瘦男人",
+      "file": "individual/16_cap_thin_man.png",
+      "sheet": 3,
+      "x": 2116,
+      "y": 608,
+      "width": 376,
+      "height": 1184,
+      "cells": 10,
+      "source_crop": [
+        2381,
+        127,
+        2984,
+        2009
+      ],
+      "source": "source_3.png",
+      "rounding_delta": [
+        -0.12386545648695346,
+        0.0
+      ]
+    },
+    {
+      "id": 17,
+      "name": "抽烟的老退伍军人",
+      "file": "individual/17_smoking_veteran.png",
+      "sheet": 3,
+      "x": 2590,
+      "y": 676,
+      "width": 452,
+      "height": 1116,
+      "cells": 10,
+      "source_crop": [
+        3019,
+        236,
+        3743,
+        2011
+      ],
+      "source": "source_3.png",
+      "rounding_delta": [
+        -0.6129204484784054,
+        0.9033635878270161
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+	"categories": {
+		"firearm": "枪械",
+		"ammo": "子弹",
+		"melee": "近战",
+		"medical": "医疗",
+		"food": "食品",
+		"material": "材料",
+		"tool": "工具",
+		"luxury": "奢侈品"
+	},
+	"medical": {
+		"spray": {
+			"kind": "full",
+			"hint": "松手 回满生命"
+		},
+		"herb_mixed": {
+			"kind": "full",
+			"hint": "松手 回满生命"
+		},
+		"medcase": {
+			"kind": "full",
+			"hint": "松手 回满生命"
+		},
+		"herb_red": {
+			"kind": "none",
+			"reason": "红色草药不能直接回血，得配绿草药"
+		},
+		"stretcher": {
+			"kind": "none",
+			"reason": "担架只能抬人，不能当药"
+		},
+		"painkiller": {
+			"kind": "amount",
+			"amount": 30,
+			"hint": "松手 给他治疗"
+		},
+		"bandage": {
+			"kind": "amount",
+			"amount": 35,
+			"hint": "松手 给他治疗"
+		},
+		"herb_green": {
+			"kind": "amount",
+			"amount": 45,
+			"hint": "松手 给他治疗"
+		},
+		"sedative": {
+			"kind": "amount",
+			"amount": 50,
+			"hint": "松手 给他治疗"
+		},
+		"antibiotics": {
+			"kind": "amount",
+			"amount": 55,
+			"hint": "松手 给他治疗"
+		},
+		"medkit": {
+			"kind": "amount",
+			"amount": 70,
+			"hint": "松手 给他治疗"
+		}
+	},
+	"endings": {
+		"merchant": {
+			"title": "体面的笼子",
+			"text": "你买下了水权，也买下了水塔议会的“特许经营”。水继续流，账继续记，这条街只是换了一个更体面的房东。"
+		},
+		"liberator": {
+			"title": "水来了",
+			"text": "阀门在夜里被打开。水声从地下室一直涌到街口，黑鸦帮和水塔议会都没能再把水关回去。"
+		},
+		"community": {
+			"title": "这条街的店",
+			"text": "你没有把水塔变成自己的产业。街坊们轮流看守泵房，账本钉在柜台上，谁都能来喝一口水。"
+		},
+		"walkaway": {
+			"title": "把钥匙留下",
+			"text": "你把店门锁好，钥匙放在柜台正中。水塔议会、黑鸦帮、这条街的水——都留给还愿意留下的人。"
+		}
+	},
+	"rent": {
+		"id": "collectors",
+		"name": "收租的",
+		"title": "黑鸦帮",
+		"lines": [
+			"这片的规矩，隔几天就得交一回。钱留下，人走。",
+			"铺子开在这儿，就得按我们的价交。",
+			"别装傻，瓶子盖儿我们都数过。",
+			"你要是拿不出来，我们就自己拿。"
+		],
+		"firstRentLines": [
+			"这铺子我们盯了半个月了。",
+			"地是我们的，墙是我们的，连你门口那块破招牌也是我们的。",
+			"想继续开，就得交租。第一次 1900，往后的规矩我们再来告诉你。",
+			"钱留下，人走。"
+		],
+		"paidLines": [
+			"算你识相。",
+			"下回还是这个数。"
+		],
+		"seizeLines": [
+			"那就别怪我们手长。",
+			"货我们搬走了，抵账。"
+		]
+	}
+}

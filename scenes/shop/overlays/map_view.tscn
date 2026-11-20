@@ -1,39 +1,50 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=2 format=3]
 
 [ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
-[ext_resource type="Script" path="res://scripts/ui/faceted_panel.gd" id="Panel"]
 
 [node name="MapView" type="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 9
 theme = ExtResource("Theme")
 
-[node name="MapFrame" type="PanelContainer" parent="."]
+[node name="SiteScroll" type="ScrollContainer" parent="."]
 layout_mode = 2
-script = ExtResource("Panel")
-finish = "wood"
+custom_minimum_size = Vector2(0, 214)
+horizontal_scroll_mode = 0
+follow_focus = true
 
-[node name="Insets" type="MarginContainer" parent="MapFrame"]
+[node name="Sites" type="VBoxContainer" parent="SiteScroll"]
 layout_mode = 2
-theme_override_constants/margin_left = 17
-theme_override_constants/margin_top = 21
-theme_override_constants/margin_right = 17
-theme_override_constants/margin_bottom = 21
-
-[node name="Sites" type="GridContainer" parent="MapFrame/Insets"]
-layout_mode = 2
+size_flags_horizontal = 3
 unique_name_in_owner = true
-columns = 2
-theme_override_constants/h_separation = 7
-theme_override_constants/v_separation = 10
+theme_override_constants/separation = 8
 
-[node name="Details" type="VBoxContainer" parent="."]
+[node name="Details" type="PanelContainer" parent="."]
 layout_mode = 2
-theme_override_constants/separation = 9
 unique_name_in_owner = true
 visible = false
+theme_type_variation = &"ShopInset"
 
-[node name="LocationName" type="Label" parent="Details"]
+[node name="Insets" type="MarginContainer" parent="Details"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 12
+
+[node name="Content" type="VBoxContainer" parent="Details/Insets"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="LocationArt" type="TextureRect" parent="Details/Insets/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(0, 128)
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="LocationName" type="Label" parent="Details/Insets/Content"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/font_size = 19
@@ -41,7 +52,7 @@ text = "工地    风险 15%"
 unique_name_in_owner = true
 theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
 
-[node name="LocationDescription" type="Label" parent="Details"]
+[node name="LocationDescription" type="Label" parent="Details/Insets/Content"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/font_size = 16
@@ -51,7 +62,7 @@ autowrap_mode = 3
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
 
-[node name="Materials" type="Label" parent="Details"]
+[node name="Materials" type="Label" parent="Details/Insets/Content"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/font_size = 15
@@ -60,6 +71,11 @@ unique_name_in_owner = true
 autowrap_mode = 3
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="MaterialIcons" type="HBoxContainer" parent="Details/Insets/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 7
 
 [node name="Confirm" type="Button" parent="."]
 layout_mode = 2

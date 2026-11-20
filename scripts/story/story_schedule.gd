@@ -1,11 +1,31 @@
 class_name StorySchedule
 extends RefCounted
 
-const PORTRAITS := {
-	"old-soldier": "veteran",
-	"underground-clinic": "doctor",
-	"wounded-scavenger": "scout",
-	"courier": "courier",
+const SPEAKER_ART := {
+	"child": ["event_child"],
+	"black-market": ["hood"],
+	"radio-station": ["event_radio"],
+	"lost-scavenger": ["event_lost"],
+	"old-soldier": ["veteran"],
+	"underground-clinic": ["doctor"],
+	"debt-ledger": ["collectors", "icon:notes"],
+	"radio-voice": ["art:relay"],
+	"courier": ["courier"],
+	"roof-leak": ["event_neighbor"],
+	"supply-drop": ["art:crate"],
+	"radio-lottery": ["icon:radio"],
+	"wounded-scavenger": ["scout"],
+	"plague": ["event_patient"],
+	"informer": ["event_spy"],
+	"caravan": ["event_caravan"],
+	"dog-pack": ["event_dog"],
+	"suspicious-package": ["art:crate"],
+	"generator": ["event_mechanic"],
+	"funeral": ["icon:book"],
+	"night-thief": ["event_spy"],
+	"water-ledger": ["art:water_tower", "icon:notes", "art:water_tower"],
+	"district-voices": ["event_neighbor", "event_mechanic", "art:apartment"],
+	"gang-remnants": ["collectors", "icon:notes"],
 }
 
 var progress: Dictionary = {}
@@ -38,8 +58,9 @@ func next_story(day: int, ownership: String, seed_value: int) -> Dictionary:
 	stage.stage_index = index
 	stage.stage_count = story.stages.size()
 	stage.heading = story.title
-	if PORTRAITS.has(story.id):
-		stage.speaker.portrait = PORTRAITS[story.id]
+	if SPEAKER_ART.has(story.id):
+		var art: Array = SPEAKER_ART[story.id]
+		stage.speaker.portrait = art[mini(index, art.size() - 1)]
 	return stage
 
 

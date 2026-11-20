@@ -1,11 +1,25 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+[ext_resource type="Texture2D" path="res://assets/ui/low_poly/prepare_counter.webp" id="CounterArt"]
 
 [node name="PrepareView" type="VBoxContainer"]
-alignment = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 10
 theme = ExtResource("Theme")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+theme_type_variation = &"ShopTitle"
+theme_override_font_sizes/font_size = 28
+text = "交易柜台"
+
+[node name="CounterArt" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("CounterArt")
+expand_mode = 1
+stretch_mode = 6
 
 [node name="Message" type="Label" parent="."]
 unique_name_in_owner = true
@@ -16,24 +30,20 @@ theme_override_font_sizes/font_size = 15
 autowrap_mode = 3
 theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
 
-[node name="Actions" type="HBoxContainer" parent="."]
-layout_mode = 2
-theme_override_constants/separation = 4
-
-[node name="OpenShop" type="Button" parent="Actions"]
+[node name="OpenShop" type="Button" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-custom_minimum_size = Vector2(0, 44)
+custom_minimum_size = Vector2(0, 52)
 mouse_default_cursor_shape = 2
 theme_type_variation = &"ShopPrimary"
 theme_override_font_sizes/font_size = 19
 text = "开门营业"
 unique_name_in_owner = true
 
-[node name="Scavenge" type="Button" parent="Actions"]
+[node name="Scavenge" type="Button" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-custom_minimum_size = Vector2(0, 44)
+custom_minimum_size = Vector2(0, 46)
 mouse_default_cursor_shape = 2
 theme_type_variation = &"ShopSecondary"
 theme_override_font_sizes/font_size = 16
@@ -43,7 +53,7 @@ unique_name_in_owner = true
 [node name="Dispatch" type="Button" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-custom_minimum_size = Vector2(0, 37)
+custom_minimum_size = Vector2(0, 46)
 mouse_default_cursor_shape = 2
 theme_type_variation = &"ShopQuiet"
 theme_override_font_sizes/font_size = 15

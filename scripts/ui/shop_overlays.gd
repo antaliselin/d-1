@@ -5,6 +5,8 @@ signal changed
 
 const SCOUT_ROW = preload("res://scenes/ui/scout_row.tscn")
 const NOTE_ENTRY = preload("res://scenes/ui/note_entry.tscn")
+const HEIGHT_FRACTIONS := {"map": 0.72, "notes": 0.70, "dispatch": 0.86, "settlement": 0.54, "intro": 0.72}
+const MODE_ICONS := {"map": "pin", "notes": "notes", "dispatch": "crate", "settlement": "trade", "intro": "book"}
 
 var game: StoreGame
 var mode := ""
@@ -22,6 +24,7 @@ var scout_entries: Dictionary = {}
 
 @onready var heading: Label = %HeadingLabel
 @onready var subtitle: Label = %Subtitle
+@onready var panel: PanelContainer = %Panel
 @onready var scroll: ScrollContainer = %Scroll
 @onready var map_view: VBoxContainer = %MapView
 @onready var notes_view: VBoxContainer = %NotesView
@@ -47,9 +50,11 @@ var scout_entries: Dictionary = {}
 
 func _ready() -> void:
 	hide()
+	resized.connect(_resize_panel)
 	%Close.pressed.connect(close)
 	map_view.get_node("%Confirm").pressed.connect(_confirm_scavenge)
 	notes_view.get_node("%OpenIntro").pressed.connect(_show_intro.bind(0))
+	notes_view.get_node("%Present").pressed.connect(_present_current_note)
 	intro_view.get_node("%Next").pressed.connect(_next_chapter)
 	dispatch_view.get_node("%Decrease").pressed.connect(_step_budget.bind(-50))
 	dispatch_view.get_node("%Increase").pressed.connect(_step_budget.bind(50))
@@ -58,6 +63,7 @@ func _ready() -> void:
 		note_tabs[tab].pressed.connect(show_notes.bind(tab))
 	for category: String in interest_buttons:
 		interest_buttons[category].pressed.connect(_toggle_interest.bind(category))
+		ShopWidgets.button_icon(interest_buttons[category], ShopWidgets.category_icon(category), 20)
 	for category: String in gear_selectors:
 		gear_selectors[category].item_selected.connect(_select_gear.bind(category))
 
@@ -75,10 +81,10 @@ func show_map() -> void:
 	site_buttons.clear()
 	for id: String in game.expeditions.destinations(game.day):
 		var place: Dictionary = game.catalog.locations[id]
-		var button := ShopWidgets.action(place.name, _select_location.bind(id), &"ShopQuiet", 64, 16)
-		button.icon = load("res://assets/locations/%s.png" % id)
-		button.expand_icon = true
-		button.add_theme_constant_override("icon_max_width", 38)
+		var button := ShopWidgets.action(place.name, _select_location.bind(id), &"ShopSecondary", 60, 18)
+		ShopWidgets.button_icon(button, ShopWidgets.location_icon(id), 74)
+		button.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		button.add_theme_constant_override("h_separation", 14)
 		site_buttons[id] = button
 		sites.add_child(button)
 	_select_location("")
@@ -96,29 +102,33 @@ func show_notes(tab: String = "customer") -> void:
 	note_entries.clear()
 	var entries := game.journal.entries(note_tab, game.catalog)
 	notes_view.get_node("%Empty").visible = entries.is_empty()
+	notes_view.get_node("%DetailPane").visible = not entries.is_empty()
+	_show_note_detail({})
 	for entry: Dictionary in entries:
-		var note := NOTE_ENTRY.instantiate()
-		var button: Button = note.get_node("Title")
+		var button: Button = NOTE_ENTRY.instantiate()
 		button.text = entry.title
-		button.pressed.connect(_toggle_note.bind(entry.id))
-		note.get_node("Detail").text = "\n\n".join(entry.detail)
-		note.get_node("Present").pressed.connect(_present.bind(entry.id))
-		list.add_child(note)
-		note_entries[entry.id] = note
+		ShopWidgets.button_icon(button, _note_art(entry), 33)
+		button.tooltip_text = entry.title
+		button.pressed.connect(_toggle_note.bind(entry))
+		list.add_child(button)
+		note_entries[entry.id] = button
 
 
 func show_settlement() -> void:
 	var offer: Dictionary = game.trade.sold
-	_open("settlement", "交易明细", "入账 %d 瓶盖    ·    声望 %+d" % [int(offer.total), int(offer.reputation)])
-	var details: Array[String] = []
+	_open("settlement", "交易明细", "")
+	settlement_view.get_node("%SummaryText").text = "入账 %d 瓶盖" % int(offer.total)
+	settlement_view.get_node("%ReputationText").text = "声望 %+d" % int(offer.reputation)
+	var details: VBoxContainer = settlement_view.get_node("%Lines")
+	ShopWidgets.clear_entries(details)
 	for line: Dictionary in offer.lines:
 		var amount := int(line.base) + int(line.bonus)
-		var suffix := "，含协同 +%d" % int(line.bonus) if int(line.bonus) > 0 else ""
-		details.append("%s %s    +%d%s" % [line.name, game.catalog.amount_text(line.id, int(line.amount)), amount, suffix])
-	settlement_view.get_node("%Lines").text = "\n\n".join(details)
-	settlement_view.get_node("%Lines").visible = not details.is_empty()
+		var suffix := "\n含协同 +%d" % int(line.bonus) if int(line.bonus) > 0 else ""
+		var description := "%s %s%s" % [line.name, game.catalog.amount_text(line.id, int(line.amount)), suffix]
+		details.add_child(ShopWidgets.item_row(line.id, description, "+%d" % amount))
+	details.visible = not offer.lines.is_empty()
 	settlement_view.get_node("%Healing").text = "治疗酬谢    +%d" % int(offer.healing)
-	settlement_view.get_node("%Healing").visible = int(offer.healing) > 0
+	settlement_view.get_node("%HealingRow").visible = int(offer.healing) > 0
 	settlement_view.get_node("%BudgetWarning").visible = offer.capped
 
 
@@ -137,7 +147,8 @@ func show_dispatch() -> void:
 		if scout_id == "" and not traveling:
 			scout_id = id
 		var entry := SCOUT_ROW.instantiate()
-		entry.get_node("Portrait").texture = ShopWidgets.portrait(member.portrait)
+		entry.get_node("Portrait").texture = ShopWidgets.half_portrait(member.portrait)
+		entry.modulate = Color(0.65, 0.71, 0.74) if traveling else Color.WHITE
 		var button: Button = entry.get_node("Select")
 		button.pressed.connect(_select_scout.bind(id))
 		button.disabled = traveling
@@ -148,8 +159,10 @@ func show_dispatch() -> void:
 
 func _open(key: String, title: String, description: String) -> void:
 	mode = key
+	%HeadingArt.texture = ShopWidgets.ui_icon(MODE_ICONS[key])
 	heading.text = title
 	subtitle.text = description
+	subtitle.visible = not description.is_empty()
 	map_view.visible = key == "map"
 	notes_view.visible = key == "notes"
 	dispatch_view.visible = key == "dispatch"
@@ -157,25 +170,43 @@ func _open(key: String, title: String, description: String) -> void:
 	intro_view.visible = key == "intro"
 	scroll.set_deferred("scroll_vertical", 0)
 	show()
+	_resize_panel()
 	%Close.grab_focus()
+
+
+func _resize_panel() -> void:
+	if mode.is_empty():
+		return
+	panel.custom_minimum_size = Vector2(clampf(size.x - 40.0, 0.0, 520.0), size.y * float(HEIGHT_FRACTIONS[mode]))
 
 
 func _select_location(id: String) -> void:
 	map_target = id
 	for key: String in site_buttons:
-		site_buttons[key].theme_type_variation = &"ShopPrimary" if key == map_target else &"ShopQuiet"
+		site_buttons[key].theme_type_variation = &"ShopPrimary" if key == map_target else &"ShopSecondary"
 	map_view.get_node("%Details").visible = map_target != ""
 	map_view.get_node("%Confirm").disabled = map_target == ""
 	if map_target == "":
 		return
 	var place: Dictionary = game.catalog.locations[map_target]
+	map_view.get_node("%LocationArt").texture = ShopWidgets.location_icon(map_target)
 	map_view.get_node("%LocationName").text = "%s    风险 %d%%" % [place.name, roundi(place.risk * 100.0)]
 	map_view.get_node("%LocationDescription").text = place.blurb
 	var materials: Array[String] = []
+	var icons: HBoxContainer = map_view.get_node("%MaterialIcons")
+	ShopWidgets.clear_entries(icons)
 	for entry: Dictionary in place.loot:
-		var name_text: String = game.catalog.categories[game.catalog.items[entry.itemId].category]
+		var category: String = game.catalog.items[entry.itemId].category
+		var name_text: String = game.catalog.categories[category]
 		if name_text not in materials:
 			materials.append(name_text)
+			var icon_view := TextureRect.new()
+			icon_view.texture = ShopWidgets.category_icon(category)
+			icon_view.custom_minimum_size = Vector2(42, 34)
+			icon_view.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			icon_view.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			icon_view.tooltip_text = name_text
+			icons.add_child(icon_view)
 	map_view.get_node("%Materials").text = "有机会找到：%s" % "、".join(materials)
 
 
@@ -201,14 +232,38 @@ func _next_chapter() -> void:
 		show_notes("clue")
 
 
-func _toggle_note(id: String) -> void:
-	expanded_note = "" if expanded_note == id else id
-	var can_present := not game.available_clues().is_empty()
+func _toggle_note(entry: Dictionary) -> void:
+	expanded_note = "" if entry.id == expanded_note else entry.id
 	for key: String in note_entries:
-		var note: Control = note_entries[key]
-		var expanded := key == expanded_note
-		note.get_node("Detail").visible = expanded
-		note.get_node("Present").visible = expanded and can_present
+		note_entries[key].theme_type_variation = &"ShopPrimary" if key == expanded_note else &"ShopSecondary"
+	_show_note_detail({} if expanded_note.is_empty() else entry)
+
+
+func _show_note_detail(entry: Dictionary) -> void:
+	var art: TextureRect = notes_view.get_node("%DetailArt")
+	art.texture = _note_art(entry) if not entry.is_empty() else null
+	art.visible = art.texture != null
+	notes_view.get_node("%DetailTitle").text = entry.get("title", "选择一条记录")
+	notes_view.get_node("%Detail").text = "\n\n".join(entry.get("detail", []))
+	notes_view.get_node("%Present").visible = not entry.is_empty() and not game.available_clues().is_empty()
+
+
+func _note_art(entry: Dictionary) -> Texture2D:
+	if entry.get("portrait", "") != "":
+		return ShopWidgets.half_portrait(entry.portrait)
+	if entry.has("locationId"):
+		return ShopWidgets.location_icon(entry.locationId)
+	match entry.id:
+		"clue-water":
+			return ShopWidgets.location_icon("water_tower")
+		"clue-rent":
+			return ShopWidgets.ui_icon("money")
+	return ShopWidgets.ui_icon("notes")
+
+
+func _present_current_note() -> void:
+	if not expanded_note.is_empty():
+		_present(expanded_note)
 
 
 func _present(id: String) -> void:
@@ -249,6 +304,7 @@ func _select_gear(index: int, category: String) -> void:
 
 func _update_gear_selector(category: String) -> void:
 	var selector: OptionButton = gear_selectors[category]
+	selector.get_popup().add_theme_constant_override("icon_max_width", 28)
 	selector.clear()
 	selector.add_item("%s · 不携带" % game.catalog.categories[category])
 	selector.set_item_metadata(0, "")
@@ -261,6 +317,7 @@ func _update_gear_selector(category: String) -> void:
 			continue
 		selector.add_item(game.catalog.items[id].name)
 		var index := selector.item_count - 1
+		selector.set_item_icon(index, ShopWidgets.icon(id))
 		selector.set_item_metadata(index, id)
 		if gear.get(category, "") == id:
 			selector.select(index)
@@ -271,6 +328,7 @@ func _refresh_dispatch() -> void:
 		var member: Dictionary = game.expeditions.roster[id]
 		var status := " · 途中" if game.expeditions.active.has(id) else (" · 已选" if id == scout_id else "")
 		scout_entries[id].text = member.name + status + "    " + member.trait
+		scout_entries[id].theme_type_variation = &"ShopPrimary" if id == scout_id else &"ShopSecondary"
 	dispatch_view.get_node("%Decrease").disabled = dispatch_budget <= 50
 	dispatch_view.get_node("%Increase").disabled = dispatch_budget >= mini(500, game.money)
 	dispatch_view.get_node("%BudgetValue").text = "预算 %d / %d" % [dispatch_budget, mini(500, game.money)]

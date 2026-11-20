@@ -22,14 +22,33 @@ layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="ReportText" type="Label" parent="Scroll"]
+[node name="Body" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="ReportArt" type="TextureRect" parent="Scroll/Body"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+custom_minimum_size = Vector2(0, 300)
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ReportText" type="Label" parent="Scroll/Body"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/font_size = 17
-text = "今日进账 0 瓶盖\\n关好卷帘门，明天继续。"
+text = "今日进账 0 瓶盖"
 unique_name_in_owner = true
 autowrap_mode = 3
 size_flags_horizontal = 3
+
+[node name="ReportLoot" type="VBoxContainer" parent="Scroll/Body"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
 
 [node name="NextDay" type="Button" parent="."]
 layout_mode = 2

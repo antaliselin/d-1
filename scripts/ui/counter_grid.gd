@@ -39,7 +39,7 @@ func _draw_cells(rect: Rect2, dimensions: Vector2i, blocked: Dictionary) -> void
 	if rect.size.x <= 0.0:
 		return
 	var cell_size := rect.size.x / dimensions.x
-	FacetedStyle.slab(self, rect.grow(8), Color("#a27049"), Color("#333a32"), 7, 14)
+	draw_style_box(get_theme_stylebox("frame", &"ShopBackpack"), rect.grow(8))
 	for y in dimensions.y:
 		for x in dimensions.x:
 			var point := Vector2i(x, y)
@@ -49,7 +49,7 @@ func _draw_cells(rect: Rect2, dimensions: Vector2i, blocked: Dictionary) -> void
 				draw_line(tile.position + Vector2.ONE * 4, tile.end - Vector2.ONE * 4, Color("#815b43"), 2, true)
 				draw_line(Vector2(tile.end.x - 4, tile.position.y + 4), Vector2(tile.position.x + 4, tile.end.y - 4), Color("#815b43"), 2, true)
 			else:
-				FacetedStyle.slab(self, tile, Color("#5e6050"), Color("#434a3d"), 2, 3)
+				FacetedStyle.slab(self, tile, Color("#5a6b5f"), Color("#35463b"), 2, 3)
 
 
 func board_rect() -> Rect2:

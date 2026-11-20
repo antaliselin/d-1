@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+
+[node name="DeliverySlot" type="Button"]
+custom_minimum_size = Vector2(48, 46)
+size_flags_horizontal = 3
+mouse_filter = 2
+theme = ExtResource("Theme")
+theme_type_variation = &"ShopQuiet"
+theme_override_constants/icon_max_width = 35
+theme_override_font_sizes/font_size = 12
+disabled = true
+text = "空位"
+icon_alignment = 1
+expand_icon = true

@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
 [ext_resource type="PackedScene" path="res://scenes/ui/counter_grid.tscn" id="Board"]
+[ext_resource type="Script" path="res://scripts/ui/shop_symbol.gd" id="Symbol"]
 
 [sub_resource type="StyleBoxFlat" id="HealthBackground"]
-bg_color = Color(0.161, 0.204, 0.184, 1)
+bg_color = Color(0.083, 0.133, 0.15, 1)
 
 [sub_resource type="StyleBoxFlat" id="HealthFill"]
 resource_local_to_scene = true
@@ -16,7 +17,7 @@ theme = ExtResource("Theme")
 [node name="Upper" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchor_right = 1.0
-anchor_bottom = 0.3
+anchor_bottom = 0.20
 offset_bottom = -8.0
 theme_override_constants/separation = 6
 
@@ -77,7 +78,7 @@ mouse_filter = 2
 
 [node name="Lower" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchor_top = 0.52
+anchor_top = 0.50
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 8.0
@@ -96,7 +97,29 @@ layout_mode = 2
 theme_override_constants/separation = 8
 size_flags_horizontal = 3
 
-[node name="DialogueLine" type="Label" parent="Lower/Conversation/Dialogue"]
+[node name="TradeStatusArt" type="TextureRect" parent="Lower/Conversation/Dialogue"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+custom_minimum_size = Vector2(0, 116)
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SpeechPanel" type="PanelContainer" parent="Lower/Conversation/Dialogue"]
+layout_mode = 2
+theme_type_variation = &"ShopInset"
+mouse_filter = 2
+
+[node name="Insets" type="MarginContainer" parent="Lower/Conversation/Dialogue/SpeechPanel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 11
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 11
+theme_override_constants/margin_bottom = 9
+
+[node name="DialogueLine" type="Label" parent="Lower/Conversation/Dialogue/SpeechPanel/Insets"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/font_size = 16
@@ -205,7 +228,7 @@ custom_minimum_size = Vector2(0, 35)
 mouse_default_cursor_shape = 2
 theme_type_variation = &"ShopQuiet"
 theme_override_font_sizes/font_size = 14
-text = "旋转 ↻"
+text = "旋转"
 unique_name_in_owner = true
 
 [node name="ReturnPiece" type="Button" parent="Lower/BoardActions/Buttons"]
@@ -218,7 +241,20 @@ theme_override_font_sizes/font_size = 14
 text = "收回单件"
 unique_name_in_owner = true
 
-[node name="BoardHint" type="Label" parent="Lower/BoardActions"]
+[node name="FeedbackRow" type="HBoxContainer" parent="Lower/BoardActions"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="WarningIcon" type="Control" parent="Lower/BoardActions/FeedbackRow"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+custom_minimum_size = Vector2(22, 22)
+mouse_filter = 2
+script = ExtResource("Symbol")
+symbol = "warning"
+
+[node name="BoardHint" type="Label" parent="Lower/BoardActions/FeedbackRow"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/font_size = 13

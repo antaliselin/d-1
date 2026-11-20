@@ -1,11 +1,20 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+[ext_resource type="Texture2D" path="res://assets/ui/low_poly/opening_shop.webp" id="OpeningArt"]
 
 [node name="IntroView" type="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 theme = ExtResource("Theme")
+
+[node name="OpeningArt" type="TextureRect" parent="."]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 200)
+mouse_filter = 2
+texture = ExtResource("OpeningArt")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="StoryText" type="Label" parent="."]
 layout_mode = 2

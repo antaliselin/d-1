@@ -1,22 +1,79 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+
+[ext_resource type="Script" path="res://scripts/ui/shop_symbol.gd" id="Symbol"]
 
 [node name="SettlementView" type="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 theme = ExtResource("Theme")
 
-[node name="Lines" type="Label" parent="."]
+[node name="Summary" type="PanelContainer" parent="."]
 layout_mode = 2
-mouse_filter = 2
-theme_override_font_sizes/font_size = 17
-text = "交易结算"
-unique_name_in_owner = true
-autowrap_mode = 3
-size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 56)
+theme_type_variation = &"ShopInset"
 
-[node name="Healing" type="Label" parent="."]
+[node name="Stats" type="HBoxContainer" parent="Summary"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 9
+
+[node name="MoneyIcon" type="Control" parent="Summary/Stats"]
+layout_mode = 2
+custom_minimum_size = Vector2(35, 35)
+mouse_filter = 2
+script = ExtResource("Symbol")
+symbol = "money"
+
+[node name="SummaryText" type="Label" parent="Summary/Stats"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ShopTitle"
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
+
+[node name="Separator" type="VSeparator" parent="Summary/Stats"]
+layout_mode = 2
+
+[node name="ReputationIcon" type="Control" parent="Summary/Stats"]
+layout_mode = 2
+custom_minimum_size = Vector2(32, 32)
+mouse_filter = 2
+script = ExtResource("Symbol")
+symbol = "reputation"
+
+[node name="ReputationText" type="Label" parent="Summary/Stats"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ShopTitle"
+theme_override_font_sizes/font_size = 18
+
+[node name="Lines" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="HealingRow" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+custom_minimum_size = Vector2(0, 43)
+theme_type_variation = &"ShopInset"
+
+[node name="Content" type="HBoxContainer" parent="HealingRow"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 9
+
+[node name="Icon" type="Control" parent="HealingRow/Content"]
+layout_mode = 2
+custom_minimum_size = Vector2(32, 32)
+mouse_filter = 2
+script = ExtResource("Symbol")
+symbol = "medical"
+
+[node name="Healing" type="Label" parent="HealingRow/Content"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_font_sizes/font_size = 17
@@ -25,7 +82,6 @@ unique_name_in_owner = true
 autowrap_mode = 3
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
-visible = false
 
 [node name="BudgetWarning" type="Label" parent="."]
 layout_mode = 2

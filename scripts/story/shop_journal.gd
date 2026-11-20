@@ -8,7 +8,7 @@ var visited: Dictionary = {}
 func meet(customer: Dictionary, day: int) -> void:
 	if customer.get("special", false) and not met.has(customer.id):
 		met[customer.id] = {
-			"id": "customer:" + customer.id, "title": customer.name,
+			"id": "customer:" + customer.id, "title": customer.name, "portrait": customer.get("portrait", ""),
 			"detail": ["第 %d 天 · %s" % [day, customer.title], customer.request, customer.aside],
 		}
 
@@ -31,7 +31,7 @@ func entries(kind: String, catalog: ShopCatalog) -> Array[Dictionary]:
 		for id: String in visited:
 			var location: Dictionary = catalog.locations[id]
 			result.append({
-				"id": "location:" + id, "title": location.name,
+				"id": "location:" + id, "title": location.name, "locationId": id,
 				"detail": ["首次到访 · 第 %d 天" % visited[id], location.blurb],
 			})
 	return result

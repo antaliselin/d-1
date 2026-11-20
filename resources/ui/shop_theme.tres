@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=31 format=3]
+[gd_resource type="Theme" load_steps=45 format=3]
 
 [ext_resource type="Texture2D" path="res://assets/ui/button_amber_normal.png" id="amber_normal"]
 [ext_resource type="Texture2D" path="res://assets/ui/button_amber_hover.png" id="amber_hover"]
@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" path="res://assets/ui/button_dark_hover.png" id="dark_hover"]
 [ext_resource type="Texture2D" path="res://assets/ui/button_dark_pressed.png" id="dark_pressed"]
 [ext_resource type="Texture2D" path="res://assets/ui/button_dark_disabled.png" id="dark_disabled"]
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansSC-Variable.ttf" id="noto_sans_sc"]
+
+[ext_resource type="Texture2D" path="res://assets/ui/low_poly/frame_atlas.png" id="facets"]
 
 [sub_resource type="StyleBoxTexture" id="amber_normal"]
 texture = ExtResource("amber_normal")
@@ -145,12 +148,22 @@ content_margin_right = 6.0
 content_margin_top = 4.0
 content_margin_bottom = 4.0
 
+[sub_resource type="FontVariation" id="NotoSansSCRegular"]
+base_font = ExtResource("noto_sans_sc")
+variation_opentype = {"weight": 400.0}
+
 [sub_resource type="SystemFont" id="Regular"]
 font_names = PackedStringArray("Microsoft YaHei UI", "Noto Sans CJK SC", "PingFang SC", "WenQuanYi Micro Hei", "Droid Sans Fallback")
+fallbacks = Array[Font]([SubResource("NotoSansSCRegular")])
+
+[sub_resource type="FontVariation" id="NotoSansSCBold"]
+base_font = ExtResource("noto_sans_sc")
+variation_opentype = {"weight": 700.0}
 
 [sub_resource type="SystemFont" id="Bold"]
 font_names = PackedStringArray("Microsoft YaHei UI", "Noto Sans CJK SC", "PingFang SC", "WenQuanYi Micro Hei", "Droid Sans Fallback")
 font_weight = 700
+fallbacks = Array[Font]([SubResource("NotoSansSCBold")])
 
 [sub_resource type="StyleBoxEmpty" id="Empty"]
 
@@ -176,7 +189,119 @@ bg_color = Color(0.50, 0.59, 0.61, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxLine" id="Divider"]
+color = Color(0.38, 0.5, 0.57, 1)
+thickness = 1
 corner_radius_bottom_right = 3
+
+[sub_resource type="StyleBoxTexture" id="Facet_bar"]
+texture = ExtResource("facets")
+region_rect = Rect2(2, 2, 64, 64)
+texture_margin_left = 15.0
+content_margin_left = 0.0
+texture_margin_top = 15.0
+content_margin_top = 0.0
+texture_margin_right = 15.0
+content_margin_right = 0.0
+texture_margin_bottom = 15.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="Facet_steel"]
+texture = ExtResource("facets")
+region_rect = Rect2(70, 2, 64, 64)
+texture_margin_left = 17.0
+content_margin_left = 0.0
+texture_margin_top = 17.0
+content_margin_top = 0.0
+texture_margin_right = 17.0
+content_margin_right = 0.0
+texture_margin_bottom = 17.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="Facet_wood"]
+texture = ExtResource("facets")
+region_rect = Rect2(138, 2, 64, 64)
+texture_margin_left = 17.0
+content_margin_left = 0.0
+texture_margin_top = 17.0
+content_margin_top = 0.0
+texture_margin_right = 17.0
+content_margin_right = 0.0
+texture_margin_bottom = 17.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="Facet_modal"]
+texture = ExtResource("facets")
+region_rect = Rect2(206, 2, 64, 64)
+texture_margin_left = 16.0
+content_margin_left = 0.0
+texture_margin_top = 16.0
+content_margin_top = 0.0
+texture_margin_right = 16.0
+content_margin_right = 0.0
+texture_margin_bottom = 16.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="Facet_card"]
+texture = ExtResource("facets")
+region_rect = Rect2(2, 70, 64, 64)
+texture_margin_left = 12.0
+content_margin_left = 0.0
+texture_margin_top = 12.0
+content_margin_top = 0.0
+texture_margin_right = 12.0
+content_margin_right = 0.0
+texture_margin_bottom = 12.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="Facet_card_active"]
+texture = ExtResource("facets")
+region_rect = Rect2(70, 70, 64, 64)
+texture_margin_left = 12.0
+content_margin_left = 0.0
+texture_margin_top = 12.0
+content_margin_top = 0.0
+texture_margin_right = 12.0
+content_margin_right = 0.0
+texture_margin_bottom = 12.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="Facet_pocket"]
+texture = ExtResource("facets")
+region_rect = Rect2(138, 70, 64, 64)
+texture_margin_left = 10.0
+content_margin_left = 0.0
+texture_margin_top = 10.0
+content_margin_top = 0.0
+texture_margin_right = 10.0
+content_margin_right = 0.0
+texture_margin_bottom = 10.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="Facet_inset"]
+texture = ExtResource("facets")
+region_rect = Rect2(206, 70, 64, 64)
+texture_margin_left = 11.0
+content_margin_left = 0.0
+texture_margin_top = 11.0
+content_margin_top = 0.0
+texture_margin_right = 11.0
+content_margin_right = 0.0
+texture_margin_bottom = 11.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxTexture" id="Facet_grid"]
+texture = ExtResource("facets")
+region_rect = Rect2(2, 138, 64, 64)
+texture_margin_left = 12.0
+content_margin_left = 0.0
+texture_margin_top = 12.0
+content_margin_top = 0.0
+texture_margin_right = 12.0
+content_margin_right = 0.0
+texture_margin_bottom = 12.0
+content_margin_bottom = 0.0
 
 [resource]
 ShopPrimary/base_type = &"Button"
@@ -223,15 +348,51 @@ default_font_size = 17
 Label/colors/font_color = Color(0.96, 0.91, 0.79, 1)
 ShopTitle/base_type = &"Label"
 ShopTitle/fonts/font = SubResource("Bold")
+VSeparator/styles/separator = SubResource("Divider")
+HSeparator/styles/separator = SubResource("Divider")
+OptionButton/styles/normal = SubResource("steel_normal")
+OptionButton/styles/hover = SubResource("steel_hover")
+OptionButton/styles/pressed = SubResource("steel_pressed")
+OptionButton/styles/disabled = SubResource("steel_disabled")
+OptionButton/styles/focus = SubResource("Focus")
+PopupMenu/styles/panel = SubResource("Facet_modal")
+PopupMenu/styles/hover = SubResource("Facet_card_active")
+PopupMenu/colors/font_color = Color(0.96, 0.93, 0.85, 1)
 ShopStockRow/base_type = &"Button"
 PanelContainer/styles/panel = SubResource("Empty")
 VScrollBar/styles/scroll = SubResource("Track")
-ShopStockRow/styles/normal = SubResource("Empty")
-ShopStockRow/styles/hover = SubResource("Empty")
-ShopStockRow/styles/pressed = SubResource("Empty")
-ShopStockRow/styles/disabled = SubResource("Empty")
-ShopStockRow/styles/focus = SubResource("Empty")
-ShopStockRow/styles/hover_pressed = SubResource("Empty")
+ShopStockRow/styles/normal = SubResource("Facet_card")
+ShopStockRow/styles/hover = SubResource("Facet_card_active")
+ShopStockRow/styles/pressed = SubResource("Facet_card_active")
+ShopStockRow/styles/disabled = SubResource("Facet_card")
+ShopStockRow/styles/focus = SubResource("Focus")
+ShopStockRow/styles/hover_pressed = SubResource("Facet_card_active")
 VScrollBar/styles/grabber = SubResource("Thumb")
 VScrollBar/styles/grabber_highlight = SubResource("Thumb")
 VScrollBar/styles/grabber_pressed = SubResource("Thumb")
+ShopBar/base_type = &"PanelContainer"
+ShopBar/styles/panel = SubResource("Facet_bar")
+ShopSteel/base_type = &"PanelContainer"
+ShopSteel/styles/panel = SubResource("Facet_steel")
+ShopCounter/base_type = &"PanelContainer"
+ShopCounter/styles/panel = SubResource("Facet_wood")
+ShopModal/base_type = &"PanelContainer"
+ShopModal/styles/panel = SubResource("Facet_modal")
+ShopIconPocket/base_type = &"PanelContainer"
+ShopIconPocket/styles/panel = SubResource("Facet_pocket")
+ShopInset/base_type = &"PanelContainer"
+ShopInset/styles/panel = SubResource("Facet_inset")
+ShopBackpack/base_type = &"Control"
+ShopBackpack/styles/frame = SubResource("Facet_grid")
+ShopStockSelected/base_type = &"ShopStockRow"
+ShopStockSelected/styles/normal = SubResource("Facet_card_active")
+ShopStockSelected/styles/hover = SubResource("Facet_card_active")
+ShopStockSelected/styles/pressed = SubResource("Facet_card_active")
+ShopStockSelected/styles/disabled = SubResource("Facet_card_active")
+ShopStockSelected/styles/hover_pressed = SubResource("Facet_card_active")
+ShopStockReadOnly/base_type = &"ShopStockRow"
+ShopStockReadOnly/styles/normal = SubResource("Facet_card")
+ShopStockReadOnly/styles/hover = SubResource("Facet_card")
+ShopStockReadOnly/styles/pressed = SubResource("Facet_card")
+ShopStockReadOnly/styles/disabled = SubResource("Facet_card")
+ShopStockReadOnly/styles/hover_pressed = SubResource("Facet_card")

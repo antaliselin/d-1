@@ -16,6 +16,8 @@ anchor_right = 1
 anchor_bottom = 1
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 theme = ExtResource("Theme")
 script = ExtResource("Controller")
 
@@ -26,7 +28,9 @@ anchor_right = 1
 anchor_bottom = 1
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.045, 0.07, 0.075, 0.81)
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+color = Color(0.032, 0.055, 0.073, 0.76)
 
 [node name="Center" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -38,10 +42,13 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Panel" type="PanelContainer" parent="Center"]
+unique_name_in_owner = true
 layout_mode = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 script = ExtResource("Panel")
 finish = "modal"
-custom_minimum_size = Vector2(472, 720)
+custom_minimum_size = Vector2(510, 720)
 
 [node name="Insets" type="MarginContainer" parent="Center/Panel"]
 layout_mode = 2
@@ -57,6 +64,14 @@ theme_override_constants/separation = 10
 [node name="Heading" type="HBoxContainer" parent="Center/Panel/Insets/Body"]
 layout_mode = 2
 theme_override_constants/separation = 7
+
+[node name="HeadingArt" type="TextureRect" parent="Center/Panel/Insets/Body/Heading"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(32, 32)
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="HeadingLabel" type="Label" parent="Center/Panel/Insets/Body/Heading"]
 layout_mode = 2
@@ -87,10 +102,16 @@ autowrap_mode = 3
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
 
+[node name="Divider" type="HSeparator" parent="Center/Panel/Insets/Body"]
+layout_mode = 2
+mouse_filter = 2
+custom_minimum_size = Vector2(0, 3)
+
 [node name="Scroll" type="ScrollContainer" parent="Center/Panel/Insets/Body"]
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
+follow_focus = true
 unique_name_in_owner = true
 
 [node name="Content" type="VBoxContainer" parent="Center/Panel/Insets/Body/Scroll"]

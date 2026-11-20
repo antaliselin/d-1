@@ -22,6 +22,8 @@ var visitor_index := 0
 var trade: TradeSession
 var message := ""
 var report: Array[String] = []
+var report_location := ""
+var report_loot: Dictionary = {}
 var events: Array[Dictionary] = []
 var delivered: Array[ShopPiece] = []
 var event_result: Array[String] = []
@@ -137,6 +139,8 @@ func scavenge(location: String) -> void:
 	journal.visit(location, day)
 	phase = Phase.SCAVENGE_REPORT
 	report.assign(trip.log)
+	report_loot = trip.items
+	report_location = location
 	message = "天黑前赶回了铺子。今天已结束。"
 
 
@@ -154,6 +158,8 @@ func next_day() -> void:
 	day += 1
 	revenue = 0
 	report.clear()
+	report_location = ""
+	report_loot = {}
 	visitor_index = 0
 	phase = Phase.PREPARE
 	message = ""
@@ -423,7 +429,7 @@ func _resolve_pressure(event: Dictionary, option: Dictionary) -> void:
 func _finale_event() -> Dictionary:
 	return {
 		"kind": "finale", "heading": "水塔之夜",
-		"speaker": {"name": "水塔议会", "title": "最后的水税单", "portrait": "collectors"},
+		"speaker": {"name": "水塔议会", "title": "最后的水税单", "portrait": "art:water_tower"},
 		"lines": ["你可以买下水权，可以打开泵房，也可以把街坊们叫来。今夜，由你决定。"],
 		"choices": [
 			{"id": "merchant", "label": "买下水权 · 30000", "requiresMoney": 30000},
@@ -442,7 +448,7 @@ func _resolve_finale(option: Dictionary) -> void:
 		return
 	money -= int(option.get("requiresMoney", 0))
 	stock.use_requirements(option.get("goods", {}))
-	ending = ShopCatalog.RULES.data.endings[option.id]
+	ending = ShopCatalog.RULES.data.endings[option.id].merged({"id": option.id})
 	events.clear()
 	phase = Phase.ENDED
 

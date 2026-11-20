@@ -86,7 +86,6 @@ func scavenge(id: String, day: int, money: int) -> Dictionary:
 			continue
 		var units := int(found[key]) * catalog.units_per_piece(key)
 		found[key] = units
-		log.append("带回 %s %s" % [catalog.items[key].name, catalog.amount_text(key, units)])
 	return {"items": found, "money_loss": loss, "log": log}
 
 
@@ -165,8 +164,6 @@ func _return_trip(id: String, day: int, reputation: int, trip: Dictionary) -> Di
 	var log: Array[String] = ["%s从外面回来了。" % survivor.name]
 	if mishap:
 		log.append("回程遇到麻烦，丢了一部分战利品。")
-	for item: String in gains:
-		log.append("%s %s" % [catalog.items[item].name, catalog.amount_text(item, gains[item])])
 	var returned: Array[String] = []
 	var return_chance := 0.55 + reputation * 0.002 - (0.2 if mishap else 0.0)
 	for category: String in trip.gear:

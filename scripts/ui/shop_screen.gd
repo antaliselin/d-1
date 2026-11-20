@@ -2,6 +2,15 @@ extends Control
 
 const STOCK_ROW = preload("res://scenes/ui/stock_row.tscn")
 const EVENT_CHOICE = preload("res://scenes/ui/event_choice.tscn")
+const DELIVERY_SLOT = preload("res://scenes/ui/delivery_slot.tscn")
+const CLOSED_ART = preload("res://assets/ui/low_poly/closed_shop.webp")
+const DEPARTED_ART = preload("res://assets/ui/low_poly/departed_shop.webp")
+const ENDING_ART := {
+	"merchant": preload("res://assets/ui/low_poly/ending_contract.webp"),
+	"liberator": preload("res://assets/ui/low_poly/ending_water.webp"),
+	"community": preload("res://assets/ui/low_poly/ending_ledger.webp"),
+	"walkaway": preload("res://assets/ui/low_poly/ending_key.webp"),
+}
 const PHASE_LABELS := ["准备营业", "营业中", "营业中", "闭店", "搜刮归来", "柜台来客", "终章"]
 
 var game := StoreGame.new()
@@ -11,7 +20,12 @@ var selection: Dictionary = {}
 var refresh_pending := false
 var stock_entries: Dictionary = {}
 var backpack_session: TradeSession
+var focus_before_overlay: Control
 
+@onready var header: PanelContainer = %Header
+@onready var inventory: PanelContainer = %Inventory
+@onready var footer: PanelContainer = %Footer
+@onready var shop_content: Control = $Insets
 @onready var prepare_view: VBoxContainer = %PrepareView
 @onready var trade_view: Control = %TradeView
 @onready var event_view: Control = %EventView
@@ -20,25 +34,35 @@ var backpack_session: TradeSession
 @onready var board: CounterGrid = trade_view.get_node("%Grid")
 @onready var portrait_stage: ShopDropSurface = %PortraitStage
 @onready var visitor_portrait: TextureRect = %VisitorPortrait
-@onready var inventory_hint: Label = %InventoryHint
-@onready var stock_scroll: StockDropScroll = %StockScroll
-@onready var rows: VBoxContainer = %Rows
-@onready var filter_buttons: Dictionary = {"all": %All, "firearm": %Firearms, "ammo": %Ammo, "other": %Other}
+@onready var inventory_hint: Label = inventory.get_node("%InventoryHint")
+@onready var stock_scroll: StockDropScroll = inventory.get_node("%StockScroll")
+@onready var rows: VBoxContainer = inventory.get_node("%Rows")
+@onready var catalog_toggle: Button = inventory.get_node("%CatalogToggle")
+@onready var filter_buttons: Dictionary = {
+	"all": inventory.get_node("%All"), "firearm": inventory.get_node("%Firearms"),
+	"ammo": inventory.get_node("%Ammo"), "other": inventory.get_node("%Other"),
+}
+@onready var return_all_button: Button = footer.get_node("%ReturnAll")
+@onready var sell_button: Button = footer.get_node("%Sell")
 @onready var dialogue_options: VBoxContainer = trade_view.get_node("%DialogueOptions")
 @onready var health_bar: ProgressBar = trade_view.get_node("%HealthBar")
 
 
 func _ready() -> void:
-	%StockPreview.hide()
+	inventory.get_node("%StockPreview").hide()
 	overlays.game = game
 	overlays.changed.connect(_queue_refresh)
+	overlays.visibility_changed.connect(_sync_overlay_input)
 	stock_scroll.piece_returned.connect(_return_piece)
 	for key: String in filter_buttons:
 		filter_buttons[key].pressed.connect(_filter_stock.bind(key))
-	%CatalogToggle.pressed.connect(_toggle_empty)
-	%NotesButton.pressed.connect(overlays.show_notes)
-	%ReturnAll.pressed.connect(_return_all)
-	%Sell.pressed.connect(_do.bind(game.complete_sale))
+	catalog_toggle.pressed.connect(_toggle_empty)
+	footer.get_node("%NotesButton").pressed.connect(overlays.show_notes)
+	ShopWidgets.button_icon(footer.get_node("%NotesButton"), ShopWidgets.ui_icon("notes"), 18)
+	ShopWidgets.button_icon(return_all_button, ShopWidgets.ui_icon("undo"), 18)
+	ShopWidgets.button_icon(sell_button, ShopWidgets.ui_icon("trade"), 20)
+	return_all_button.pressed.connect(_return_all)
+	sell_button.pressed.connect(_do.bind(game.complete_sale))
 	prepare_view.get_node("%OpenShop").pressed.connect(_do.bind(game.open_shop))
 	prepare_view.get_node("%Scavenge").pressed.connect(overlays.show_map)
 	prepare_view.get_node("%Dispatch").pressed.connect(overlays.show_dispatch)
@@ -47,6 +71,8 @@ func _ready() -> void:
 	board.piece_returned.connect(_return_piece)
 	trade_view.get_node("%Rotate").pressed.connect(_rotate)
 	trade_view.get_node("%ReturnPiece").pressed.connect(_return_selected)
+	ShopWidgets.button_icon(trade_view.get_node("%Rotate"), ShopWidgets.ui_icon("rotate"), 17)
+	ShopWidgets.button_icon(trade_view.get_node("%ReturnPiece"), ShopWidgets.ui_icon("undo"), 17)
 	trade_view.get_node("%ShowClues").pressed.connect(_open_clues)
 	trade_view.get_node("%OpenBackpack").pressed.connect(_open_backpack)
 	trade_view.get_node("%Settlement").pressed.connect(overlays.show_settlement)
@@ -61,6 +87,21 @@ func _ready() -> void:
 	delivery.accepts = _can_deliver
 	delivery.dropped = func(data: Dictionary) -> void: _pick_stock(data.id)
 	_refresh()
+
+
+func _sync_overlay_input() -> void:
+	if overlays.visible:
+		focus_before_overlay = get_viewport().gui_get_focus_owner()
+		if get_viewport().gui_is_dragging():
+			get_viewport().gui_cancel_drag()
+		shop_content.mouse_behavior_recursive = Control.MOUSE_BEHAVIOR_DISABLED
+		shop_content.focus_behavior_recursive = Control.FOCUS_BEHAVIOR_DISABLED
+	else:
+		shop_content.mouse_behavior_recursive = Control.MOUSE_BEHAVIOR_INHERITED
+		shop_content.focus_behavior_recursive = Control.FOCUS_BEHAVIOR_INHERITED
+		if is_instance_valid(focus_before_overlay) and focus_before_overlay.is_visible_in_tree():
+			focus_before_overlay.grab_focus()
+		focus_before_overlay = null
 
 
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -96,10 +137,10 @@ func _refresh() -> void:
 
 
 func _render_header() -> void:
-	%DayAndPhase.text = "第 %02d 天   /   %s" % [game.day, PHASE_LABELS[game.phase]]
-	%Traffic.text = "客流    %d 人" % game.traffic()
+	header.get_node("%DayAndPhase").text = "第 %02d 天   /   %s" % [game.day, PHASE_LABELS[game.phase]]
+	header.get_node("%Traffic").text = "客流    %d 人" % game.traffic()
 	var rent := "距缴租  %d 天" % maxi(0, game.next_rent - game.day) if game.ownership == "gang" else "产权    已取得"
-	%RentCountdown.text = "今日缴租" if game.ownership == "gang" and game.next_rent <= game.day else rent
+	header.get_node("%RentCountdown").text = "今日缴租" if game.ownership == "gang" and game.next_rent <= game.day else rent
 
 
 func _render_counter() -> void:
@@ -120,19 +161,23 @@ func _render_counter() -> void:
 		StoreGame.Phase.EVENT:
 			_render_event()
 		StoreGame.Phase.CLOSED:
-			_render_report("今日打烊", ["今日进账 %d 瓶盖" % game.revenue, game.message])
+			_render_report("今日打烊", [game.message], true, CLOSED_ART)
 		StoreGame.Phase.SCAVENGE_REPORT:
-			_render_report("搜刮归来", game.report)
+			_render_report("搜刮归来", game.report, true, ShopWidgets.location_icon(game.report_location))
 		StoreGame.Phase.ENDED:
-			_render_report(game.ending.title, [game.ending.text], false)
+			_render_report(game.ending.title, [game.ending.text], false, ENDING_ART.get(game.ending.get("id", "")))
 
 
 func _render_portrait() -> void:
 	var key := ""
 	if trade_view.visible:
 		key = game.trade.customer.portrait
+		portrait_stage.anchor_top = 0.20
+		portrait_stage.anchor_bottom = 0.50
 	elif event_view.visible:
 		key = game.current_event().speaker.get("portrait", "")
+		portrait_stage.anchor_top = 0.28
+		portrait_stage.anchor_bottom = 0.55
 		var split := 0.6
 		event_view.get_node("Upper").anchor_bottom = split if key.is_empty() else portrait_stage.anchor_top
 		event_view.get_node("Lower").anchor_top = split if key.is_empty() else portrait_stage.anchor_bottom
@@ -156,6 +201,10 @@ func _render_trade() -> void:
 	if dialogue_line.text != line:
 		dialogue_line.text = line
 		conversation.scroll_vertical = 0
+	var status_art: TextureRect = trade_view.get_node("%TradeStatusArt")
+	status_art.visible = after
+	if after:
+		status_art.texture = DEPARTED_ART if trade.sold.is_empty() else ShopWidgets.ui_icon("done")
 	trade_view.get_node("%Health").visible = not after
 	conversation.visible = not show_backpack
 	trade_view.get_node("%DialogueOptions").visible = blocked
@@ -209,6 +258,7 @@ func _render_board(trade: TradeSession) -> void:
 	var piece := selection.get("piece") as ShopPiece
 	trade_view.get_node("%ReturnPiece").disabled = piece == null or piece.customer_owned
 	var hint: Label = trade_view.get_node("%BoardHint")
+	trade_view.get_node("%WarningIcon").visible = fill.capped or selection.has("pending_cell")
 	if fill.capped:
 		hint.text = "已达预算上限，成交将交付整箱。"
 		hint.add_theme_color_override("font_color", FacetedStyle.RED)
@@ -219,7 +269,7 @@ func _render_board(trade: TradeSession) -> void:
 		hint.text = "选中  %s" % game.catalog.items[selection.id].name
 		if trade.heal_amount(selection.id, piece) > 0:
 			hint.text += " · 点击客人治疗"
-		hint.add_theme_color_override("font_color", FacetedStyle.AMBER)
+		hint.add_theme_color_override("font_color", FacetedStyle.RED if selection.has("pending_cell") else FacetedStyle.AMBER)
 	if not game.message.is_empty():
 		hint.text += "\n" + game.message
 
@@ -235,6 +285,8 @@ func _render_event() -> void:
 	event_view.get_node("%Delivery").visible = delivery_visible
 	var given := event_view.get_node("%GivenItems")
 	var choices := event_view.get_node("%Choices")
+	var loot: VBoxContainer = event_view.get_node("%EventLoot")
+	_render_loot(loot, event.result.gains if not resolved and event.get("kind", "") == "return" else {})
 	ShopWidgets.clear_entries(given)
 	ShopWidgets.clear_entries(choices)
 	if resolved:
@@ -244,9 +296,18 @@ func _render_event() -> void:
 		for category: String in event.delivery.accepts:
 			names.append(game.catalog.categories[category])
 		event_view.get_node("%DeliveryCount").text = "交付 %d/%d    %s" % [game.delivered.size(), game.delivery_needed(), " / ".join(names)]
-		for index in game.delivered.size():
-			var text: String = "取回 " + game.catalog.items[game.delivered[index].id].name
-			given.add_child(ShopWidgets.action(text, _do.bind(game.take_back_delivery.bind(index)), &"ShopQuiet", 32, 14))
+		for index in game.delivery_needed():
+			var slot: Button = DELIVERY_SLOT.instantiate()
+			if index < game.delivered.size():
+				var item: Dictionary = game.catalog.items[game.delivered[index].id]
+				slot.text = ""
+				slot.icon = ShopWidgets.icon(item.id)
+				slot.tooltip_text = "取回 " + item.name
+				slot.mouse_filter = Control.MOUSE_FILTER_PASS
+				slot.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+				slot.disabled = false
+				slot.pressed.connect(_do.bind(game.take_back_delivery.bind(index)))
+			given.add_child(slot)
 
 	for option: Dictionary in event.choices:
 		var entry := EVENT_CHOICE.instantiate()
@@ -254,27 +315,45 @@ func _render_event() -> void:
 		button.text = option.label
 		button.disabled = not game.event_choice_allowed(option)
 		button.pressed.connect(_do.bind(game.choose_event.bind(option)))
+		if option.has("requiresMoney"):
+			ShopWidgets.button_icon(button, ShopWidgets.ui_icon("money"), 21)
+		elif event.get("kind", "") == "return":
+			ShopWidgets.button_icon(button, ShopWidgets.ui_icon("undo" if option.id == "resend" else "crate"), 21)
 		if option.has("goods"):
 			var requirements: Label = entry.get_node("Requirements")
 			requirements.text = game.requirement_text(option.goods)
 			requirements.show()
 			button.tooltip_text = requirements.text
+			if not option.goods.is_empty() and not option.has("requiresMoney"):
+				ShopWidgets.button_icon(button, ShopWidgets.category_icon(option.goods.keys()[0]), 21)
 		choices.add_child(entry)
 
 
-func _render_report(title: String, lines: Array, allow_next: bool = true) -> void:
+func _render_report(title: String, lines: Array, allow_next: bool = true, artwork: Texture2D = null) -> void:
 	report_view.get_node("%ReportTitle").text = title
 	report_view.get_node("%ReportText").text = "\n\n".join(lines)
 	report_view.get_node("%NextDay").visible = allow_next
+	var illustration: TextureRect = report_view.get_node("%ReportArt")
+	illustration.texture = artwork
+	illustration.visible = artwork != null
+	_render_loot(report_view.get_node("%ReportLoot"), game.report_loot if game.phase == StoreGame.Phase.SCAVENGE_REPORT else {})
+
+
+func _render_loot(container: VBoxContainer, loot: Dictionary) -> void:
+	ShopWidgets.clear_entries(container)
+	for id: String in loot:
+		var item: Dictionary = game.catalog.items[id]
+		container.add_child(ShopWidgets.item_row(id, item.name, game.catalog.amount_text(id, int(loot[id]))))
+	container.visible = not loot.is_empty()
 
 
 func _render_stock() -> void:
-	%CatalogToggle.text = "仅现货" if show_empty else "全目录"
+	catalog_toggle.text = "仅现货" if show_empty else "全目录"
 	match game.phase:
 		StoreGame.Phase.TRADE:
-			inventory_hint.text = "● 表示客人需要的物品"
+			inventory_hint.text = "◆ 表示客人需要的物品"
 		StoreGame.Phase.EVENT:
-			inventory_hint.text = "可交付物资以圆点标记"
+			inventory_hint.text = "◆ 表示可交付物资"
 		_:
 			inventory_hint.text = "按分类查看现有物资"
 	for key: String in filter_buttons:
@@ -306,7 +385,7 @@ func _render_stock() -> void:
 		entry.configure(definition, amount, selection.get("id") == id and selection.get("piece") == null, needed, can_trade or can_deliver)
 		entry.show()
 		displayed += 1
-	%EmptyStock.visible = displayed == 0
+	inventory.get_node("%EmptyStock").visible = displayed == 0
 
 
 func _matches_filter(category: String) -> bool:
@@ -316,14 +395,14 @@ func _matches_filter(category: String) -> bool:
 
 
 func _render_footer() -> void:
-	%MoneyValue.text = str(game.money)
-	%ReputationValue.text = str(game.reputation)
+	footer.get_node("%MoneyValue").text = str(game.money)
+	footer.get_node("%ReputationValue").text = str(game.reputation)
 	var show_backpack := _shows_backpack()
-	%ReturnAll.disabled = not show_backpack
+	return_all_button.disabled = not show_backpack
 	var offer: Dictionary = game.trade.quote() if show_backpack else {}
 	var amount := int(offer.get("total", 0))
-	%Sell.text = "成交" if amount == 0 else "成交 +%d" % amount
-	%Sell.disabled = not offer.get("can_sell", false)
+	sell_button.text = "成交" if amount == 0 else "成交 +%d" % amount
+	sell_button.disabled = not offer.get("can_sell", false)
 
 
 func _open_clues() -> void:

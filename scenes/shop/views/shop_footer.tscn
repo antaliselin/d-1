@@ -1,0 +1,134 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+[ext_resource type="Script" path="res://scripts/ui/faceted_panel.gd" id="Panel"]
+[ext_resource type="Script" path="res://scripts/ui/shop_symbol.gd" id="Symbol"]
+
+[node name="Footer" type="PanelContainer"]
+layout_mode = 2
+theme = ExtResource("Theme")
+script = ExtResource("Panel")
+finish = "bar"
+custom_minimum_size = Vector2(0, 78)
+
+[node name="Insets" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 9
+
+[node name="Content" type="HBoxContainer" parent="Insets"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Stats" type="HBoxContainer" parent="Insets/Content"]
+layout_mode = 2
+theme_override_constants/separation = 10
+size_flags_vertical = 4
+
+[node name="Money" type="HBoxContainer" parent="Insets/Content/Stats"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="Control" parent="Insets/Content/Stats/Money"]
+layout_mode = 2
+mouse_filter = 2
+custom_minimum_size = Vector2(28, 22)
+script = ExtResource("Symbol")
+symbol = "money"
+
+[node name="Values" type="VBoxContainer" parent="Insets/Content/Stats/Money"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Caption" type="Label" parent="Insets/Content/Stats/Money/Values"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 13
+text = "瓶盖"
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="MoneyValue" type="Label" parent="Insets/Content/Stats/Money/Values"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 23
+text = "800"
+theme_type_variation = &"ShopTitle"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
+
+[node name="Divider" type="VSeparator" parent="Insets/Content/Stats"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Reputation" type="HBoxContainer" parent="Insets/Content/Stats"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="Control" parent="Insets/Content/Stats/Reputation"]
+layout_mode = 2
+mouse_filter = 2
+custom_minimum_size = Vector2(28, 22)
+script = ExtResource("Symbol")
+symbol = "reputation"
+
+[node name="Values" type="VBoxContainer" parent="Insets/Content/Stats/Reputation"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Caption" type="Label" parent="Insets/Content/Stats/Reputation/Values"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 13
+text = "声望"
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="ReputationValue" type="Label" parent="Insets/Content/Stats/Reputation/Values"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 23
+text = "50"
+theme_type_variation = &"ShopTitle"
+unique_name_in_owner = true
+
+[node name="Spacer" type="Control" parent="Insets/Content"]
+layout_mode = 2
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Actions" type="HBoxContainer" parent="Insets/Content"]
+layout_mode = 2
+theme_override_constants/separation = 4
+size_flags_vertical = 4
+
+[node name="NotesButton" type="Button" parent="Insets/Content/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 44)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopQuiet"
+theme_override_font_sizes/font_size = 15
+text = "笔记"
+unique_name_in_owner = true
+
+[node name="ReturnAll" type="Button" parent="Insets/Content/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 44)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopSecondary"
+theme_override_font_sizes/font_size = 15
+text = "全部收回"
+unique_name_in_owner = true
+
+[node name="Sell" type="Button" parent="Insets/Content/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(111, 48)
+mouse_default_cursor_shape = 2
+theme_type_variation = &"ShopPrimary"
+theme_override_font_sizes/font_size = 18
+text = "成交"
+unique_name_in_owner = true
+disabled = true

@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+
+[node name="SettlementLine" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 50)
+mouse_filter = 2
+theme = ExtResource("Theme")
+theme_type_variation = &"ShopInset"
+
+[node name="Insets" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 5
+
+[node name="Row" type="HBoxContainer" parent="Insets"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="ItemIcon" type="TextureRect" parent="Insets/Row"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="Label" parent="Insets/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+autowrap_mode = 3
+
+[node name="Total" type="Label" parent="Insets/Row"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ShopTitle"
+theme_override_font_sizes/font_size = 17
+theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)

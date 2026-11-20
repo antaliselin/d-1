@@ -10,15 +10,16 @@ theme = ExtResource("Theme")
 [node name="Portrait" type="TextureRect" parent="."]
 layout_mode = 2
 mouse_filter = 2
-custom_minimum_size = Vector2(36, 44)
+custom_minimum_size = Vector2(60, 58)
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Select" type="Button" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 58)
 mouse_default_cursor_shape = 2
 theme_type_variation = &"ShopSecondary"
 theme_override_font_sizes/font_size = 14
+text_overrun_behavior = 3
 text = "埃迪"

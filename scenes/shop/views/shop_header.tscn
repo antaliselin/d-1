@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Theme" path="res://resources/ui/shop_theme.tres" id="Theme"]
+[ext_resource type="Script" path="res://scripts/ui/faceted_panel.gd" id="Panel"]
+[ext_resource type="Script" path="res://scripts/ui/shop_symbol.gd" id="Symbol"]
+
+[node name="Header" type="PanelContainer"]
+layout_mode = 2
+theme = ExtResource("Theme")
+script = ExtResource("Panel")
+finish = "bar"
+custom_minimum_size = Vector2(0, 90)
+
+[node name="Insets" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="HBoxContainer" parent="Insets"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TitleGroup" type="VBoxContainer" parent="Insets/Content"]
+layout_mode = 2
+theme_override_constants/separation = 2
+size_flags_horizontal = 3
+
+[node name="GameTitle" type="Label" parent="Insets/Content/TitleGroup"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 34
+text = "末世小卖部"
+theme_type_variation = &"ShopTitle"
+
+[node name="DayAndPhase" type="Label" parent="Insets/Content/TitleGroup"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 14
+text = "第 01 天   /   准备营业"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.75, 0.8, 0.73, 1)
+
+[node name="Divider" type="VSeparator" parent="Insets/Content"]
+layout_mode = 2
+custom_minimum_size = Vector2(5, 0)
+mouse_filter = 2
+
+[node name="Stats" type="VBoxContainer" parent="Insets/Content"]
+layout_mode = 2
+theme_override_constants/separation = 2
+size_flags_vertical = 4
+custom_minimum_size = Vector2(120, 0)
+
+[node name="Visitors" type="HBoxContainer" parent="Insets/Content/Stats"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Icon" type="Control" parent="Insets/Content/Stats/Visitors"]
+layout_mode = 2
+mouse_filter = 2
+custom_minimum_size = Vector2(22, 22)
+script = ExtResource("Symbol")
+symbol = "visitor"
+
+[node name="Traffic" type="Label" parent="Insets/Content/Stats/Visitors"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "客流    3 人"
+unique_name_in_owner = true
+
+[node name="Rent" type="HBoxContainer" parent="Insets/Content/Stats"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Icon" type="Control" parent="Insets/Content/Stats/Rent"]
+layout_mode = 2
+mouse_filter = 2
+custom_minimum_size = Vector2(22, 22)
+script = ExtResource("Symbol")
+symbol = "clock"
+
+[node name="RentCountdown" type="Label" parent="Insets/Content/Stats/Rent"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "距缴租  2 天"
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.96, 0.73, 0.42, 1)
